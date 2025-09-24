@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyu87u6p5us2a"]
+
+[ext_resource type="Texture2D" uid="uid://cgg40gr8xi84j" path="res://sprites/potion.png" id="1_afhtg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afhtg"]
+radius = 102.0784
+
+[node name="Food" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10.75, 10.75)
+texture = ExtResource("1_afhtg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_afhtg")

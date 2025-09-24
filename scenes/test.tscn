@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddnb8n4a54wb1"]
+
+[ext_resource type="Texture2D" uid="uid://cw63q6vk6a026" path="res://sprites/NPC Portraits/NPC01.png" id="1_errlg"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.28027344, 0.28027344)
+texture = ExtResource("1_errlg")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://gs22eokw4ff6"]
+
+[ext_resource type="Script" uid="uid://cuaxo5mwf02r0" path="res://scripts/straw.gd" id="1_fwli4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pecxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwli4"]
+size = Vector2(1.0020504, 1.0111039)
+
+[sub_resource type="BoxMesh" id="BoxMesh_122os"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Boba tea" type="MeshInstance2D" parent="."]
+position = Vector2(592, 455.00003)
+scale = Vector2(335.3125, 382.75)
+mesh = SubResource("BoxMesh_pecxu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boba tea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/StaticBody2D"]
+position = Vector2(-0.0029822588, -0.0013064146)
+shape = SubResource("RectangleShape2D_fwli4")
+
+[node name="straw" type="MeshInstance2D" parent="."]
+position = Vector2(593, 0)
+scale = Vector2(39.5, 344.5)
+mesh = SubResource("BoxMesh_122os")
+script = ExtResource("1_fwli4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="straw"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="straw/StaticBody2D"]
+position = Vector2(-0.0029822588, -0.0013064146)
+shape = SubResource("RectangleShape2D_fwli4")
