@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmbxnawh4d2g4"]
+
+[ext_resource type="Script" uid="uid://3qponapcif2k" path="res://food/tomato.gd" id="1_umoja"]
+[ext_resource type="Texture2D" uid="uid://cs7u5cyw2r4u8" path="res://assets/heart.jpg" id="1_x0b1e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x0b1e"]
+radius = 5.8481016
+
+[node name="tomato" type="Node2D"]
+scale = Vector2(7.181818, 7.1818204)
+script = ExtResource("1_umoja")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.023500506, 0.023500491)
+texture = ExtResource("1_x0b1e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_x0b1e")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

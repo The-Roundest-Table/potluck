@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://clydxw6hsdi4x"]
+
+[ext_resource type="Script" uid="uid://cuaxo5mwf02r0" path="res://scripts/player_movement.gd" id="1_endmv"]
+[ext_resource type="Texture2D" uid="uid://cgg40gr8xi84j" path="res://sprites/potion.png" id="1_y7101"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7101"]
+
+[node name="boba_player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(19.5, 19.5)
+scale = Vector2(3.4375, 3.4375)
+
+[node name="Node" type="Node" parent="CharacterBody2D"]
+script = ExtResource("1_endmv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_y7101")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_y7101")
