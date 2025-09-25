@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1yc2tygvpjio"]
+
+[ext_resource type="PackedScene" uid="uid://clydxw6hsdi4x" path="res://boba_player.tscn" id="1_u577f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u577f"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cy281"]
+normal = Vector2(-1, 0)
+
+[node name="Tower" type="Node2D"]
+
+[node name="boba_player" parent="." instance=ExtResource("1_u577f")]
+position = Vector2(47, 566)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="left" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_u577f")
+
+[node name="right" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1152, 0)
+shape = SubResource("WorldBoundaryShape2D_cy281")
