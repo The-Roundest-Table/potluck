@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfehqv12l0k2q"]
+
+[ext_resource type="Script" uid="uid://dqsawdpnhf723" path="res://scripts/drawing.gd" id="1_3a0ey"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3a0ey")
+
+[node name="Line2D" type="Line2D" parent="."]
