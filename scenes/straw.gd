@@ -1,11 +1,4 @@
-class_name Straw extends MeshInstance2D
-
-const SPEED = 100.0
-@onready var parent: CharacterBody2D = get_parent()
-
-var start_position
-var end_position
-
+extends MeshInstance2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,5 +8,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	pass
