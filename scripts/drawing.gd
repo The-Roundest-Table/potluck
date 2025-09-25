@@ -14,4 +14,5 @@ func _input(event: InputEvent) -> void:
 				current_line.width = 4
 				lines.add_child(current_line)
 				current_line.add_point(event.position)
-	
+	elif  event is InputEventMouseMotion and pressed:
+		current_line.add_point(event.position)

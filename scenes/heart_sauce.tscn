@@ -1,8 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfehqv12l0k2q"]
+[gd_scene load_steps=4 format=3 uid="uid://bfehqv12l0k2q"]
 
 [ext_resource type="Script" uid="uid://dqsawdpnhf723" path="res://scripts/drawing.gd" id="1_3a0ey"]
+[ext_resource type="Texture2D" uid="uid://cht1hyektigat" path="res://icon.svg" id="2_87eaw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_87eaw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3a0ey")
 
 [node name="Line2D" type="Line2D" parent="."]
+default_color = Color(0.29461887, 0.15920165, 0.059216097, 1)
+texture = ExtResource("2_87eaw")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(462, -26.000006)
+rotation = 0.7505084
+scale = Vector2(573.5, 262.5)
+mesh = SubResource("BoxMesh_87eaw")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(146.00002, 175.00003)
+rotation = 2.0931702
+scale = Vector2(573.5, 262.5)
+mesh = SubResource("BoxMesh_87eaw")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+position = Vector2(945.99994, 7.999996)
+rotation = 2.4077694
+scale = Vector2(388.13055, 728.5937)
+mesh = SubResource("BoxMesh_87eaw")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
