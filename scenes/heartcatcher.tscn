@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dr7pjbkytkwh0"]
 
+[ext_resource type="Script" uid="uid://cfrmgji1b503l" path="res://scenes/heartcatcher.gd" id="1_hqnkh"]
 [ext_resource type="PackedScene" uid="uid://cw6bm1v3j4x6f" path="res://pan_player.tscn" id="1_wdnwu"]
-[ext_resource type="PackedScene" uid="uid://bmbxnawh4d2g4" path="res://food/tomato.tscn" id="2_v8y1u"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v8y1u"]
 normal = Vector2(1, 0)
@@ -10,6 +10,7 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 
 [node name="heartcatcher" type="Node2D"]
+script = ExtResource("1_hqnkh")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -19,9 +20,6 @@ shape = SubResource("WorldBoundaryShape2D_v8y1u")
 [node name="right" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_hqnkh")
-
-[node name="Tomato" parent="." instance=ExtResource("2_v8y1u")]
-position = Vector2(628, 544)
 
 [node name="Pan" parent="." instance=ExtResource("1_wdnwu")]
 position = Vector2(212, 527)

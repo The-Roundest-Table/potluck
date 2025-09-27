@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://gs22eokw4ff6"]
 
-[ext_resource type="Script" uid="uid://dfjh72pes8vqq" path="res://scenes/straw.gd" id="1_fwli4"]
+[ext_resource type="Script" uid="uid://dfjh72pes8vqq" path="res://scripts/straw.gd" id="1_fwli4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pecxu"]
 

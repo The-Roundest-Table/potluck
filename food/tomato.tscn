@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0b1e"]
 radius = 5.8481016
 
-[node name="tomato" type="Node2D"]
+[node name="tomato" type="CharacterBody2D"]
 scale = Vector2(7.181818, 7.1818204)
 script = ExtResource("1_umoja")
 
