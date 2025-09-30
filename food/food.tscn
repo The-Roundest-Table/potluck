@@ -12,6 +12,7 @@ scale = Vector2(10.75, 10.75)
 texture = ExtResource("1_afhtg")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+input_pickable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_afhtg")

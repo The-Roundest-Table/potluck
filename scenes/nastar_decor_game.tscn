@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://xa588w3i8hex"]
+[gd_scene load_steps=3 format=3 uid="uid://xa588w3i8hex"]
+
+[ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar_decor_game.gd" id="1_ghgsh"]
+[ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
 
 [node name="nastar_decor_game" type="Node2D"]
+script = ExtResource("1_ghgsh")
+
+[node name="nastar_base" parent="." instance=ExtResource("2_samfg")]
+position = Vector2(562, 282)
