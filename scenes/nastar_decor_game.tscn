@@ -1,10 +1,111 @@
-[gd_scene load_steps=3 format=3 uid="uid://xa588w3i8hex"]
+[gd_scene load_steps=4 format=3 uid="uid://xa588w3i8hex"]
 
 [ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar_decor_game.gd" id="1_ghgsh"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
+[ext_resource type="Texture2D" uid="uid://j3h6tk2x3kbf" path="res://sprites/page.png" id="3_ddy2s"]
 
-[node name="nastar_decor_game" type="Node2D"]
+[node name="nastar_decor_game" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ghgsh")
 
 [node name="nastar_base" parent="." instance=ExtResource("2_samfg")]
-position = Vector2(562, 282)
+position = Vector2(517, 493)
+
+[node name="Decor" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 344.0
+offset_bottom = 637.0
+
+[node name="cols" type="HBoxContainer" parent="Decor"]
+layout_mode = 2
+
+[node name="col1" type="VBoxContainer" parent="Decor/cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="a" type="Button" parent="Decor/cols/col1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "A"
+
+[node name="b" type="Button" parent="Decor/cols/col1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "C"
+
+[node name="c" type="Button" parent="Decor/cols/col1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "E"
+
+[node name="d" type="Button" parent="Decor/cols/col1"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "G"
+
+[node name="col2" type="VBoxContainer" parent="Decor/cols"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="e" type="Button" parent="Decor/cols/col2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "B"
+
+[node name="f" type="Button" parent="Decor/cols/col2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "D"
+
+[node name="g" type="Button" parent="Decor/cols/col2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "F"
+
+[node name="h" type="Button" parent="Decor/cols/col2"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "H"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="a" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(752, 121)
+texture = ExtResource("3_ddy2s")
+
+[node name="a2" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(822, 118)
+texture = ExtResource("3_ddy2s")
+
+[node name="a3" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(748, 204)
+texture = ExtResource("3_ddy2s")
+
+[node name="a4" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(818, 201)
+texture = ExtResource("3_ddy2s")
+
+[node name="a5" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(748, 283)
+texture = ExtResource("3_ddy2s")
+
+[node name="a6" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(816, 283)
+texture = ExtResource("3_ddy2s")
+
+[node name="a7" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(751, 371)
+texture = ExtResource("3_ddy2s")
+
+[node name="a8" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(817, 364)
+texture = ExtResource("3_ddy2s")
