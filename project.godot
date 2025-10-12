@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+scene_manager="*res://scripts/scene_manager.gd"
 
 [dialogic]
 
@@ -30,6 +31,10 @@ layout/style_directory={}
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[global_group]
+
+baked=""
 
 [input]
 

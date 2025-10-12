@@ -4,16 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
 [ext_resource type="Texture2D" uid="uid://j3h6tk2x3kbf" path="res://sprites/page.png" id="3_ddy2s"]
 
-[node name="nastar_decor_game" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="nastar_decor_game" type="Node"]
 script = ExtResource("1_ghgsh")
-
-[node name="nastar_base" parent="." instance=ExtResource("2_samfg")]
-position = Vector2(517, 493)
+connected_scene = "bake"
 
 [node name="Decor" type="MarginContainer" parent="."]
-layout_mode = 0
 offset_right = 344.0
 offset_bottom = 637.0
 
@@ -68,44 +63,55 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "H"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="tart" type="Node2D" parent="."]
+unique_name_in_owner = true
 
-[node name="a" type="Sprite2D" parent="Node2D"]
+[node name="nastar_base" parent="tart" instance=ExtResource("2_samfg")]
+position = Vector2(517, 493)
+
+[node name="a" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(752, 121)
 texture = ExtResource("3_ddy2s")
 
-[node name="a2" type="Sprite2D" parent="Node2D"]
+[node name="a2" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(822, 118)
 texture = ExtResource("3_ddy2s")
 
-[node name="a3" type="Sprite2D" parent="Node2D"]
+[node name="a3" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(748, 204)
 texture = ExtResource("3_ddy2s")
 
-[node name="a4" type="Sprite2D" parent="Node2D"]
+[node name="a4" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(818, 201)
 texture = ExtResource("3_ddy2s")
 
-[node name="a5" type="Sprite2D" parent="Node2D"]
+[node name="a5" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(748, 283)
 texture = ExtResource("3_ddy2s")
 
-[node name="a6" type="Sprite2D" parent="Node2D"]
+[node name="a6" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(816, 283)
 texture = ExtResource("3_ddy2s")
 
-[node name="a7" type="Sprite2D" parent="Node2D"]
+[node name="a7" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(751, 371)
 texture = ExtResource("3_ddy2s")
 
-[node name="a8" type="Sprite2D" parent="Node2D"]
+[node name="a8" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(817, 364)
 texture = ExtResource("3_ddy2s")
+
+[node name="finish" type="Button" parent="."]
+offset_left = 889.0
+offset_top = 26.0
+offset_right = 1125.0
+offset_bottom = 104.0
+text = "Ready to Bake!"

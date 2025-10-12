@@ -1,4 +1,6 @@
-class_name Nastar_Decor extends Control
+extends BaseScene
+
+@export var connected_scene: String
 
 @onready var a = $Decor/cols/col1/a
 @onready var b = $Decor/cols/col1/b
@@ -9,27 +11,31 @@ class_name Nastar_Decor extends Control
 @onready var g = $Decor/cols/col2/g
 @onready var h = $Decor/cols/col2/h
 
+@onready var finish = $finish
 @onready var buttons = [a, b, c, d, e, f, g, h];
+@onready var decors = [$tart/a, $tart/a2, $tart/a3, $tart/a4, $tart/a5, $tart/a6, $tart/a7, $tart/a8]
 
-var decor_state = [false, false, false, false, false, false, false, false]
-
-@onready var decors = [$Node2D/a, $Node2D/a2, $Node2D/a3, $Node2D/a4, $Node2D/a5, $Node2D/a6, $Node2D/a7, $Node2D/a8]
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	super()
 	for n in buttons.size():
 		buttons[n].button_down.connect(on_a_pressed.bind(n))
-	#start_button.button_down.connect(on_start_pressed)
-	#exit_button.button_down.connect(on_exit_pressed)
-	#controls_button.button_down.connect(on_controls_pressed)
-	#credits_button.button_down.connect(on_credits_pressed)
+	finish.button_down.connect(on_finish_pressed)
 
-#func on_start_pressed() -> void:
-	#get_tree().call_deferred('change_scene_to_file', "res://scenes/locations/home.tscn")")
 func on_a_pressed(n) -> void:
-	#print(n)
-	decor_state[n] = !decor_state[n]
-	print(decor_state)
-	decors[n].visible = decor_state[n];
+	decors[n].visible = !decors[n].visible;
 	
+func on_finish_pressed() -> void:
+	#print("end")
+	#var tart = %tart
+	#for t in tart.get_children():
+		#if t.visible:
+			#t.add_to_group("baked")
+	#var guards = get_tree().get_nodes_in_group("baked")
+	#print(guards)
+	
+	scene_manager.change_scene(self, connected_scene)
+	
+	#get_tree().call_deferred('change_scene_to_file', "res://scenes/bake.tscn")
