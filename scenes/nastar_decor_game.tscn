@@ -65,48 +65,48 @@ text = "H"
 
 [node name="tart" type="Node2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(568, 305)
 
 [node name="nastar_base" parent="tart" instance=ExtResource("2_samfg")]
-position = Vector2(517, 493)
 
 [node name="a" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(752, 121)
+position = Vector2(-76, -68)
 texture = ExtResource("3_ddy2s")
 
 [node name="a2" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(822, 118)
+position = Vector2(37, 57)
 texture = ExtResource("3_ddy2s")
 
 [node name="a3" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(748, 204)
+position = Vector2(-36, 57)
 texture = ExtResource("3_ddy2s")
 
 [node name="a4" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(818, 201)
+position = Vector2(60, -5)
 texture = ExtResource("3_ddy2s")
 
 [node name="a5" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(748, 283)
+position = Vector2(-12, -8)
 texture = ExtResource("3_ddy2s")
 
 [node name="a6" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(816, 283)
+position = Vector2(-77, -4)
 texture = ExtResource("3_ddy2s")
 
 [node name="a7" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(751, 371)
+position = Vector2(59, -68)
 texture = ExtResource("3_ddy2s")
 
 [node name="a8" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(817, 364)
+position = Vector2(-12, -69)
 texture = ExtResource("3_ddy2s")
 
 [node name="finish" type="Button" parent="."]
