@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6bhdknts7y54"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qcl6x"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_x8m2p"]
+
+[node name="roulette" type="Node2D"]
+
+[node name="table" type="MeshInstance2D" parent="."]
+position = Vector2(570.00006, 310)
+scale = Vector2(493.68396, 493.68402)
+mesh = SubResource("SphereMesh_qcl6x")
+
+[node name="spinner" type="MeshInstance2D" parent="."]
+position = Vector2(570.00006, 310)
+scale = Vector2(308.34912, 308.34915)
+mesh = SubResource("SphereMesh_qcl6x")
+texture = SubResource("ImageTexture_x8m2p")
