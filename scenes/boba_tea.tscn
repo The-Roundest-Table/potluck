@@ -1,35 +1,68 @@
-[gd_scene load_steps=5 format=3 uid="uid://gs22eokw4ff6"]
+[gd_scene load_steps=9 format=3 uid="uid://gs22eokw4ff6"]
 
-[ext_resource type="Script" uid="uid://dfjh72pes8vqq" path="res://scripts/straw.gd" id="1_fwli4"]
+[ext_resource type="Script" uid="uid://cekxtyxtjbh07" path="res://scenes/boba_tea.gd" id="1_122os"]
+[ext_resource type="Script" uid="uid://dmyqglvq8xt6a" path="res://scenes/straw.gd" id="1_fwli4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pecxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwli4"]
 size = Vector2(1.0020504, 1.0111039)
 
-[sub_resource type="BoxMesh" id="BoxMesh_122os"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_122os"]
+size = Vector2(1.1302891, 0.11887658)
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="QuadMesh" id="QuadMesh_fwli4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vu8t7"]
+size = Vector2(1.1392412, 1.2191582)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20b7j"]
+size = Vector2(1159, 40)
+
+[node name="boba_tea" type="Node2D"]
+script = ExtResource("1_122os")
+connected_scene = "nastar_decor_game"
 
 [node name="Boba tea" type="MeshInstance2D" parent="."]
 position = Vector2(592, 455.00003)
 scale = Vector2(335.3125, 382.75)
 mesh = SubResource("BoxMesh_pecxu")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Boba tea"]
+[node name="cup" type="Area2D" parent="Boba tea"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cup"]
 position = Vector2(-0.0029822588, -0.0013064146)
 shape = SubResource("RectangleShape2D_fwli4")
 
-[node name="straw" type="MeshInstance2D" parent="."]
-position = Vector2(593, 0)
+[node name="cupfloor" type="StaticBody2D" parent="Boba tea"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cupfloor"]
+position = Vector2(0.0059645176, 0.43827558)
+shape = SubResource("RectangleShape2D_122os")
+
+[node name="straw" type="CharacterBody2D" parent="." node_paths=PackedStringArray("endPoint")]
+position = Vector2(73, 0)
 scale = Vector2(39.5, 344.5)
-mesh = SubResource("BoxMesh_122os")
 script = ExtResource("1_fwli4")
+endPoint = NodePath("../end")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="straw"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="straw"]
+position = Vector2(0, -0.102685034)
+scale = Vector2(1, 1.2053702)
+mesh = SubResource("QuadMesh_fwli4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="straw/StaticBody2D"]
-position = Vector2(-0.0029822588, -0.0013064146)
-shape = SubResource("RectangleShape2D_fwli4")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="straw"]
+position = Vector2(0.037974358, -0.10159653)
+shape = SubResource("RectangleShape2D_vu8t7")
+
+[node name="end" type="Marker2D" parent="."]
+position = Vector2(1099, 0)
+
+[node name="fall" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fall"]
+position = Vector2(579, 720)
+shape = SubResource("RectangleShape2D_20b7j")
+
+[connection signal="poked" from="straw" to="." method="_on_straw_poked"]
+[connection signal="body_entered" from="fall" to="straw" method="_on_fall_body_entered"]
