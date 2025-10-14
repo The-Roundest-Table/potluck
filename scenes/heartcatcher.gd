@@ -1,7 +1,8 @@
-extends Node2D
+extends BaseScene
 
 var tomato = preload("res://food/tomato.tscn")
 @onready var player: CharacterBody2D = $Pan
+@export var connected_scene: String
 var tomatoes = [];
 
 var tomcount = 0;
@@ -9,6 +10,7 @@ var tomcount = 0;
 const TIME_PERIOD = 0.5
 
 var time = 0
+var delay = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,6 +28,10 @@ func _process(delta: float) -> void:
 		add_child(new_icon)
 		tomatoes.append(new_icon.caught.connect(on_tomato_caught))
 		time = 0
+	if tomcount >= 20:
+		scene_manager.change_scene(self, connected_scene)
+		
+		
 	
 
 func on_tomato_caught():

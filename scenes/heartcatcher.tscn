@@ -11,6 +11,7 @@ normal = Vector2(-1, 0)
 
 [node name="heartcatcher" type="Node2D"]
 script = ExtResource("1_hqnkh")
+connected_scene = "boba_tea"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
