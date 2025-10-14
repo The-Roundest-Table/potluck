@@ -12,7 +12,7 @@ func _ready():
 		tart = scene_manager.tart
 		add_child(tart)
 	
-	position_tart()
+	#position_tart()
 	
 func position_tart() -> void:
 	var last_scene = scene_manager.last_scene_name

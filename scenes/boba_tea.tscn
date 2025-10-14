@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://gs22eokw4ff6"]
+[gd_scene load_steps=9 format=3 uid="uid://gs22eokw4ff6"]
 
+[ext_resource type="Script" uid="uid://cekxtyxtjbh07" path="res://scenes/boba_tea.gd" id="1_122os"]
 [ext_resource type="Script" uid="uid://dmyqglvq8xt6a" path="res://scenes/straw.gd" id="1_fwli4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_pecxu"]
@@ -19,6 +20,8 @@ size = Vector2(1.1392412, 1.2191582)
 size = Vector2(1159, 40)
 
 [node name="boba_tea" type="Node2D"]
+script = ExtResource("1_122os")
+connected_scene = "nastar_decor_game"
 
 [node name="Boba tea" type="MeshInstance2D" parent="."]
 position = Vector2(592, 455.00003)
@@ -31,9 +34,9 @@ mesh = SubResource("BoxMesh_pecxu")
 position = Vector2(-0.0029822588, -0.0013064146)
 shape = SubResource("RectangleShape2D_fwli4")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Boba tea"]
+[node name="cupfloor" type="StaticBody2D" parent="Boba tea"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cupfloor"]
 position = Vector2(0.0059645176, 0.43827558)
 shape = SubResource("RectangleShape2D_122os")
 
@@ -61,4 +64,5 @@ position = Vector2(1099, 0)
 position = Vector2(579, 720)
 shape = SubResource("RectangleShape2D_20b7j")
 
+[connection signal="poked" from="straw" to="." method="_on_straw_poked"]
 [connection signal="body_entered" from="fall" to="straw" method="_on_fall_body_entered"]

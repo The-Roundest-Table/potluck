@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6bhdknts7y54"]
+[gd_scene load_steps=4 format=3 uid="uid://c6bhdknts7y54"]
+
+[ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qcl6x"]
 
@@ -16,3 +18,4 @@ position = Vector2(570.00006, 310)
 scale = Vector2(308.34912, 308.34915)
 mesh = SubResource("SphereMesh_qcl6x")
 texture = SubResource("ImageTexture_x8m2p")
+script = ExtResource("1_x8m2p")

@@ -28,14 +28,7 @@ func on_a_pressed(n) -> void:
 	decors[n].visible = !decors[n].visible;
 	
 func on_finish_pressed() -> void:
-	#print("end")
-	#var tart = %tart
-	#for t in tart.get_children():
-		#if t.visible:
-			#t.add_to_group("baked")
-	#var guards = get_tree().get_nodes_in_group("baked")
-	#print(guards)
-	
+
 	scene_manager.change_scene(self, connected_scene)
 	
 	#get_tree().call_deferred('change_scene_to_file', "res://scenes/bake.tscn")

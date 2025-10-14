@@ -7,6 +7,8 @@ var drop = false
 @export var limit = 10
 @export var endPoint: Marker2D
 
+signal poked
+
 var startPosition
 var endPosition
 
@@ -39,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 	move_and_slide()
+	handleCollision()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
@@ -51,3 +54,11 @@ func _on_fall_body_entered(body: Node2D) -> void:
 		drop = false
 		velocity.y = 0
 		position = startPosition;
+
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i);
+		var collider = collision.get_collider();
+		print(collider.name)
+		if collider.name == "cupfloor":
+			poked.emit()
