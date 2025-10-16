@@ -5,17 +5,22 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y7101"]
 
-[node name="boba_player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(19.5, 19.5)
+[node name="boba_player" type="CharacterBody2D"]
 scale = Vector2(3.4375, 3.4375)
 
-[node name="Node" type="Node" parent="CharacterBody2D"]
+[node name="moving" type="Node" parent="."]
 script = ExtResource("1_endmv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_y7101")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_y7101")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_y7101")
+
+[connection signal="area_entered" from="Area2D" to="moving" method="_on_area_2d_area_entered"]

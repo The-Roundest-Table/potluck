@@ -3,6 +3,8 @@ extends Node2D
 @onready var ray_cast = $RayCast2D
 @onready var timer = $Timer
 @export var ammo : PackedScene
+@export var start: Marker2D
+
  
 var player
  
@@ -14,7 +16,7 @@ func _physics_process(_delta):
 	_check_player_collision()
  
 func _aim():
-	ray_cast.target_position = to_local(player.position)
+	ray_cast.target_position = player.position - ray_cast.position
  
 func _check_player_collision():
 	#pass
@@ -25,12 +27,12 @@ func _check_player_collision():
  
  
 func _on_timer_timeout():
-	#pass
 	_shoot()
  
 func _shoot():
 	pass
 	var bullet = ammo.instantiate()
-	bullet.position = position
+	bullet.position = start.position
+	bullet.rotation = ray_cast.target_position.angle() + deg_to_rad(90)
 	bullet.direction = (ray_cast.target_position).normalized()
 	get_tree().current_scene.add_child(bullet)

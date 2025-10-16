@@ -1,4 +1,4 @@
-extends Area2D
+extends Sprite2D
  
 var direction : Vector2 = Vector2.RIGHT
 var speed : float = 300
@@ -13,3 +13,4 @@ func _on_screen_exited():
 
 func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
 	queue_free()
+	
