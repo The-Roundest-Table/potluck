@@ -2,23 +2,26 @@
 
 [ext_resource type="Script" uid="uid://buyb7auobt2xb" path="res://scripts/bullet.gd" id="1_mkf8s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ay4al"]
-size = Vector2(5, 20)
-
 [sub_resource type="BoxMesh" id="BoxMesh_ay4al"]
 size = Vector3(4.99, 20.325, 1)
 
-[node name="Bullet" type="Area2D"]
-scale = Vector2(2.775, 2.775)
-script = ExtResource("1_mkf8s")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ay4al"]
+size = Vector2(5, 20)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ay4al")
+[node name="Sprite2D" type="Sprite2D"]
+script = ExtResource("1_mkf8s")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 modulate = Color(0.9222896, 0.072116144, 0.6038049, 1)
+scale = Vector2(2.775, 2.775)
 mesh = SubResource("BoxMesh_ay4al")
 
-[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+[node name="Bullet" type="Area2D" parent="."]
+scale = Vector2(2.775, 2.775)
 
-[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet"]
+shape = SubResource("RectangleShape2D_ay4al")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Bullet"]
+
+[connection signal="screen_exited" from="Bullet/VisibleOnScreenEnabler2D" to="Bullet" method="_on_visible_on_screen_enabler_2d_screen_exited"]
