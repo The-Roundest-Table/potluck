@@ -5,6 +5,7 @@ var tart: Node2D
 var round = 1;
 var scene_dir_path = "res://scenes/"
 var spins = 0;
+var berries: int = 0
 
 
 # Called when the node enters the scene tree for the first time.

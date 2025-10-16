@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnkjs2lh2nfm"]
+
+[ext_resource type="PackedScene" uid="uid://cdkihj0cu2q0g" path="res://scenes/berries.tscn" id="1_f6m44"]
+[ext_resource type="PackedScene" uid="uid://blg1g5vxgwwuj" path="res://scenes/alaadji.tscn" id="2_2vpnt"]
+
+[node name="BerryPicking" type="Node2D"]
+
+[node name="Berries" parent="." instance=ExtResource("1_f6m44")]
+position = Vector2(949, 486)
+
+[node name="Berries2" parent="." instance=ExtResource("1_f6m44")]
+position = Vector2(121, 560)
+
+[node name="Berries3" parent="." instance=ExtResource("1_f6m44")]
+position = Vector2(176, 389)
+
+[node name="Berries4" parent="." instance=ExtResource("1_f6m44")]
+position = Vector2(353, 534)
+
+[node name="Berries5" parent="." instance=ExtResource("1_f6m44")]
+position = Vector2(1057, 347)
+
+[node name="alaadji" parent="." instance=ExtResource("2_2vpnt")]
+position = Vector2(395, 108)
