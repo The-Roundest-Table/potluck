@@ -1,6 +1,6 @@
 extends BaseScene
 
-var tomato = preload("res://food/tomato.tscn")
+@export var tomato : PackedScene
 @onready var player: CharacterBody2D = $Pan
 @export var connected_scene: String
 var tomatoes = [];

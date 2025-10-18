@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr7pjbkytkwh0"]
+[gd_scene load_steps=6 format=3 uid="uid://dr7pjbkytkwh0"]
 
 [ext_resource type="Script" uid="uid://cfrmgji1b503l" path="res://scenes/heartcatcher.gd" id="1_hqnkh"]
 [ext_resource type="PackedScene" uid="uid://cw6bm1v3j4x6f" path="res://pan_player.tscn" id="1_wdnwu"]
+[ext_resource type="PackedScene" uid="uid://bmbxnawh4d2g4" path="res://food/tomato.tscn" id="2_hqnkh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v8y1u"]
 normal = Vector2(1, 0)
@@ -11,6 +12,7 @@ normal = Vector2(-1, 0)
 
 [node name="heartcatcher" type="Node2D"]
 script = ExtResource("1_hqnkh")
+tomato = ExtResource("2_hqnkh")
 connected_scene = "boba_tea"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
