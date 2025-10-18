@@ -19,8 +19,9 @@ func _process(delta: float) -> void:
 
 func _on_player_died():
 	print("die")
-	scene_manager.change_scene(self, death_scene)
+	scene_manager.cutscene(self, "starbucks")
 	pass
 
 func _on_win():
-	scene_manager.change_scene(self, win_scene)
+	print("win")
+	scene_manager.cutscene(self, win_scene)

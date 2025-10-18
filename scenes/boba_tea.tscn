@@ -21,7 +21,7 @@ size = Vector2(1159, 40)
 
 [node name="boba_tea" type="Node2D"]
 script = ExtResource("1_122os")
-connected_scene = "nastar_decor_game"
+connected_scene = "tower"
 
 [node name="Boba tea" type="MeshInstance2D" parent="."]
 position = Vector2(592, 455.00003)

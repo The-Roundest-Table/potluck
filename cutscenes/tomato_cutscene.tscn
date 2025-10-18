@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyandnq1qw4wk"]
+
+[ext_resource type="Script" uid="uid://c1rgdilknpdut" path="res://cutscenes/tomato_cutscene.gd" id="1_l324h"]
+
+[node name="TomatoCutscene" type="Node2D"]
+script = ExtResource("1_l324h")
