@@ -18,7 +18,9 @@ func _process(delta: float) -> void:
 	
 	if speed <= 0:
 		print(int(rad_to_deg(rotation))%360)
-		#add popup 
+		if !get_owner().get_node("FoodPopup").opened:
+			get_owner().get_node("FoodPopup").open()
+
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:

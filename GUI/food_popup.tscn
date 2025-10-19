@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ctfmbotm2gy"]
+
+[ext_resource type="Script" uid="uid://b3d7qjnxy7m46" path="res://GUI/food_popup.gd" id="1_icyk3"]
+[ext_resource type="Texture2D" uid="uid://dd3xdch3v66fc" path="res://sprites/inventory-slot-placeholder.png" id="1_jln6d"]
+[ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_qewg7"]
+
+[node name="FoodPopup" type="Node2D"]
+script = ExtResource("1_icyk3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(44.625, 23.999998)
+texture = ExtResource("1_jln6d")
+
+[node name="food" type="Sprite2D" parent="."]
+position = Vector2(3.0517578e-05, -36.999985)
+scale = Vector2(0.23383623, 0.23383619)
+texture = ExtResource("2_qewg7")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -154.0
+offset_right = 298.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="name" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Food Title"
+
+[node name="description" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 235.0
+offset_right = 582.0
+offset_bottom = 305.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Here is some stuff about the food. Dig in!"
