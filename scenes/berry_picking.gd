@@ -5,14 +5,19 @@ var alaadji
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	super()
 	alaadji = get_node("alaadji")
-	pass # Replace with function body.
+	Dialogic.start('picking berries')
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if alaadji.placed:
-		print("hi")
+		pass
+		#Dialogic.start('berries_spirits')
+
+func _on_dialogic_signal(argument:String):
+	if argument == "berries_scene_end":
 		scene_manager.change_scene(self, connected_scene)
-	pass

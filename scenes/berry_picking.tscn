@@ -6,7 +6,6 @@
 
 [node name="BerryPicking" type="Node2D"]
 script = ExtResource("1_dsw5r")
-connected_scene = "ytyk"
 
 [node name="Berries" parent="." instance=ExtResource("1_f6m44")]
 position = Vector2(949, 486)
