@@ -26,3 +26,14 @@ shape = SubResource("WorldBoundaryShape2D_hqnkh")
 
 [node name="Pan" parent="." instance=ExtResource("1_wdnwu")]
 position = Vector2(212, 527)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 510.0
+offset_top = 62.0
+offset_right = 683.0
+offset_bottom = 85.0
+grow_horizontal = 2
+text = "left right keys to move"

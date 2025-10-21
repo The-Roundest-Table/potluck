@@ -1,6 +1,7 @@
 extends BaseScene
 
 @onready var tart_copies: Node2D = $tart_copies
+@export var connected_scene: String
 
 
 # Called when the node enters the scene tree for the first time.

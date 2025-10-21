@@ -22,4 +22,5 @@ texture = SubResource("ImageTexture_x8m2p")
 script = ExtResource("1_x8m2p")
 
 [node name="FoodPopup" parent="." instance=ExtResource("2_f75s3")]
+visible = false
 position = Vector2(570, 324)

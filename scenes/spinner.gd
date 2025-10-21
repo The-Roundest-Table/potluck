@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 		print(int(rad_to_deg(rotation))%360)
 		if !get_owner().get_node("FoodPopup").opened:
 			get_owner().get_node("FoodPopup").open()
+		if get_owner().get_node("FoodPopup").closed:
+			scene_manager.change_scene(get_owner(),"heartcatcher")
 
 	
 func _input(event: InputEvent) -> void:
