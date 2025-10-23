@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxp6i4214nnof"]
+
+[ext_resource type="Texture2D" uid="uid://bjsnyc0dsa5lo" path="res://placeholders/hand2.png" id="1_uc51q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
+size = Vector2(272.9, 213.84686)
+
+[node name="Hand1" type="CharacterBody2D"]
+rotation = -0.029034635
+scale = Vector2(0.315, 0.315)
+
+[node name="Hand1Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("1_uc51q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-877.1234, 247.51044)
+scale = Vector2(0.99999905, 0.99999905)
+shape = SubResource("RectangleShape2D_553fv")

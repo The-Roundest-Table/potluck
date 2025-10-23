@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://beda38kvpiyoq"]
+
+[ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
+[ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
+[ext_resource type="Texture2D" uid="uid://bjsnyc0dsa5lo" path="res://placeholders/hand2.png" id="3_553fv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
+size = Vector2(272.9, 213.84686)
+
+[sub_resource type="SphereMesh" id="SphereMesh_avmg2"]
+radius = 100.0
+height = 69.686
+
+[sub_resource type="QuadMesh" id="QuadMesh_plan6"]
+size = Vector2(30, 400)
+
+[sub_resource type="Animation" id="Animation_hrjjl"]
+resource_name = "mixing"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y2g2y"]
+_data = {
+&"mixing": SubResource("Animation_hrjjl")
+}
+
+[node name="Mixing" type="Node2D"]
+script = ExtResource("1_hrjjl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Kyorchekh" type="Sprite2D" parent="."]
+position = Vector2(600, 431.00003)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_y2g2y")
+
+[node name="Hand1" type="CharacterBody2D" parent="."]
+position = Vector2(684.00006, 14.000002)
+rotation = -0.029034635
+scale = Vector2(0.315, 0.315)
+
+[node name="Hand1Sprite" type="Sprite2D" parent="Hand1"]
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("3_553fv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand1"]
+position = Vector2(-877.1234, 247.51044)
+scale = Vector2(0.99999905, 0.99999905)
+shape = SubResource("RectangleShape2D_553fv")
+
+[node name="Ytyk" type="Node2D" parent="."]
+position = Vector2(578, 211)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk"]
+modulate = Color(0.8334631, 0.6342708, 0.459468, 1)
+position = Vector2(8, 200)
+scale = Vector2(1.4752796, 1.3483449)
+mesh = SubResource("SphereMesh_avmg2")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Ytyk"]
+modulate = Color(0.877132, 0.71575254, 0.5691327, 1)
+position = Vector2(6, 191.50983)
+scale = Vector2(1.4115986, 1.1046754)
+mesh = SubResource("SphereMesh_avmg2")
+
+[node name="YtykMesh1" type="MeshInstance2D" parent="Ytyk"]
+modulate = Color(0.8260324, 0.6943411, 0.41869348, 1)
+position = Vector2(5, -12.5)
+scale = Vector2(1, 0.9375)
+mesh = SubResource("QuadMesh_plan6")
+
+[node name="Hand2" type="Sprite2D" parent="."]
+position = Vector2(784, 72)
+rotation = -0.029034635
+scale = Vector2(0.315, 0.315)
+texture = ExtResource("3_553fv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_y2g2y")
+}
