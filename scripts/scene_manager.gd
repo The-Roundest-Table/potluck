@@ -3,6 +3,7 @@ class_name Scene_Manager extends Node
 var last_scene_name: String
 var tart: Node2D
 var round = 1;
+var turn = 0;
 var scene_dir_path = "res://scenes/"
 var cutscene_dir_path = "res://cutscenes/"
 var spins = 0;
@@ -18,6 +19,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func update_turn():
+	turn +=1;
+	if turn > 4:
+		round +=1;
+		turn = 1;
+	
 
 func change_scene(from, to_scene_name: String) -> void:
 	last_scene_name = from.name
