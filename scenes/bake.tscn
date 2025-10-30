@@ -15,3 +15,5 @@ offset_top = 568.0
 offset_right = 665.0
 offset_bottom = 599.0
 text = "baking time"
+
+[node name="Timer" type="Timer" parent="."]
