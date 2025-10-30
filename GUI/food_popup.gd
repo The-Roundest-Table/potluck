@@ -14,11 +14,11 @@ func _process(delta: float) -> void:
 	if Input.is_anything_pressed() and opened and !closed:
 		close();
 
-func open():
+func open(name, desc):
 	visible = true
 	opened = true
-	$Control/name.text = "Test Name"
-	$Control/description.text = "test description"
+	$Control/name.text = name
+	$Control/description.text = desc
 	
 func close():
 	print("close")

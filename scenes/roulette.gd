@@ -3,7 +3,7 @@ extends BaseScene
 var rounds = [
 	['sate', 'stroganina', 'egg tofu', 'heartcatcher'],
 	['flapjack', 'mooncake', 'alaadji', 'nastar'],
-	['kyorchekh', 'es campur', 'tanghulu', 'heartcatcher'],
+	['kyorchekh', 'es campur', 'tanghulu', 'naijuan'],
 	['boba_tea', 'durian', 'ching bo leung', 'khaan']
 ]
 
@@ -38,3 +38,14 @@ func load_json_file():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_spinner_selection(choice) -> void:
+	#print_debug(choice)
+	print_debug(rounds[scene_manager.round][choice])
+	var name = food_descs.get(rounds[scene_manager.round][choice]).name
+	var desc = food_descs.get(rounds[scene_manager.round][choice]).description
+	
+	
+	get_node("FoodPopup").open(name, desc)
+	pass # Replace with function body.

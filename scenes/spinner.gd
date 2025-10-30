@@ -3,6 +3,10 @@ extends MeshInstance2D
 var speed = 0.1
 var stop = false
 var choice;
+var choices_remain = 4;
+
+signal selection;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,7 +22,9 @@ func _process(delta: float) -> void:
 	
 	if speed <= 0:
 		print(int(rad_to_deg(rotation))%360)
-		choice = int(rad_to_deg(rotation))%360
+		choice = int(rad_to_deg(rotation))%choices_remain
+		selection.emit(choice)
+		
 
 	
 func _input(event: InputEvent) -> void:

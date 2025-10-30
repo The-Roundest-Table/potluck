@@ -2,7 +2,9 @@ class_name Scene_Manager extends Node
 
 var last_scene_name: String
 var tart: Node2D
-var round = 1;
+var round = 0:
+	get:
+		return round;
 var turn = 0;
 var scene_dir_path = "res://scenes/"
 var cutscene_dir_path = "res://cutscenes/"
