@@ -24,6 +24,12 @@ scene_manager="*res://scripts/scene_manager.gd"
 
 directories/dch_directory={}
 directories/dtl_directory={
+"berries_ending1": "res://dialogue/berries_ending1.dtl",
+"berries_ending2": "res://dialogue/berries_ending2.dtl",
+"berries_mixing": "res://dialogue/berries_mixing.dtl",
+"berries_smell": "res://dialogue/berries_smell.dtl",
+"berries_spirits": "res://dialogue/berries_spirits.dtl",
+"picking berries": "res://dialogue/picking berries.dtl",
 "timeline": "res://dialogue/timeline.dtl"
 }
 layout/style_directory={}
@@ -62,5 +68,10 @@ dialogic_default_action={
 click={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(722, 40),"global_position":Vector2(741, 136),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+select={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }

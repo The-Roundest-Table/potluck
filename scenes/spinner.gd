@@ -2,7 +2,7 @@ extends MeshInstance2D
 
 var speed = 0.1
 var stop = false
-#var choice = [a, b, c, d]
+var choice;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,12 +18,9 @@ func _process(delta: float) -> void:
 	
 	if speed <= 0:
 		print(int(rad_to_deg(rotation))%360)
-		if !get_owner().get_node("FoodPopup").opened:
-			get_owner().get_node("FoodPopup").open()
-		if get_owner().get_node("FoodPopup").closed:
-			scene_manager.change_scene(get_owner(),"heartcatcher")
+		choice = int(rad_to_deg(rotation))%360
 
 	
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+	if event.is_action_pressed("select"):
 		stop = true

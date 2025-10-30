@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6bhdknts7y54"]
+[gd_scene load_steps=6 format=3 uid="uid://c6bhdknts7y54"]
 
+[ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
 [ext_resource type="PackedScene" uid="uid://b0ctfmbotm2gy" path="res://GUI/food_popup.tscn" id="2_f75s3"]
 
@@ -8,6 +9,7 @@
 [sub_resource type="ImageTexture" id="ImageTexture_x8m2p"]
 
 [node name="roulette" type="Node2D"]
+script = ExtResource("1_uqyis")
 
 [node name="table" type="MeshInstance2D" parent="."]
 position = Vector2(570.00006, 310)
