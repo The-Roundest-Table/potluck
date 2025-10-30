@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://beda38kvpiyoq"]
+[gd_scene load_steps=16 format=3 uid="uid://beda38kvpiyoq"]
 
 [ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
 [ext_resource type="Texture2D" uid="uid://bjsnyc0dsa5lo" path="res://placeholders/hand2.png" id="3_553fv"]
+[ext_resource type="Texture2D" uid="uid://dst4xmjeqwbjq" path="res://assets/timer_progress/timer_under.png" id="4_avmg2"]
+[ext_resource type="Texture2D" uid="uid://droxj63ksce45" path="res://assets/timer_progress/timer_over.png" id="5_plan6"]
+[ext_resource type="Texture2D" uid="uid://ctgqiy2qu5urg" path="res://assets/timer_progress/timer_progress.png" id="6_iuoun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
 size = Vector2(272.9, 213.84686)
@@ -133,16 +136,13 @@ _data = {
 &"mixing": SubResource("Animation_hrjjl")
 }
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_avmg2"]
+
 [node name="Mixing" type="Node2D"]
 script = ExtResource("1_hrjjl")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="Kyorchekh" type="Sprite2D" parent="."]
-position = Vector2(600, 431.00003)
+position = Vector2(600, 431)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_y2g2y")
 
@@ -161,24 +161,23 @@ scale = Vector2(0.99999905, 0.99999905)
 shape = SubResource("RectangleShape2D_553fv")
 
 [node name="Ytyk" type="Node2D" parent="."]
-position = Vector2(578, 211)
-rotation = 0.1675516
+position = Vector2(586, 41)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk"]
 modulate = Color(0.8334631, 0.6342708, 0.459468, 1)
-position = Vector2(8, 200)
+position = Vector2(0, 370)
 scale = Vector2(1.4752796, 1.3483449)
 mesh = SubResource("SphereMesh_avmg2")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="Ytyk"]
 modulate = Color(0.877132, 0.71575254, 0.5691327, 1)
-position = Vector2(6, 191.50983)
+position = Vector2(-2, 361.50983)
 scale = Vector2(1.4115986, 1.1046754)
 mesh = SubResource("SphereMesh_avmg2")
 
 [node name="YtykMesh1" type="MeshInstance2D" parent="Ytyk"]
 modulate = Color(0.8260324, 0.6943411, 0.41869348, 1)
-position = Vector2(5, -12.5)
+position = Vector2(-3, 157.5)
 scale = Vector2(1, 0.9375)
 mesh = SubResource("QuadMesh_plan6")
 
@@ -192,3 +191,39 @@ texture = ExtResource("3_553fv")
 libraries = {
 &"": SubResource("AnimationLibrary_y2g2y")
 }
+
+[node name="TimerDialogueAppear" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="RadialProgress" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 404.0
+offset_top = 343.00003
+offset_right = 646.0
+offset_bottom = 581.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.52, 0.525)
+max_value = 500.0
+fill_mode = 4
+texture_under = ExtResource("4_avmg2")
+texture_over = ExtResource("5_plan6")
+texture_progress = ExtResource("6_iuoun")
+
+[node name="TimerToStopProgress" type="Timer" parent="."]
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_avmg2")
+offset_right = 1214.0
+offset_bottom = 686.0
+color = Color(0, 0, 0, 0.8)
+
+[connection signal="timeout" from="TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
+[connection signal="timeout" from="TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]
