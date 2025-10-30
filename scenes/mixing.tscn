@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://beda38kvpiyoq"]
+[gd_scene load_steps=12 format=3 uid="uid://beda38kvpiyoq"]
 
 [ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
@@ -16,9 +16,120 @@ size = Vector2(30, 400)
 
 [sub_resource type="Animation" id="Animation_hrjjl"]
 resource_name = "mixing"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(684.00006, 14.000002), Vector2(788, 44.999996), Vector2(684.00006, 14.000002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(784, 72), Vector2(689.0001, 81.00001), Vector2(784, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_y2g2y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684.00006, 14.000002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(784, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_553fv"]
+resource_name = "mix_right"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684.00006, 14.000002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(784, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_avmg2"]
+resource_name = "mix_left"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(689.95013, 80.91001)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(786.96, 44.689995)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y2g2y"]
 _data = {
+&"RESET": SubResource("Animation_y2g2y"),
+&"mix_left": SubResource("Animation_avmg2"),
+&"mix_right": SubResource("Animation_553fv"),
 &"mixing": SubResource("Animation_hrjjl")
 }
 
@@ -26,6 +137,7 @@ _data = {
 script = ExtResource("1_hrjjl")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -50,6 +162,7 @@ shape = SubResource("RectangleShape2D_553fv")
 
 [node name="Ytyk" type="Node2D" parent="."]
 position = Vector2(578, 211)
+rotation = 0.1675516
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk"]
 modulate = Color(0.8334631, 0.6342708, 0.459468, 1)
