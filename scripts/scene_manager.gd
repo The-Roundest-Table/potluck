@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 
 func update_turn():
 	turn +=1;
-	if turn > 4:
+	if turn > 3:
 		round +=1;
 		turn = 1;
 	

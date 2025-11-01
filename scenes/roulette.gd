@@ -4,14 +4,16 @@ var rounds = [
 	['sate', 'stroganina', 'egg tofu', 'heartcatcher'],
 	['flapjack', 'mooncake', 'alaadji', 'nastar'],
 	['kyorchekh', 'es campur', 'tanghulu', 'naijuan'],
-	['boba_tea', 'durian', 'ching bo leung', 'khaan']
+	['boba', 'durian', 'ching bo leung', 'khaan']
 ]
 
 var foods_json = "res://scripts/foods.json"
 var food_descs: Dictionary = {}
+@onready var popup;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	popup = get_node("FoodPopup")
 	load_json_file()
 	print(food_descs.get(rounds[0][1]).name)
 	super()
@@ -37,15 +39,20 @@ func load_json_file():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if popup.opened:
+		print_debug("close please")
 	pass
 
 
 func _on_spinner_selection(choice) -> void:
 	#print_debug(choice)
-	print_debug(rounds[scene_manager.round][choice])
-	var name = food_descs.get(rounds[scene_manager.round][choice]).name
-	var desc = food_descs.get(rounds[scene_manager.round][choice]).description
-	
-	
-	get_node("FoodPopup").open(name, desc)
+	#print_debug(rounds[scene_manager.round][choice])
+	var item = rounds[scene_manager.round][choice]
+	#var item = 'sate'
+	if "heartcatcher nastar boba kyorchekh".contains(item):
+		scene_manager.change_scene(self, item);
+	else:
+		var name = food_descs.get(item).name
+		var desc = food_descs.get(item).description
+		popup.open(name, desc)
 	pass # Replace with function body.

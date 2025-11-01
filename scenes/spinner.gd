@@ -24,9 +24,15 @@ func _process(delta: float) -> void:
 		print(int(rad_to_deg(rotation))%360)
 		choice = int(rad_to_deg(rotation))%choices_remain
 		selection.emit(choice)
+		scene_manager.update_turn()
+		print_debug(str("round: ",scene_manager.round, "turn", scene_manager.turn))
+		stop = false
+		speed = 0.1
+		
 		
 
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("select"):
 		stop = true
+		
