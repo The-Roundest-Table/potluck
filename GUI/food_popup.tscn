@@ -7,8 +7,8 @@
 [node name="FoodPopup" type="Node2D"]
 script = ExtResource("1_icyk3")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(44.625, 23.999998)
+[node name="card" type="Sprite2D" parent="."]
+scale = Vector2(44.625, 33.375)
 texture = ExtResource("1_jln6d")
 
 [node name="food" type="Sprite2D" parent="."]

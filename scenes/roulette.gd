@@ -54,5 +54,6 @@ func _on_spinner_selection(choice) -> void:
 	else:
 		var name = food_descs.get(item).name
 		var desc = food_descs.get(item).description
-		popup.open(name, desc)
+		var art = food_descs.get(item).art
+		popup.open(name, desc, art)
 	pass # Replace with function body.

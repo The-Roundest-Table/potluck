@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://d05d5fofk8e6r"]
+
+[ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="1_h827o"]
+[ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="2_jk72h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h827o"]
+atlas = ExtResource("1_h827o")
+region = Rect2(0, 0, 6326, 4582)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jk72h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h827o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cookbook" type="AnimatedSprite2D"]
+scale = Vector2(0.12265386, 0.12265387)
+sprite_frames = SubResource("SpriteFrames_jk72h")
+script = ExtResource("2_jk72h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="food1" type="Sprite2D" parent="."]
+
+[node name="food2" type="Sprite2D" parent="."]
+
+[node name="food3" type="Sprite2D" parent="."]
+
+[node name="food4" type="Sprite2D" parent="."]
+
+[node name="left" type="TextureButton" parent="."]
+offset_left = -3106.3027
+offset_top = -2291.0
+offset_right = -2413.2957
+offset_bottom = 2217.623
+
+[node name="right" type="TextureButton" parent="."]
+offset_left = 2462.2188
+offset_top = -2291.0
+offset_right = 3155.2258
+offset_bottom = 2217.623
+
+[connection signal="button_down" from="left" to="." method="_on_left_button_down"]
+[connection signal="button_down" from="right" to="." method="_on_right_button_down"]
