@@ -3,6 +3,7 @@ extends BaseScene
 @export var tomato : PackedScene
 @onready var player: CharacterBody2D = $Pan
 @export var connected_scene: String
+@onready var tomatoCounter = $RichTextLabel;
 var tomatoes = [];
 
 var tomcount = 0;
@@ -21,6 +22,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time += delta;
+	
+	$RichTextLabel.text = str(tomcount, "/20 caught")
 
 	if time > TIME_PERIOD:
 		var new_icon = tomato.instantiate();

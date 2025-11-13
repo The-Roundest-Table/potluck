@@ -13,7 +13,7 @@ normal = Vector2(-1, 0)
 [node name="heartcatcher" type="Node2D"]
 script = ExtResource("1_hqnkh")
 tomato = ExtResource("2_hqnkh")
-connected_scene = "boba_tea"
+connected_scene = "heart_sauce"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -37,3 +37,8 @@ offset_right = 683.0
 offset_bottom = 85.0
 grow_horizontal = 2
 text = "left right keys to move"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 244.0
+offset_bottom = 142.0
+theme_override_font_sizes/normal_font_size = 30

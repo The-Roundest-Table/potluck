@@ -1,80 +1,96 @@
 { "sate": {
 		"name": "sate",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"stroganina": {
 		"name": "stroganina",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"egg tofu": {
 		"name": "egg tofu",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"heartcatcher": {
 		"name": "西红柿鸡蛋面",
+		"art": "res://assets/final/noodle.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"flapjack": {
 		"name": "flapjack",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"mooncake": {
 		"name": "mooncake",
+		"art": "res://assets/final/mooncake.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"alaadji": {
 		"name": "alaadji",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"nastar": {
 		"name": "nastar",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"kyorchekh": {
 		"name": "kyorchekh",
+		"art": "res://assets/food art/yogurt.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"tanghulu": {
 		"name": "tanghulu",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"naijuan": {
 		"name": "naijuan",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"es campur": {
 		"name": "es campur",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
-	"boba tea": {
+	"boba": {
 		"name": "boba tea",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"durian": {
 		"name": "durian",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"ching bo leung": {
 		"name": "ching bo leung",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},
 	"khaan": {
 		"name": "khaan",
+		"art": "res://assets/final/stroganina.png",
 		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
 		"ingredients": ["test", "test2"]
 	},

@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://civt2xg2ko08r"]
+[gd_scene load_steps=2 format=3 uid="uid://civt2xg2ko08r"]
+
+[ext_resource type="Script" uid="uid://beuqqjd2tvmav" path="res://cutscenes/mixue.gd" id="1_3dgju"]
 
 [node name="WinScene" type="Node2D"]
+script = ExtResource("1_3dgju")
+connected_scene = "roulette"

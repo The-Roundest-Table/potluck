@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6bhdknts7y54"]
+[gd_scene load_steps=7 format=3 uid="uid://c6bhdknts7y54"]
 
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
 [ext_resource type="PackedScene" uid="uid://b0ctfmbotm2gy" path="res://GUI/food_popup.tscn" id="2_f75s3"]
+[ext_resource type="PackedScene" uid="uid://d05d5fofk8e6r" path="res://GUI/cookbook.tscn" id="4_u4f06"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qcl6x"]
 
@@ -26,5 +27,9 @@ script = ExtResource("1_x8m2p")
 [node name="FoodPopup" parent="." instance=ExtResource("2_f75s3")]
 visible = false
 position = Vector2(570, 324)
+
+[node name="Cookbook" parent="." instance=ExtResource("4_u4f06")]
+visible = false
+position = Vector2(581, 333)
 
 [connection signal="selection" from="spinner" to="." method="_on_spinner_selection"]
