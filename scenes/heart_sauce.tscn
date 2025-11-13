@@ -1,66 +1,375 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfehqv12l0k2q"]
+[gd_scene load_steps=13 format=3 uid="uid://bfehqv12l0k2q"]
 
 [ext_resource type="Script" uid="uid://dqsawdpnhf723" path="res://scripts/drawing.gd" id="1_3a0ey"]
-[ext_resource type="Texture2D" uid="uid://cy1y3ntrll527" path="res://assets/pan.png" id="2_ica5x"]
-[ext_resource type="Texture2D" uid="uid://cs7u5cyw2r4u8" path="res://assets/heart.jpg" id="3_ica5x"]
+[ext_resource type="Texture2D" uid="uid://b0ojos4jb6vrq" path="res://assets/noodles/noodle_0009_图层-11.png" id="3_7668r"]
+[ext_resource type="Texture2D" uid="uid://dcbhbyu0ynpbf" path="res://assets/noodles/DASH LINE.png" id="3_g81xc"]
+[ext_resource type="Texture2D" uid="uid://4ae8p8tagxrc" path="res://assets/noodles/whole.png" id="3_ica5x"]
+[ext_resource type="Texture2D" uid="uid://do01mh6nmt0eq" path="res://assets/placeholder/scallions.png" id="3_oitc8"]
+[ext_resource type="Texture2D" uid="uid://bf0ylkkbgcbft" path="res://assets/noodles/noodle_0008_bowl-拷贝.png" id="4_1qdqn"]
+[ext_resource type="Texture2D" uid="uid://beagsdqwwmaov" path="res://assets/placeholder/soy-sauce-peking-duck-kikkoman-bottle-bottle-f70ef99f0ea6d017a9d13fd3a746bb3f.png" id="7_dxa4t"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_87eaw"]
-
-[sub_resource type="Curve2D" id="Curve2D_oitc8"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55.050507, 23.737373, 0, 0, 0, 0, 94.44446, 58.58586, 0, 0, 0, 0, 124.24243, 25.757576, 0, 0, 0, 0, 173.23233, -1.0100975, 0, 0, 0, 0, 228.28284, 29.29293, 0, 0, 0, 0, 217.67676, 83.83839, 0, 0, 0, 0, 172.72726, 163.63635, 0, 0, 0, 0, 95.45456, 224.2424, 0, 0, 0, 0, 14.141418, 161.61615, 0, 0, 0, 0, -39.39392, 92.9293, 0, 0, 0, 0, -41.919174, 35.35354, -20.505, 3.895, 0, 0, 0, 0)
+[sub_resource type="Animation" id="Animation_g81xc"]
+resource_name = "sauce_dripping_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoySauce/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(96, -132), Vector2(92, -234)]
 }
-point_count = 13
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoySauce/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="QuadMesh" id="QuadMesh_7668r"]
+[sub_resource type="Animation" id="Animation_dxa4t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoySauce/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(96, -132)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoySauce/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("scallions:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_abkel"]
+resource_name = "sauce_dripping_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SoySauce/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(92, -234), Vector2(96, -132)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SoySauce/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1mu0l"]
+resource_name = "scallions"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scallions:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1mu0l"]
+_data = {
+&"RESET": SubResource("Animation_dxa4t"),
+&"sauce_dripping_in": SubResource("Animation_g81xc"),
+&"sauce_dripping_out": SubResource("Animation_abkel"),
+&"scallions": SubResource("Animation_1mu0l")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3a0ey")
 connected_scene = "roulette"
 
+[node name="baseLayer" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 247.0
+offset_top = 74.0
+offset_right = 1351.0
+offset_bottom = 908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("3_ica5x")
+
+[node name="dashLine" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 420.0
+offset_top = 165.0
+offset_right = 1524.0
+offset_bottom = 999.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_g81xc")
+
 [node name="Line2D" type="Line2D" parent="."]
+modulate = Color(1, 1, 1, 0.53333336)
 points = PackedVector2Array(143, 202)
-texture = ExtResource("2_ica5x")
 texture_mode = 1
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-visible = false
-position = Vector2(462, -26.000006)
-rotation = 0.7505084
-scale = Vector2(573.5, 276.40378)
-mesh = SubResource("BoxMesh_87eaw")
+[node name="background" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 247.0
+offset_top = 74.0
+offset_right = 1351.0
+offset_bottom = 908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("3_7668r")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
-visible = false
-position = Vector2(146.00002, 175.00003)
-rotation = 2.0931702
-scale = Vector2(573.5, 262.5)
-mesh = SubResource("BoxMesh_87eaw")
+[node name="background2" type="TextureRect" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -616.0
+offset_top = -465.6
+offset_right = 1448.4922
+offset_bottom = 462.40002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
-visible = false
-position = Vector2(945.99994, 7.999996)
-rotation = 2.4077694
-scale = Vector2(388.13055, 728.5937)
-mesh = SubResource("BoxMesh_87eaw")
+[node name="background3" type="TextureRect" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3109.5964
+offset_top = -464.0
+offset_right = 5603.193
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-visible = false
+[node name="background2" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 183.0
+offset_top = 26.999996
+offset_right = 1415.0
+offset_bottom = 955.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.625, -0.625)
+texture = ExtResource("3_7668r")
 
-[node name="Path2D" type="Path2D" parent="."]
-visible = false
-position = Vector2(374.99997, 108.99999)
-scale = Vector2(1.98, 1.98)
-curve = SubResource("Curve2D_oitc8")
+[node name="background2" type="TextureRect" parent="background2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -616.0
+offset_top = -465.6
+offset_right = 616.0
+offset_bottom = 462.40002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(72.05489, 206.2203)
-rotation = -2.4852972
-progress = 550.46
+[node name="background3" type="TextureRect" parent="background2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1848.0
+offset_top = -464.0
+offset_right = 3080.0
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Path2D/PathFollow2D"]
-position = Vector2(5.2520294, 5.271)
-rotation = 2.7452943
-scale = Vector2(28.878128, 26.810612)
-mesh = SubResource("QuadMesh_7668r")
-texture = ExtResource("3_ica5x")
+[node name="background3" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 183.00002
+offset_top = 1184.0
+offset_right = 1415.0
+offset_bottom = 2112.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.625, -0.625)
+texture = ExtResource("3_7668r")
+
+[node name="background2" type="TextureRect" parent="background3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -616.0
+offset_top = -465.6
+offset_right = 616.0
+offset_bottom = 462.40002
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
+
+[node name="background3" type="TextureRect" parent="background3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1848.0
+offset_top = -464.0
+offset_right = 3080.0
+offset_bottom = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = ExtResource("3_7668r")
+
+[node name="topLayer" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 247.0
+offset_top = 74.0
+offset_right = 1351.0
+offset_bottom = 908.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("4_1qdqn")
+
+[node name="scallions" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 549.0
+offset_top = 255.0
+offset_right = 589.0
+offset_bottom = 295.0
+
+[node name="scallion" type="TextureRect" parent="scallions"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 925.0
+offset_bottom = 700.0
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("3_oitc8")
+
+[node name="SoySauce" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="SoySauce"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -20.0
+offset_top = -113.0
+offset_right = 20.0
+color = Color(0.5817762, 0.3273691, 0.22571844, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="SoySauce"]
+position = Vector2(96, -132)
+rotation = -2.2096488
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("7_dxa4t")
+
+[node name="ScallionsButton" type="TextureButton" parent="."]
+offset_left = 31.0
+offset_top = 511.0
+offset_right = 1141.0
+offset_bottom = 1123.0
+scale = Vector2(0.19, 0.19)
+texture_normal = ExtResource("3_oitc8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1mu0l")
+}
+
+[connection signal="pressed" from="ScallionsButton" to="." method="_on_scallions_button_pressed"]
