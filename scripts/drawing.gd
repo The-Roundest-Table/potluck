@@ -52,6 +52,6 @@ func _process(delta: float) -> void:
 func _on_dialogic_signal(argument:String):
 	if argument == "heartsauce_done":
 		scene_manager.change_scene(self, connected_scene)
-	#if argument == "scallions_sprinkle":
-		#animator.play("scallions")
+	if argument == "scallions_sprinkle":
+		animator.play("scallions")
 		#sauce = false

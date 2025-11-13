@@ -4,6 +4,7 @@ extends BaseScene
 @onready var player: CharacterBody2D = $Pan
 @export var connected_scene: String
 @onready var tomatoCounter = $RichTextLabel;
+@onready var progressBar = $ProgressBar
 var tomatoes = [];
 
 var tomcount = 0;
@@ -40,4 +41,5 @@ func _process(delta: float) -> void:
 
 func on_tomato_caught():
 	tomcount+=1
+	progressBar.value += 1
 	print(tomcount)

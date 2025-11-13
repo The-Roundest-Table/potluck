@@ -42,3 +42,10 @@ text = "left right keys to move"
 offset_right = 244.0
 offset_bottom = 142.0
 theme_override_font_sizes/normal_font_size = 30
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 887.0
+offset_top = 25.0
+offset_right = 1123.0
+offset_bottom = 52.0
+max_value = 20.0
