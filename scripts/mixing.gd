@@ -5,10 +5,10 @@ extends Node2D
 @onready var timerStopProgress = $TimerToStopProgress
 @onready var progressBar = $RadialProgress
 var Mixing:bool = false
+var DialogueCount = 0
 
 func _ready() -> void:
-	pass
-	#timerForDialogue.start()
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
@@ -46,11 +46,28 @@ func _process(delta: float) -> void:
 		#$ProgressBar.value += 1*delta  
 	#else:  
 		#$ProgressBar.value = 0
+	#print(DialogueCount)
 	if progressBar.value == 500:
 		#Dialogic.start('berries_mixing')
 		#timerStopProgress.start()
 		progressBar.value = 0
-		Dialogic.start('berries_mixing')
+		DialogueCount += 1
+		if DialogueCount == 1:
+			Dialogic.start('berries_mixing')
+		if DialogueCount == 2:
+			Dialogic.start('berries_mixing', 'string2')
+		if DialogueCount == 3:
+			Dialogic.start('berries_mixing', 'string3')
+		if DialogueCount == 4:
+			Dialogic.start('berries_mixing', 'string4')
+		if DialogueCount == 5:
+			Dialogic.start('berries_mixing', 'string5')
+		if DialogueCount == 6:
+			Dialogic.start('berries_mixing', 'string6')
+		if DialogueCount == 7:
+			Dialogic.start('berries_mixing', 'string7')
+			
+		
 	
 
 
@@ -59,3 +76,12 @@ func _on_timer_to_stop_progress_timeout() -> void:
 	print("timer to stop progress")
 	timerForDialogue.stop()
 	progressBar.value = 0
+func _on_dialogic_signal(argument:String):
+	if argument == "mixing_ended":
+		#print("mixing ended")
+		if DialogueCount == 7:
+			Dialogic.start('berries_ending2')
+		if DialogueCount <= 4:
+			Dialogic.start('berries_ending1')
+		if DialogueCount > 4 && DialogueCount < 7:
+			Dialogic.start('berries_ending3')

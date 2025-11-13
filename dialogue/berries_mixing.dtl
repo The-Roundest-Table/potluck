@@ -1,26 +1,15 @@
 I have a complicated relationship with my mother.
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string2
 She never accepted me being queer. And she didn't believe me when I needed it the most.
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string3
 Hate and fear has been cultivated in the society we grew up.
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string4
 Just like I never truly know who I am. I never truly know if she actually loves me or hates me
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string5
 But I still remember the song she sang me to put me to sleep. I remember smiles, warmth, hugs. Sakha kisses when you kiss your relatives by smelling them
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string6
 I don't know how much of all these complications is just life or colonialism. Or other structures.
-- Keep reading
-- Keep mixing
-	jump berries_ending2/
+label string7
 I remember. So it means I resist
-jump berries_ending1/
+[signal arg="mixing_ended"]
+[end_timeline]
