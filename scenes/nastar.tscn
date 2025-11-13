@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://xa588w3i8hex"]
+[gd_scene load_steps=6 format=3 uid="uid://xa588w3i8hex"]
 
-[ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar_decor_game.gd" id="1_ghgsh"]
+[ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar.gd" id="1_ghgsh"]
+[ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_rbor1"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
 [ext_resource type="Texture2D" uid="uid://j3h6tk2x3kbf" path="res://sprites/page.png" id="3_ddy2s"]
 
-[node name="nastar_decor_game" type="Node"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_nmjgn"]
+radius = 71.17584
+
+[node name="nastar" type="Node"]
 script = ExtResource("1_ghgsh")
 connected_scene = "bake"
 
@@ -66,6 +70,7 @@ text = "H"
 [node name="tart" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(568, 305)
+script = ExtResource("2_rbor1")
 
 [node name="nastar_base" parent="tart" instance=ExtResource("2_samfg")]
 
@@ -109,9 +114,17 @@ visible = false
 position = Vector2(-12, -69)
 texture = ExtResource("3_ddy2s")
 
+[node name="thing" type="Area2D" parent="tart"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tart/thing"]
+shape = SubResource("CircleShape2D_nmjgn")
+
 [node name="finish" type="Button" parent="."]
 offset_left = 889.0
 offset_top = 26.0
 offset_right = 1125.0
 offset_bottom = 104.0
 text = "Ready to Bake!"
+
+[connection signal="mouse_entered" from="tart/thing" to="tart" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="tart/thing" to="tart" method="_on_area_2d_mouse_exited"]

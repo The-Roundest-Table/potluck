@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1yc2tygvpjio"]
+[gd_scene load_steps=9 format=3 uid="uid://d1yc2tygvpjio"]
 
 [ext_resource type="Script" uid="uid://bm6xab0jtlsm3" path="res://scenes/tower.gd" id="1_qrbg1"]
 [ext_resource type="PackedScene" uid="uid://clydxw6hsdi4x" path="res://boba_player.tscn" id="1_u577f"]
 [ext_resource type="Script" uid="uid://b02by6n0rup4j" path="res://scripts/tower.gd" id="2_ay4al"]
 [ext_resource type="PackedScene" uid="uid://dj4eiubd4chqq" path="res://scenes/bullet.tscn" id="2_ktxwe"]
+[ext_resource type="Texture2D" uid="uid://j1kq401ifg3g" path="res://assets/boba/tower.png" id="5_jfguu"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktxwe"]
 size = Vector3(125, 600, 1)
@@ -35,6 +36,7 @@ position = Vector2(933, 61)
 target_position = Vector2(-958, 586)
 
 [node name="TowerMesh" type="MeshInstance2D" parent="TowerAsset"]
+visible = false
 position = Vector2(933, 361.00003)
 mesh = SubResource("BoxMesh_ktxwe")
 
@@ -53,5 +55,10 @@ position = Vector2(73.000015, 583)
 
 [node name="winTimer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="Tower" type="Sprite2D" parent="."]
+position = Vector2(927, 348.99997)
+scale = Vector2(0.6228448, 0.6228448)
+texture = ExtResource("5_jfguu")
 
 [connection signal="timeout" from="TowerAsset/Timer" to="TowerAsset" method="_on_timer_timeout"]

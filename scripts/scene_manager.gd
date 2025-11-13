@@ -30,7 +30,7 @@ func update_turn():
 
 func change_scene(from, to_scene_name: String) -> void:
 	last_scene_name = from.name
-	if from.name == "nastar_decor_game":
+	if from.name == "nastar":
 		tart = from.tart
 		tart.get_parent().remove_child(tart)
 	

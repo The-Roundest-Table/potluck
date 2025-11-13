@@ -26,9 +26,12 @@ directories/dch_directory={}
 directories/dtl_directory={
 "berries_ending1": "res://dialogue/berries_ending1.dtl",
 "berries_ending2": "res://dialogue/berries_ending2.dtl",
+"berries_ending3": "res://dialogue/berries_ending3.dtl",
 "berries_mixing": "res://dialogue/berries_mixing.dtl",
+"berries_mixing2": "res://dialogue/berries_mixing2.dtl",
 "berries_smell": "res://dialogue/berries_smell.dtl",
 "berries_spirits": "res://dialogue/berries_spirits.dtl",
+"heartsauce": "res://dialogue/heartsauce.dtl",
 "picking berries": "res://dialogue/picking berries.dtl",
 "timeline": "res://dialogue/timeline.dtl"
 }
