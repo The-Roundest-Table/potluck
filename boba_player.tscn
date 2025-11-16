@@ -1,26 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://clydxw6hsdi4x"]
+[gd_scene load_steps=5 format=3 uid="uid://clydxw6hsdi4x"]
 
 [ext_resource type="Script" uid="uid://cuaxo5mwf02r0" path="res://scripts/player_movement.gd" id="1_endmv"]
-[ext_resource type="Texture2D" uid="uid://cgg40gr8xi84j" path="res://sprites/potion.png" id="1_y7101"]
+[ext_resource type="Texture2D" uid="uid://cqwkd514cx0ch" path="res://assets/boba/final-boba.png" id="2_y7101"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y7101"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7101"]
+size = Vector2(74, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk6wn"]
+size = Vector2(74, 103)
 
 [node name="boba_player" type="CharacterBody2D"]
-scale = Vector2(3.4375, 3.4375)
 
 [node name="moving" type="Node" parent="."]
 script = ExtResource("1_endmv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_y7101")
+position = Vector2(-7, 15)
+shape = SubResource("RectangleShape2D_y7101")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_y7101")
+scale = Vector2(0.16859505, 0.16859497)
+texture = ExtResource("2_y7101")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.999998, 14.499999)
 scale = Vector2(0.99999994, 0.99999994)
-shape = SubResource("CircleShape2D_y7101")
+shape = SubResource("RectangleShape2D_lk6wn")
 
 [connection signal="area_entered" from="Area2D" to="moving" method="_on_area_2d_area_entered"]

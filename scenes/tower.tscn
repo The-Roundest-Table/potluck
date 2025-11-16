@@ -1,10 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1yc2tygvpjio"]
+[gd_scene load_steps=23 format=3 uid="uid://d1yc2tygvpjio"]
 
 [ext_resource type="Script" uid="uid://bm6xab0jtlsm3" path="res://scenes/tower.gd" id="1_qrbg1"]
 [ext_resource type="PackedScene" uid="uid://clydxw6hsdi4x" path="res://boba_player.tscn" id="1_u577f"]
 [ext_resource type="Script" uid="uid://b02by6n0rup4j" path="res://scripts/tower.gd" id="2_ay4al"]
+[ext_resource type="Texture2D" uid="uid://60o118snfusj" path="res://assets/decoration/pearl-tower_0001_c1.png" id="2_k4j06"]
 [ext_resource type="PackedScene" uid="uid://dj4eiubd4chqq" path="res://scenes/bullet.tscn" id="2_ktxwe"]
 [ext_resource type="Texture2D" uid="uid://j1kq401ifg3g" path="res://assets/boba/tower.png" id="5_jfguu"]
+[ext_resource type="Texture2D" uid="uid://bqedgtm6u2fqi" path="res://assets/decoration/pearl-tower_0002_c2.png" id="7_i2ndj"]
+[ext_resource type="Texture2D" uid="uid://b04e0les4x1g2" path="res://assets/decoration/boba-tea_0006_light-pink-star.png" id="8_2vbvo"]
+[ext_resource type="Texture2D" uid="uid://duh0c14yqh06w" path="res://assets/decoration/boba-tea_0005_pink-star-s.png" id="9_64n81"]
+[ext_resource type="Texture2D" uid="uid://cvw1k37mrugg" path="res://assets/decoration/boba-tea_0004_blue-star.png" id="10_kw3tj"]
+[ext_resource type="Texture2D" uid="uid://deflnu0snvu0l" path="res://assets/decoration/boba-tea_0002_light-blue-star.png" id="11_k6fnl"]
+[ext_resource type="Texture2D" uid="uid://chgxplm4celxk" path="res://assets/decoration/boba-tea_0001_yellow-star.png" id="12_3hems"]
+[ext_resource type="Texture2D" uid="uid://dik2n8ciy674i" path="res://assets/decoration/boba-tea_0000_pink-star.png" id="13_xxmqw"]
+[ext_resource type="Texture2D" uid="uid://b2lkyawlh6qmh" path="res://assets/decoration/boba-tea_0003_orange-star.png" id="14_3hems"]
+[ext_resource type="Texture2D" uid="uid://u52xa8e651bj" path="res://assets/decoration/pearl-tower_0004_s2.png" id="15_xxmqw"]
+[ext_resource type="Texture2D" uid="uid://b1yh5eu42e0c5" path="res://assets/decoration/pearl-tower_0007_p1.png" id="16_xh8a6"]
+[ext_resource type="Texture2D" uid="uid://dav53nd2743oa" path="res://assets/decoration/pearl-tower_0008_p2.png" id="17_v1bxd"]
+[ext_resource type="Texture2D" uid="uid://bi2tmt5dul30x" path="res://assets/decoration/pearl-tower_0009_blue-dot.png" id="18_cjdug"]
+[ext_resource type="Texture2D" uid="uid://dc1le7afrqk4c" path="res://assets/decoration/pearl-tower_0010_red-dot.png" id="19_dyfdg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktxwe"]
 size = Vector3(125, 600, 1)
@@ -19,6 +33,13 @@ normal = Vector2(-1, 0)
 script = ExtResource("1_qrbg1")
 death_scene = "starbucks"
 win_scene = "mixue"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="PearlTower0001C1" type="Sprite2D" parent="."]
+position = Vector2(867, 71)
+scale = Vector2(0.6614907, 0.6614907)
+texture = ExtResource("2_k4j06")
 
 [node name="TowerAsset" type="Node2D" parent="." node_paths=PackedStringArray("start")]
 script = ExtResource("2_ay4al")
@@ -54,11 +75,88 @@ shape = SubResource("WorldBoundaryShape2D_cy281")
 position = Vector2(73.000015, 583)
 
 [node name="winTimer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 20.0
+one_shot = true
+autostart = true
 
 [node name="Tower" type="Sprite2D" parent="."]
-position = Vector2(927, 348.99997)
+position = Vector2(926, 357)
 scale = Vector2(0.6228448, 0.6228448)
 texture = ExtResource("5_jfguu")
 
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 53.0
+offset_top = 44.0
+offset_right = 346.0
+offset_bottom = 90.0
+max_value = 20.0
+
+[node name="PearlTower0002C2" type="Sprite2D" parent="."]
+position = Vector2(1065, 88)
+scale = Vector2(0.67156863, 0.67156863)
+texture = ExtResource("7_i2ndj")
+
+[node name="BobaTea0006LightPinkStar" type="Sprite2D" parent="."]
+position = Vector2(688.25, 56.868423)
+scale = Vector2(0.23684211, 0.23684213)
+texture = ExtResource("8_2vbvo")
+
+[node name="BobaTea0005PinkStarS" type="Sprite2D" parent="."]
+position = Vector2(713.25, 202)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("9_64n81")
+
+[node name="PearlTower0001C2" type="Sprite2D" parent="."]
+position = Vector2(1029, 602.00006)
+scale = Vector2(0.7670808, 0.7670807)
+texture = ExtResource("2_k4j06")
+
+[node name="BobaTea0004BlueStar" type="Sprite2D" parent="."]
+position = Vector2(1070, 617)
+texture = ExtResource("10_kw3tj")
+
+[node name="BobaTea0002LightBlueStar" type="Sprite2D" parent="."]
+position = Vector2(431, 113.99999)
+scale = Vector2(0.34000003, 0.34)
+texture = ExtResource("11_k6fnl")
+
+[node name="BobaTea0001YellowStar" type="Sprite2D" parent="."]
+position = Vector2(441, 151)
+scale = Vector2(0.24712643, 0.24712643)
+texture = ExtResource("12_3hems")
+
+[node name="BobaTea0000PinkStar" type="Sprite2D" parent="."]
+position = Vector2(973.00006, 459.00003)
+scale = Vector2(0.26106194, 0.26106194)
+texture = ExtResource("13_xxmqw")
+
+[node name="BobaTea0003OrangeStar" type="Sprite2D" parent="."]
+position = Vector2(880.00006, 343)
+scale = Vector2(0.39440992, 0.39440992)
+texture = ExtResource("14_3hems")
+
+[node name="PearlTower0004S2" type="Sprite2D" parent="."]
+position = Vector2(880, 73)
+scale = Vector2(0.5294118, 0.52941173)
+texture = ExtResource("15_xxmqw")
+
+[node name="PearlTower0007P1" type="Sprite2D" parent="."]
+position = Vector2(836, 594)
+scale = Vector2(0.703252, 0.67054266)
+texture = ExtResource("16_xh8a6")
+
+[node name="PearlTower0008P2" type="Sprite2D" parent="."]
+position = Vector2(888.25, 632)
+scale = Vector2(0.7932331, 0.75757575)
+texture = ExtResource("17_v1bxd")
+
+[node name="PearlTower0009BlueDot" type="Sprite2D" parent="."]
+position = Vector2(124, 279)
+texture = ExtResource("18_cjdug")
+
+[node name="PearlTower0010RedDot" type="Sprite2D" parent="."]
+position = Vector2(1058, 283)
+texture = ExtResource("19_dyfdg")
+
 [connection signal="timeout" from="TowerAsset/Timer" to="TowerAsset" method="_on_timer_timeout"]
+[connection signal="timeout" from="winTimer" to="." method="_on_win_timer_timeout"]

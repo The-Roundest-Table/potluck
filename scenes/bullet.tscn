@@ -1,20 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dj4eiubd4chqq"]
 
 [ext_resource type="Script" uid="uid://buyb7auobt2xb" path="res://scripts/bullet.gd" id="1_mkf8s"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ay4al"]
-size = Vector3(4.99, 20.325, 1)
+[ext_resource type="Texture2D" uid="uid://bvq33neu702im" path="res://assets/boba/laser2.png" id="1_y25gk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ay4al"]
-size = Vector2(5, 20)
+size = Vector2(5, 59.81982)
 
 [node name="Sprite2D" type="Sprite2D"]
 script = ExtResource("1_mkf8s")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-modulate = Color(0.9222896, 0.072116144, 0.6038049, 1)
-scale = Vector2(2.775, 2.775)
-mesh = SubResource("BoxMesh_ay4al")
+[node name="MeshInstance2D" type="Sprite2D" parent="."]
+position = Vector2(-15, -15.000003)
+rotation = 0.43633232
+scale = Vector2(0.19495644, 0.19495651)
+texture = ExtResource("1_y25gk")
 
 [node name="Bullet" type="Area2D" parent="."]
 scale = Vector2(2.775, 2.775)
@@ -23,5 +22,6 @@ scale = Vector2(2.775, 2.775)
 shape = SubResource("RectangleShape2D_ay4al")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="Bullet"]
+rect = Rect2(-10, -29.90991, 20, 59.81982)
 
 [connection signal="screen_exited" from="Bullet/VisibleOnScreenEnabler2D" to="Bullet" method="_on_visible_on_screen_enabler_2d_screen_exited"]
