@@ -28,6 +28,7 @@ normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cy281"]
 normal = Vector2(-1, 0)
+distance = 274.0
 
 [node name="Tower" type="Node2D"]
 script = ExtResource("1_qrbg1")
@@ -62,7 +63,7 @@ position = Vector2(933, 361.00003)
 mesh = SubResource("BoxMesh_ktxwe")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 2
+collision_layer = 3
 
 [node name="left" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_u577f")
@@ -77,7 +78,6 @@ position = Vector2(73.000015, 583)
 [node name="winTimer" type="Timer" parent="."]
 wait_time = 20.0
 one_shot = true
-autostart = true
 
 [node name="Tower" type="Sprite2D" parent="."]
 position = Vector2(926, 357)

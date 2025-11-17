@@ -32,6 +32,7 @@ directories/dtl_directory={
 "berries_mixing2": "res://dialogue/berries_mixing2.dtl",
 "berries_smell": "res://dialogue/berries_smell.dtl",
 "berries_spirits": "res://dialogue/berries_spirits.dtl",
+"boba_tea": "res://dialogue/boba_tea.dtl",
 "heartsauce": "res://dialogue/heartsauce.dtl",
 "nastar": "res://dialogue/nastar.dtl",
 "picking berries": "res://dialogue/picking berries.dtl"

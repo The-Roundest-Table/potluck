@@ -4,16 +4,17 @@ extends Node2D
 @onready var timer = $Timer
 @export var ammo : PackedScene
 @export var start: Marker2D
-
  
 var player
  
 func _ready():
+	
 	player = get_parent().find_child("boba_player")
  
 func _physics_process(_delta):
-	_aim()
-	_check_player_collision()
+	if get_owner().play:
+		_aim()
+		_check_player_collision()
  
 func _aim():
 	ray_cast.target_position = player.position - ray_cast.position
@@ -27,7 +28,8 @@ func _check_player_collision():
  
  
 func _on_timer_timeout():
-	_shoot()
+	if get_owner().play:
+		_shoot()
  
 func _shoot():
 	pass

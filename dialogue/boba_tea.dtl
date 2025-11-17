@@ -1,0 +1,14 @@
+I love stopping by school to grab a SnowQueen boba—it’s affordable but packed with flavor.
+[end_timeline]
+label tower (tower)
+In Shanghai, there’s a funny urban rumor that getting a Mixue makes the Pearl Tower shoot a laser at you—a quirky metaphor for capitalism and youth’s carefree attitude toward life.
+[signal arg="tower_start"]
+[end_timeline]
+label win (win)
+Congratulation! Enjoy your SnowQueen!
+[signal arg="end"]
+[end_timeline]
+label lose (lose)
+Whoops! It’s Starbugs!
+[signal arg="end"]
+[end_timeline]
