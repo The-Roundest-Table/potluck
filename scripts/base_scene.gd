@@ -12,15 +12,5 @@ func _ready():
 		tart = scene_manager.tart
 		add_child(tart)
 	
-	#position_tart()
-	
 func position_tart() -> void:
 	var last_scene = scene_manager.last_scene_name
-#func position_player() -> void:
-	#var last_scene = scene_manager.last_scene_name
-	#if last_scene.is_empty():
-		#last_scene = "any"
-	#for entrance in entrance_markers.get_children():
-		#print(last_scene)
-		#if entrance is Marker2D and entrance.name == last_scene:
-			#player.global_position = entrance.global_position

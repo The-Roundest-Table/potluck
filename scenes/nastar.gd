@@ -20,6 +20,8 @@ extends BaseScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super()
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.start('nastar')
 	for n in buttons.size():
 		buttons[n].button_down.connect(on_a_pressed.bind(n))
 	finish.button_down.connect(on_finish_pressed)
@@ -28,7 +30,13 @@ func on_a_pressed(n) -> void:
 	decors[n].visible = !decors[n].visible;
 	
 func on_finish_pressed() -> void:
-	
-	scene_manager.change_scene(self, connected_scene)
+	Dialogic.start('nastar', 'decorate')
+	#scene_manager.change_scene(self, connected_scene)
 	
 	#get_tree().call_deferred('change_scene_to_file', "res://scenes/bake.tscn")
+func _on_dialogic_signal(argument:String):
+	if argument == "nastar_done":
+		scene_manager.change_scene(self, connected_scene)
+	#if argument == "scallions_sprinkle":
+		#animator.play("scallions")
+		#sauce = false

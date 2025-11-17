@@ -24,6 +24,7 @@ scene_manager="*res://scripts/scene_manager.gd"
 
 directories/dch_directory={}
 directories/dtl_directory={
+"baking": "res://dialogue/baking.dtl",
 "berries_ending1": "res://dialogue/berries_ending1.dtl",
 "berries_ending2": "res://dialogue/berries_ending2.dtl",
 "berries_ending3": "res://dialogue/berries_ending3.dtl",
@@ -33,8 +34,7 @@ directories/dtl_directory={
 "berries_spirits": "res://dialogue/berries_spirits.dtl",
 "heartsauce": "res://dialogue/heartsauce.dtl",
 "nastar": "res://dialogue/nastar.dtl",
-"picking berries": "res://dialogue/picking berries.dtl",
-"timeline": "res://dialogue/timeline.dtl"
+"picking berries": "res://dialogue/picking berries.dtl"
 }
 layout/style_directory={}
 
