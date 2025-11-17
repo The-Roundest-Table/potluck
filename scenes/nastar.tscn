@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_nmjgn"]
 radius = 71.17584
 
-[node name="nastar" type="Node"]
+[node name="nastar" type="Node2D"]
 script = ExtResource("1_ghgsh")
 connected_scene = "bake"
 

@@ -26,6 +26,7 @@ func update_turn():
 	if turn > 3:
 		round +=1;
 		turn = 1;
+	print_debug(str("round: ", round, " turn: ", turn))
 	
 
 func change_scene(from, to_scene_name: String) -> void:
@@ -33,6 +34,8 @@ func change_scene(from, to_scene_name: String) -> void:
 	if from.name == "nastar":
 		tart = from.tart
 		tart.get_parent().remove_child(tart)
+	else:
+		tart = null
 	
 	var full_path = scene_dir_path + to_scene_name + ".tscn"
 	from.get_tree().call_deferred('change_scene_to_file', full_path)

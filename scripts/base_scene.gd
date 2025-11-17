@@ -4,8 +4,9 @@ class_name BaseScene extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pass
 	if scene_manager.tart:
-		#print("hi tart")
+		print(scene_manager.tart)
 		if tart:
 			tart.queue_free()
 			

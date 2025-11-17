@@ -31,12 +31,8 @@ func on_a_pressed(n) -> void:
 	
 func on_finish_pressed() -> void:
 	Dialogic.start('nastar', 'decorate')
-	#scene_manager.change_scene(self, connected_scene)
 	
 	#get_tree().call_deferred('change_scene_to_file', "res://scenes/bake.tscn")
 func _on_dialogic_signal(argument:String):
 	if argument == "nastar_done":
 		scene_manager.change_scene(self, connected_scene)
-	#if argument == "scallions_sprinkle":
-		#animator.play("scallions")
-		#sauce = false

@@ -23,7 +23,6 @@ position = Vector2(801, 209)
 position = Vector2(378, 201)
 
 [node name="tart_copies" type="Node2D" parent="."]
-visible = false
 position = Vector2(593, 308)
 script = ExtResource("2_k816o")
 
@@ -32,6 +31,6 @@ offset_left = 565.0
 offset_top = 568.0
 offset_right = 665.0
 offset_bottom = 599.0
-text = "baking time"
+text = "Finish!"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

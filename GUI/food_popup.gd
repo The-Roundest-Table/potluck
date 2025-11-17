@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_E) and opened and !closed:
+	if Input.is_key_pressed(KEY_R) and opened and !closed:
 		close();
 
 func open(name, desc, art):

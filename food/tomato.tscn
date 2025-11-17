@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bmbxnawh4d2g4"]
 
 [ext_resource type="Script" uid="uid://3qponapcif2k" path="res://food/tomato.gd" id="1_umoja"]
-[ext_resource type="Texture2D" uid="uid://bsh2hh18wlk4j" path="res://assets/heart.png" id="2_umoja"]
+[ext_resource type="Texture2D" uid="uid://dy3uvgv7rtdgj" path="res://assets/noodles/tomato_0000_t1.png" id="2_umoja"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x0b1e"]
 radius = 5.8481016

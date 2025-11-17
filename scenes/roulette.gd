@@ -15,9 +15,8 @@ var food_descs: Dictionary = {}
 func _ready() -> void:
 	popup = get_node("FoodPopup")
 	load_json_file()
-	print(food_descs.get(rounds[0][1]).name)
+	#print(food_descs.get(rounds[0][1]).name)
 	super()
-	pass # Replace with function body.
 
 func load_json_file():
 	#open file for reading

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvqj5ywhi2aqu"]
+
+[ext_resource type="Script" uid="uid://ckjlc4cmcwsoy" path="res://bake_2.gd" id="1_spsb6"]
+[ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_ut7rn"]
+
+[node name="bake2" type="Node2D"]
+script = ExtResource("1_spsb6")
+connected_scene = "roulette"
+
+[node name="Finish" type="Button" parent="."]
+offset_left = 436.0
+offset_top = 565.0
+offset_right = 679.0
+offset_bottom = 620.0
+text = "Finish!"
+
+[node name="tart_copies" type="Node2D" parent="."]
+position = Vector2(593, 308)
+script = ExtResource("2_ut7rn")
+
+[connection signal="button_down" from="Finish" to="." method="_on_finish_button_down"]
