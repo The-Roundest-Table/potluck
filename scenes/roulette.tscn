@@ -32,4 +32,18 @@ position = Vector2(570, 324)
 visible = false
 position = Vector2(581, 333)
 
+[node name="round" type="Label" parent="."]
+offset_left = 846.0
+offset_top = 34.0
+offset_right = 1122.0
+offset_bottom = 91.0
+text = "Round:"
+
+[node name="turn" type="Label" parent="."]
+offset_left = 841.0
+offset_top = 104.0
+offset_right = 1117.0
+offset_bottom = 161.0
+text = "Turn:"
+
 [connection signal="selection" from="spinner" to="." method="_on_spinner_selection"]

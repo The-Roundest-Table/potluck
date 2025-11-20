@@ -40,7 +40,8 @@ func load_json_file():
 func _process(delta: float) -> void:
 	if popup.opened:
 		print_debug("close please")
-	pass
+	$round.text = str("Round", scene_manager.round)
+	$turn.text = str("Turn", scene_manager.turn)
 
 
 func _on_spinner_selection(choice) -> void:

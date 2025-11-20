@@ -17,6 +17,7 @@ func _ready():
 		tarts[i] = tart.duplicate();
 		add_child(tarts[i])
 		tarts[i].set_position(Vector2(170*i+ 400,200))
+		tarts[i].add_to_group("baked")
 	tart.visible = false
 	tart.queue_free();
 	
