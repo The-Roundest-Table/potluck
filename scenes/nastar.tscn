@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://xa588w3i8hex"]
+[gd_scene load_steps=7 format=3 uid="uid://xa588w3i8hex"]
 
 [ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar.gd" id="1_ghgsh"]
+[ext_resource type="Texture2D" uid="uid://byo7it4l62iqc" path="res://assets/various/BG.png" id="2_r4qwv"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_rbor1"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
 [ext_resource type="Texture2D" uid="uid://j3h6tk2x3kbf" path="res://sprites/page.png" id="3_ddy2s"]
@@ -11,6 +12,11 @@ radius = 71.17584
 [node name="nastar" type="Node2D"]
 script = ExtResource("1_ghgsh")
 connected_scene = "bake"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(582.0002, 316.00003)
+scale = Vector2(0.5062906, 0.4827586)
+texture = ExtResource("2_r4qwv")
 
 [node name="Decor" type="MarginContainer" parent="."]
 offset_right = 344.0

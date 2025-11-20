@@ -18,7 +18,8 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_released("click"):
 			print_debug(get_node("thing").get_overlapping_areas())
 			for i in get_node("thing").get_overlapping_areas():
-				global_position = i.get_parent().global_position;
+				if i.get_parent() is Marker2D:
+					global_position = i.get_parent().global_position;
 			
 	pass
 
@@ -30,8 +31,7 @@ func _on_area_2d_mouse_entered() -> void:
 	else:
 		for i in get_node("thing").get_overlapping_areas():
 			draggable = true;
-			#print_debug(i.get_parent().draggable)
-			if i.is_in_group("baked"):
+			if i.get_parent().is_in_group("baked"):
 				if i.get_parent().draggable:
 					draggable = false;
 	pass # Replace with function body.
