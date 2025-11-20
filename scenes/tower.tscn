@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://d1yc2tygvpjio"]
+[gd_scene load_steps=24 format=3 uid="uid://d1yc2tygvpjio"]
 
 [ext_resource type="Script" uid="uid://bm6xab0jtlsm3" path="res://scenes/tower.gd" id="1_qrbg1"]
 [ext_resource type="PackedScene" uid="uid://clydxw6hsdi4x" path="res://boba_player.tscn" id="1_u577f"]
 [ext_resource type="Script" uid="uid://b02by6n0rup4j" path="res://scripts/tower.gd" id="2_ay4al"]
 [ext_resource type="Texture2D" uid="uid://60o118snfusj" path="res://assets/decoration/pearl-tower_0001_c1.png" id="2_k4j06"]
 [ext_resource type="PackedScene" uid="uid://dj4eiubd4chqq" path="res://scenes/bullet.tscn" id="2_ktxwe"]
+[ext_resource type="Texture2D" uid="uid://byo7it4l62iqc" path="res://assets/various/BG.png" id="2_xxmqw"]
 [ext_resource type="Texture2D" uid="uid://j1kq401ifg3g" path="res://assets/boba/tower.png" id="5_jfguu"]
 [ext_resource type="Texture2D" uid="uid://bqedgtm6u2fqi" path="res://assets/decoration/pearl-tower_0002_c2.png" id="7_i2ndj"]
 [ext_resource type="Texture2D" uid="uid://b04e0les4x1g2" path="res://assets/decoration/boba-tea_0006_light-pink-star.png" id="8_2vbvo"]
@@ -34,6 +35,11 @@ distance = 274.0
 script = ExtResource("1_qrbg1")
 death_scene = "starbucks"
 win_scene = "mixue"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(574.25, 341.99994)
+scale = Vector2(0.5062906, 0.4827586)
+texture = ExtResource("2_xxmqw")
 
 [node name="Node2D" type="Node2D" parent="."]
 

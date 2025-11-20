@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://beda38kvpiyoq"]
+[gd_scene load_steps=17 format=3 uid="uid://beda38kvpiyoq"]
 
 [ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dst4xmjeqwbjq" path="res://assets/timer_progress/timer_under.png" id="4_avmg2"]
 [ext_resource type="Texture2D" uid="uid://droxj63ksce45" path="res://assets/timer_progress/timer_over.png" id="5_plan6"]
 [ext_resource type="Texture2D" uid="uid://ctgqiy2qu5urg" path="res://assets/timer_progress/timer_progress.png" id="6_iuoun"]
+[ext_resource type="Texture2D" uid="uid://d6k7vgvu66bq" path="res://assets/placeholder/arrow.png" id="7_plan6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
 size = Vector2(272.9, 213.84686)
@@ -17,63 +18,7 @@ height = 69.686
 [sub_resource type="QuadMesh" id="QuadMesh_plan6"]
 size = Vector2(30, 400)
 
-[sub_resource type="Animation" id="Animation_hrjjl"]
-resource_name = "mixing"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hand1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(684.00006, 14.000002), Vector2(788, 44.999996), Vector2(684.00006, 14.000002)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Hand2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(784, 72), Vector2(689.0001, 81.00001), Vector2(784, 72)]
-}
-
 [sub_resource type="Animation" id="Animation_y2g2y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hand1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(684.00006, 14.000002)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Hand2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(784, 72)]
-}
-
-[sub_resource type="Animation" id="Animation_553fv"]
-resource_name = "mix_right"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -126,6 +71,62 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(786.96, 44.689995)]
+}
+
+[sub_resource type="Animation" id="Animation_553fv"]
+resource_name = "mix_right"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684.00006, 14.000002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(784, 72)]
+}
+
+[sub_resource type="Animation" id="Animation_hrjjl"]
+resource_name = "mixing"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hand1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(684.00006, 14.000002), Vector2(788, 44.999996), Vector2(684.00006, 14.000002)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hand2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(784, 72), Vector2(689.0001, 81.00001), Vector2(784, 72)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y2g2y"]
@@ -224,6 +225,19 @@ material = SubResource("CanvasItemMaterial_avmg2")
 offset_right = 1214.0
 offset_bottom = 686.0
 color = Color(0, 0, 0, 0.8)
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="Arrow" type="Sprite2D" parent="Arrows"]
+position = Vector2(1053, 363)
+texture = ExtResource("7_plan6")
+
+[node name="Arrow2" type="Sprite2D" parent="Arrows"]
+position = Vector2(106, 380)
+rotation = 3.1384838
+texture = ExtResource("7_plan6")
+
+[node name="Scriibles" type="Node2D" parent="."]
 
 [connection signal="timeout" from="TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
 [connection signal="timeout" from="TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]

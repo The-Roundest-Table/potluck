@@ -5,6 +5,8 @@ extends Node2D
 @onready var timerStopProgress = $TimerToStopProgress
 @onready var progressBar = $RadialProgress
 var Mixing:bool = false
+var MixLeft:bool = true
+var MixRight:bool = true
 var DialogueCount = 0
 
 func _ready() -> void:
@@ -12,13 +14,19 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
-		mixingAnimator.play("mix_left")
-		progressBar.value += 1
+		if (MixLeft == true):
+			mixingAnimator.play("mix_left")
+			progressBar.value += 1
+			MixLeft = false
+			MixRight = true
 		#Mixing = true
 		#timerForDialogue.start()
 	if Input.is_action_pressed("right"):
-		mixingAnimator.play("mix_right")
-		progressBar.value += 1
+		if (MixRight == true):
+			mixingAnimator.play("mix_right")
+			progressBar.value += 1
+			MixRight = false
+			MixLeft = true
 		#Mixing = true
 	#if(Input.is_anything_pressed()==false):
 		#Mixing = false
