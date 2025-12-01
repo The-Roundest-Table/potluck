@@ -4,7 +4,6 @@ var speed = 0.1
 var stop = false
 var choice;
 var choices_remain = 4;
-
 signal selection;
 
 
@@ -16,15 +15,17 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if stop and (speed > 0):
-		speed = speed - 0.0001
+		speed = speed - 0.0002
 	rotate(speed)
 	#rotation = rotation + delta
 	
 	if speed <= 0:
+		speed = 0;
 		print(int(rad_to_deg(rotation))%360)
 		choice = int(rad_to_deg(rotation))%choices_remain
 		selection.emit(choice)
 		scene_manager.update_turn()
+		choices_remain = 4 - scene_manager.turn
 		#print_debug(str("round: ",scene_manager.round, "turn", scene_manager.turn))
 		stop = false
 		speed = 0.1
