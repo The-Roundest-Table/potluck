@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6bhdknts7y54"]
+[gd_scene load_steps=10 format=3 uid="uid://cn8vuxa5m2spt"]
 
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
@@ -17,6 +17,7 @@
 script = ExtResource("1_uqyis")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = -5.0
 offset_top = -34.0
 offset_right = 2065.0

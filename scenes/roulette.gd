@@ -38,6 +38,8 @@ func load_json_file():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("book"):
+		get_tree().call_deferred('change_scene_to_file', "res://GUI/cookbook.tscn")
 	if popup.opened:
 		print_debug("close please")
 	$round.text = str("Round", scene_manager.round)
@@ -48,6 +50,8 @@ func _on_spinner_selection(choice) -> void:
 	#print_debug(choice)
 	#print_debug(rounds[scene_manager.round][choice])
 	var item = rounds[scene_manager.round][choice]
+	var id = scene_manager.round*4 + choice
+	#$Cookbook.update_cookbook(food_descs.get(item),id)
 	#var item = 'sate'
 	if "heartcatcher nastar boba kyorchekh".contains(item):
 		scene_manager.change_scene(self, item);
@@ -56,4 +60,4 @@ func _on_spinner_selection(choice) -> void:
 		var desc = food_descs.get(item).description
 		var art = food_descs.get(item).art
 		popup.open(name, desc, art)
-	pass # Replace with function body.
+	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d05d5fofk8e6r"]
+[gd_scene load_steps=6 format=3 uid="uid://d05d5fofk8e6r"]
 
 [ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="1_h827o"]
 [ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="2_jk72h"]
+[ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="3_jk72h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h827o"]
 atlas = ExtResource("1_h827o")
@@ -18,36 +19,71 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Cookbook" type="AnimatedSprite2D"]
+[node name="Node2D" type="Node2D"]
+
+[node name="Cookbook" type="AnimatedSprite2D" parent="."]
+position = Vector2(573, 325)
 scale = Vector2(0.12265386, 0.12265387)
 sprite_frames = SubResource("SpriteFrames_jk72h")
 script = ExtResource("2_jk72h")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="Cookbook"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="food1" type="Sprite2D" parent="."]
+[node name="food1" type="Sprite2D" parent="Cookbook"]
+position = Vector2(-1508.3097, -945.75085)
+texture = ExtResource("3_jk72h")
 
-[node name="food2" type="Sprite2D" parent="."]
+[node name="food1" type="TextureButton" parent="Cookbook/food1"]
+offset_left = -847.9147
+offset_top = -554.4056
+offset_right = 807.14954
+offset_bottom = 595.17084
 
-[node name="food3" type="Sprite2D" parent="."]
+[node name="food2" type="Sprite2D" parent="Cookbook"]
+position = Vector2(-1508.3097, 1010.9751)
+texture = ExtResource("3_jk72h")
 
-[node name="food4" type="Sprite2D" parent="."]
+[node name="food2" type="TextureButton" parent="Cookbook/food2"]
+offset_left = -847.9147
+offset_top = -554.4056
+offset_right = 807.14954
+offset_bottom = 595.17084
 
-[node name="left" type="TextureButton" parent="."]
+[node name="food3" type="Sprite2D" parent="Cookbook"]
+position = Vector2(1500.1569, -945.75085)
+texture = ExtResource("3_jk72h")
+
+[node name="food3" type="TextureButton" parent="Cookbook/food3"]
+offset_left = -847.9147
+offset_top = -554.4056
+offset_right = 807.14954
+offset_bottom = 595.17084
+
+[node name="food4" type="Sprite2D" parent="Cookbook"]
+position = Vector2(1516.4628, 953.90393)
+texture = ExtResource("3_jk72h")
+
+[node name="food4" type="TextureButton" parent="Cookbook/food4"]
+offset_left = -847.9147
+offset_top = -554.4056
+offset_right = 807.14954
+offset_bottom = 595.17084
+
+[node name="left" type="TextureButton" parent="Cookbook"]
 offset_left = -3106.3027
 offset_top = -2291.0
 offset_right = -2413.2957
 offset_bottom = 2217.623
 
-[node name="right" type="TextureButton" parent="."]
+[node name="right" type="TextureButton" parent="Cookbook"]
 offset_left = 2462.2188
 offset_top = -2291.0
 offset_right = 3155.2258
 offset_bottom = 2217.623
 
-[connection signal="button_down" from="left" to="." method="_on_left_button_down"]
-[connection signal="button_down" from="right" to="." method="_on_right_button_down"]
+[connection signal="button_down" from="Cookbook/left" to="Cookbook" method="_on_left_button_down"]
+[connection signal="button_down" from="Cookbook/right" to="Cookbook" method="_on_right_button_down"]
