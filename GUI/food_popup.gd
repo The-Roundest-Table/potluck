@@ -25,3 +25,7 @@ func close():
 	print("close")
 	closed = true
 	visible = false
+
+
+func _on_food_pop_up_button_pressed() -> void:
+	visible = false

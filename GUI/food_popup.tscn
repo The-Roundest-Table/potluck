@@ -1,15 +1,24 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0ctfmbotm2gy"]
 
 [ext_resource type="Script" uid="uid://b3d7qjnxy7m46" path="res://GUI/food_popup.gd" id="1_icyk3"]
-[ext_resource type="Texture2D" uid="uid://dd3xdch3v66fc" path="res://sprites/inventory-slot-placeholder.png" id="1_jln6d"]
+[ext_resource type="Texture2D" uid="uid://cuqsqmpt11d24" path="res://assets/UI/UI assets/Pop Up Cards Variation/pop up card 1.png" id="2_icyk3"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_qewg7"]
 
 [node name="FoodPopup" type="Node2D"]
 script = ExtResource("1_icyk3")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -833.0
+offset_top = -503.0
+offset_right = 1029.0
+offset_bottom = 628.0
+color = Color(0, 0, 0, 1)
+
 [node name="card" type="Sprite2D" parent="."]
-scale = Vector2(44.625, 33.375)
-texture = ExtResource("1_jln6d")
+position = Vector2(-33.000004, -12)
+scale = Vector2(0.3547662, 0.3547662)
+texture = ExtResource("2_icyk3")
 
 [node name="food" type="Sprite2D" parent="."]
 position = Vector2(3.0517578e-05, -36.999985)

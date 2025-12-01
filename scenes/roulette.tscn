@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6bhdknts7y54"]
+[gd_scene load_steps=10 format=3 uid="uid://c6bhdknts7y54"]
 
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
 [ext_resource type="PackedScene" uid="uid://b0ctfmbotm2gy" path="res://GUI/food_popup.tscn" id="2_f75s3"]
+[ext_resource type="Texture2D" uid="uid://co7afw4fclfvv" path="res://assets/placeholder/Potluck_planning (1).png" id="2_iqt6o"]
+[ext_resource type="Texture2D" uid="uid://12rhva1rfu0w" path="res://assets/placeholder/table.png" id="3_dnls6"]
 [ext_resource type="PackedScene" uid="uid://d05d5fofk8e6r" path="res://GUI/cookbook.tscn" id="4_u4f06"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_k6evh"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qcl6x"]
 
@@ -12,14 +16,23 @@
 [node name="roulette" type="Node2D"]
 script = ExtResource("1_uqyis")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5.0
+offset_top = -34.0
+offset_right = 2065.0
+offset_bottom = 1183.0
+scale = Vector2(0.555, 0.555)
+texture = ExtResource("2_iqt6o")
+
 [node name="table" type="MeshInstance2D" parent="."]
-position = Vector2(570.00006, 310)
-scale = Vector2(493.68396, 493.68402)
-mesh = SubResource("SphereMesh_qcl6x")
+position = Vector2(550.53955, 324.00003)
+scale = Vector2(530.921, 493.68402)
+mesh = SubResource("QuadMesh_k6evh")
+texture = ExtResource("3_dnls6")
 
 [node name="spinner" type="MeshInstance2D" parent="."]
-position = Vector2(570.00006, 310)
-scale = Vector2(308.34912, 308.34915)
+position = Vector2(559, 319)
+scale = Vector2(283.82132, 283.82135)
 mesh = SubResource("SphereMesh_qcl6x")
 texture = SubResource("ImageTexture_x8m2p")
 script = ExtResource("1_x8m2p")
@@ -27,6 +40,12 @@ script = ExtResource("1_x8m2p")
 [node name="FoodPopup" parent="." instance=ExtResource("2_f75s3")]
 visible = false
 position = Vector2(570, 324)
+
+[node name="FoodPopUpButton" type="TextureButton" parent="FoodPopup"]
+offset_left = -350.0
+offset_top = -266.0
+offset_right = 320.0
+offset_bottom = 245.0
 
 [node name="Cookbook" parent="." instance=ExtResource("4_u4f06")]
 visible = false
@@ -46,4 +65,21 @@ offset_right = 1117.0
 offset_bottom = 161.0
 text = "Turn:"
 
+[node name="Panel" type="Panel" parent="."]
+offset_left = 869.0
+offset_top = 223.0
+offset_right = 1038.0
+offset_bottom = 289.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 166.0
+offset_bottom = 57.0
+text = "Press SPACE to STOP
+spinning"
+horizontal_alignment = 1
+
 [connection signal="selection" from="spinner" to="." method="_on_spinner_selection"]
+[connection signal="pressed" from="FoodPopup/FoodPopUpButton" to="FoodPopup" method="_on_food_pop_up_button_pressed"]
