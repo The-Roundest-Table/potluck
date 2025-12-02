@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn8vuxa5m2spt"]
+[gd_scene load_steps=10 format=3 uid="uid://cn8vuxa5m2spt"]
 
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dfajrqw3cmama" path="res://assets/opening scene/table.png" id="3_gils2"]
 [ext_resource type="PackedScene" uid="uid://d05d5fofk8e6r" path="res://GUI/cookbook.tscn" id="4_u4f06"]
 [ext_resource type="Texture2D" uid="uid://ika7v17boqtm" path="res://assets/opening scene/center.png" id="5_8jefs"]
+[ext_resource type="Texture2D" uid="uid://dwc3tnf5n4b1t" path="res://assets/opening scene/empty dish.png" id="7_gils2"]
 
 [node name="roulette" type="Node2D"]
 script = ExtResource("1_uqyis")
@@ -37,6 +38,26 @@ position = Vector2(570, 324)
 scale = Vector2(0.55985916, 0.55985916)
 texture = ExtResource("5_8jefs")
 script = ExtResource("1_x8m2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="spinner"]
+position = Vector2(-198.2641, 1.7861328)
+scale = Vector2(0.29510042, 0.29510036)
+texture = ExtResource("7_gils2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="spinner"]
+position = Vector2(8.930847, -205.40878)
+scale = Vector2(0.29510042, 0.29510036)
+texture = ExtResource("7_gils2")
+
+[node name="Sprite2D3" type="Sprite2D" parent="spinner"]
+position = Vector2(208.98114, -10.716919)
+scale = Vector2(0.29510042, 0.29510036)
+texture = ExtResource("7_gils2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="spinner"]
+position = Vector2(17.861633, 185.76105)
+scale = Vector2(0.29510042, 0.29510036)
+texture = ExtResource("7_gils2")
 
 [node name="FoodPopup" parent="." instance=ExtResource("2_f75s3")]
 visible = false
