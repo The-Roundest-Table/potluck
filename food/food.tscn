@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyu87u6p5us2a"]
 
-[ext_resource type="Texture2D" uid="uid://cgg40gr8xi84j" path="res://sprites/potion.png" id="1_afhtg"]
 [ext_resource type="Script" uid="uid://dkrces7c7wkxu" path="res://food/food.gd" id="1_hpk3j"]
+[ext_resource type="Texture2D" uid="uid://y6yk0pleyupm" path="res://assets/nastar/base.png" id="2_hpk3j"]
 
 [node name="Food" type="Node2D"]
 script = ExtResource("1_hpk3j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(10.75, 10.75)
-texture = ExtResource("1_afhtg")
+scale = Vector2(0.17241395, 0.17241377)
+texture = ExtResource("2_hpk3j")

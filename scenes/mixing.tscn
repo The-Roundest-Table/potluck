@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://beda38kvpiyoq"]
+[gd_scene load_steps=18 format=3 uid="uid://beda38kvpiyoq"]
 
 [ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_iuoun"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
 [ext_resource type="Texture2D" uid="uid://bjsnyc0dsa5lo" path="res://placeholders/hand2.png" id="3_553fv"]
 [ext_resource type="Texture2D" uid="uid://dst4xmjeqwbjq" path="res://assets/timer_progress/timer_under.png" id="4_avmg2"]
@@ -141,6 +142,11 @@ _data = {
 
 [node name="Mixing" type="Node2D"]
 script = ExtResource("1_hrjjl")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_iuoun")
 
 [node name="Kyorchekh" type="Sprite2D" parent="."]
 position = Vector2(600, 431)

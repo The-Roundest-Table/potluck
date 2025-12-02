@@ -46,7 +46,7 @@ theme_override_fonts/font = ExtResource("4_exjve")
 theme_override_font_sizes/font_size = 150
 text = "Together"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -59,34 +59,34 @@ grow_horizontal = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Start" type="Sprite2D" parent="VBoxContainer2"]
+[node name="Start" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(-231.625, 82)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_5hhdc")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Start"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Start"]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
 offset_bottom = 100.0
 
-[node name="Credits" type="Sprite2D" parent="VBoxContainer2"]
+[node name="Credits" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(120.375, 87)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_ibxkv")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Credits"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Credits"]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
 offset_bottom = 100.0
 
-[node name="Exit" type="Sprite2D" parent="VBoxContainer2"]
+[node name="Exit" type="Sprite2D" parent="VBoxContainer"]
 position = Vector2(454.375, 90)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_bfvk1")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Exit"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Exit"]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0

@@ -1,11 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnkjs2lh2nfm"]
+[gd_scene load_steps=6 format=3 uid="uid://dnkjs2lh2nfm"]
 
 [ext_resource type="Script" uid="uid://cbmorfil2u80s" path="res://scenes/berry_picking.gd" id="1_dsw5r"]
 [ext_resource type="PackedScene" uid="uid://cdkihj0cu2q0g" path="res://scenes/berries.tscn" id="1_f6m44"]
 [ext_resource type="PackedScene" uid="uid://blg1g5vxgwwuj" path="res://scenes/alaadji.tscn" id="2_2vpnt"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_308ow"]
+[ext_resource type="Texture2D" uid="uid://cv8vryrkftn7o" path="res://assets/berries/bush.png" id="2_qy3kh"]
 
 [node name="BerryPicking" type="Node2D"]
 script = ExtResource("1_dsw5r")
+connected_scene = "mixing"
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_308ow")
+
+[node name="Bush" type="Sprite2D" parent="."]
+position = Vector2(229.5, 570.6971)
+scale = Vector2(0.781337, 0.781337)
+texture = ExtResource("2_qy3kh")
+
+[node name="Bush2" type="Sprite2D" parent="."]
+position = Vector2(978, 376)
+scale = Vector2(0.66016716, 0.6601671)
+texture = ExtResource("2_qy3kh")
 
 [node name="Berries" parent="." instance=ExtResource("1_f6m44")]
 position = Vector2(949, 486)

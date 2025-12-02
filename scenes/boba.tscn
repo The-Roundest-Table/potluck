@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://gs22eokw4ff6"]
+[gd_scene load_steps=11 format=3 uid="uid://gs22eokw4ff6"]
 
 [ext_resource type="Script" uid="uid://cekxtyxtjbh07" path="res://scenes/boba_tea.gd" id="1_122os"]
 [ext_resource type="Script" uid="uid://dmyqglvq8xt6a" path="res://scenes/straw.gd" id="1_fwli4"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_ilpfm"]
 [ext_resource type="Texture2D" uid="uid://0mcr61ijfn67" path="res://assets/boba/straw.png" id="3_tydjs"]
 [ext_resource type="Texture2D" uid="uid://cmf234fk76kai" path="res://assets/boba/base.png" id="4_8jovd"]
 [ext_resource type="Texture2D" uid="uid://0g8trybin3k8" path="res://assets/boba/top.png" id="5_ilpfm"]
@@ -21,6 +22,11 @@ size = Vector2(1159, 40)
 [node name="boba_tea" type="Node2D"]
 script = ExtResource("1_122os")
 connected_scene = "tower"
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_ilpfm")
 
 [node name="Base" type="Sprite2D" parent="."]
 position = Vector2(592, 469)

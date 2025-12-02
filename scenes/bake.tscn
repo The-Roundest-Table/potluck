@@ -1,56 +1,100 @@
-[gd_scene load_steps=4 format=3 uid="uid://c83mppn55aeax"]
+[gd_scene load_steps=7 format=3 uid="uid://c83mppn55aeax"]
 
 [ext_resource type="Script" uid="uid://sthuwqdclqsv" path="res://scenes/bake.gd" id="1_ipi8e"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_3gvg0"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_k816o"]
+[ext_resource type="Texture2D" uid="uid://dwc3tnf5n4b1t" path="res://assets/opening scene/empty dish.png" id="3_ny1ra"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k816o"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ny1ra"]
 
 [node name="Bake" type="Node2D"]
 script = ExtResource("1_ipi8e")
 connected_scene = "roulette"
 
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_3gvg0")
+
+[node name="EmptyDish" type="Sprite2D" parent="."]
+position = Vector2(633.00006, 308)
+scale = Vector2(1.4981883, 1)
+texture = ExtResource("3_ny1ra")
+
 [node name="spot1" type="Marker2D" parent="."]
-position = Vector2(590, 109)
+position = Vector2(614, 197)
 
 [node name="Area2D" type="Area2D" parent="spot1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spot1/Area2D"]
 shape = SubResource("CircleShape2D_k816o")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spot1"]
+modulate = Color(1, 0.6666667, 1, 1)
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(102.11566, 48.000008)
+mesh = SubResource("SphereMesh_ny1ra")
+
 [node name="spot2" type="Marker2D" parent="."]
-position = Vector2(502, 373)
+position = Vector2(523, 376)
 
 [node name="Area2D" type="Area2D" parent="spot2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spot2/Area2D"]
 shape = SubResource("CircleShape2D_k816o")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spot2"]
+modulate = Color(1, 0.6666667, 1, 1)
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(102.11566, 48.000008)
+mesh = SubResource("SphereMesh_ny1ra")
+
 [node name="spot3" type="Marker2D" parent="."]
-position = Vector2(686, 373)
+position = Vector2(707, 376)
 
 [node name="Area2D" type="Area2D" parent="spot3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spot3/Area2D"]
 shape = SubResource("CircleShape2D_k816o")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spot3"]
+modulate = Color(1, 0.6666667, 1, 1)
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(102.11566, 48.000008)
+mesh = SubResource("SphereMesh_ny1ra")
+
 [node name="spot4" type="Marker2D" parent="."]
-position = Vector2(766, 213)
+position = Vector2(790, 269)
 
 [node name="Area2D" type="Area2D" parent="spot4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spot4/Area2D"]
 shape = SubResource("CircleShape2D_k816o")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spot4"]
+modulate = Color(1, 0.6666667, 1, 1)
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(102.11566, 48.000008)
+mesh = SubResource("SphereMesh_ny1ra")
+
 [node name="spot5" type="Marker2D" parent="."]
-position = Vector2(414, 213)
+position = Vector2(438, 269)
 
 [node name="Area2D" type="Area2D" parent="spot5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spot5/Area2D"]
 shape = SubResource("CircleShape2D_k816o")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="spot5"]
+modulate = Color(1, 0.6666667, 1, 1)
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(102.11566, 48.000008)
+mesh = SubResource("SphereMesh_ny1ra")
+
 [node name="tart_copies" type="Node2D" parent="."]
-position = Vector2(593, 308)
+position = Vector2(617, 308)
 script = ExtResource("2_k816o")
 
 [node name="Button" type="Button" parent="."]
