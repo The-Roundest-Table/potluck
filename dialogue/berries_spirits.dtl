@@ -1,3 +1,2 @@
 Of course, each time after foraging we would leave gifts to the spirits of the forest
 [signal arg="berries_scene_end"]
-jump berries_mixing/
