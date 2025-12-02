@@ -1,19 +1,19 @@
 { "sate": {
 		"name": "sate",
 		"art": "res://assets/placeholder/Potluck_planning (1).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "meat skewers with peanut sauce",
 		"ingredients": ["test", "test2"]
 	},
 	"stroganina": {
 		"name": "stroganina",
 		"art": "res://assets/final/stroganina.png",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Frozen fish that melts in your mouth. It's refreshing, rich in flavor",
 		"ingredients": ["test", "test2"]
 	},
 	"egg tofu": {
 		"name": "egg tofu",
 		"art": "res://assets/placeholder/Potluck_planning (4).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "A return to warmth, simplicity, and safety.",
 		"ingredients": ["test", "test2"]
 	},
 	"heartcatcher": {
@@ -25,73 +25,73 @@
 	"flapjack": {
 		"name": "flapjack",
 		"art": "res://assets/placeholder/Potluck_planning (7).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Food as a bridge between people.",
 		"ingredients": ["test", "test2"]
 	},
 	"mooncake": {
 		"name": "mooncake",
 		"art": "res://assets/final/mooncake.png",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "This round celebrates connection, cultural identity, and shared experience—meals eaten together, recipes passed down, and the act of feeding as a gesture of love and inclusion.",
 		"ingredients": ["test", "test2"]
 	},
 	"alaadji": {
 		"name": "alaadji",
 		"art": "res://assets/placeholder/Potluck_planning (6).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "We usually leave these foods to the spirits. But it also makes a really nice meal. I remember cooking it together with my mother",
 		"ingredients": ["test", "test2"]
 	},
 	"nastar": {
 		"name": "nastar",
 		"art": "res://assets/placeholder/Potluck_planning (5).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "This round celebrates connection, cultural identity, and shared experience—meals eaten together, recipes passed down, and the act of feeding as a gesture of love and inclusion.",
 		"ingredients": ["test", "test2"]
 	},
 	"kyorchekh": {
 		"name": "kyorchekh",
 		"art": "res://assets/placeholder/Potluck_planning (10).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "We usually make it together with my mother. It's made of fresh milk and berries we gather in the forest.",
 		"ingredients": ["test", "test2"]
 	},
 	"tanghulu": {
 		"name": "tanghulu",
 		"art": "res://assets/placeholder/Potluck_planning (12).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
 		"ingredients": ["test", "test2"]
 	},
 	"naijuan": {
 		"name": "naijuan",
 		"art": "res://assets/placeholder/Potluck_planning (11).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
 		"ingredients": ["test", "test2"]
 	},
 	"es campur": {
 		"name": "es campur",
 		"art": "res://assets/placeholder/Potluck_planning (9).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
 		"ingredients": ["test", "test2"]
 	},
 	"boba": {
 		"name": "boba tea",
 		"art": "res://assets/placeholder/Potluck_planning (16).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Food that tempts and teases—the forbidden bite, the midnight craving, the indulgence that feels both wrong and irresistibly right. ",
 		"ingredients": ["test", "test2"]
 	},
 	"durian": {
 		"name": "durian",
 		"art": "res://assets/placeholder/Potluck_planning (13).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "These dishes explore desire, shame, and self-acceptance, revealing how pleasure and guilt intertwine in modern eating culture.",
 		"ingredients": ["test", "test2"]
 	},
 	"ching bo leung": {
 		"name": "ching bo leung",
 		"art": "res://assets/placeholder/Potluck_planning (15).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "These dishes explore desire, shame, and self-acceptance, revealing how pleasure and guilt intertwine in modern eating culture.",
 		"ingredients": ["test", "test2"]
 	},
 	"khaan": {
 		"name": "khaan",
 		"art": "res://assets/placeholder/Potluck_planning (14).jpg",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "This dish is made of cow's blood and intestines. It's something that I struggle with cooking in here. I still remember the taste.",
 		"ingredients": ["test", "test2"]
 	},
 }
