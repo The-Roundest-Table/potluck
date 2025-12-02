@@ -1,4 +1,4 @@
-extends Node2D
+extends BaseScene
 
 @onready var mixingAnimator = $AnimationPlayer
 @onready var timerForDialogue = $TimerDialogueAppear
@@ -8,9 +8,11 @@ var Mixing:bool = false
 var MixLeft:bool = true
 var MixRight:bool = true
 var DialogueCount = 0
+@export var connected_scene: String
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	super()
 
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
@@ -93,3 +95,5 @@ func _on_dialogic_signal(argument:String):
 			Dialogic.start('berries_ending1')
 		if DialogueCount > 4 && DialogueCount < 7:
 			Dialogic.start('berries_ending3')
+	if argument == "end_berries":
+		scene_manager.change_scene(self, connected_scene)
