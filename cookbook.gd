@@ -1,4 +1,4 @@
-class_name Cookbook extends AnimatedSprite2D
+class_name Cookbook extends Sprite2D
 
 @export var page_count : int = 3 #total page count
 
@@ -65,9 +65,11 @@ func go_to_page(page:int):
 	if page < 0 or page > page_count:
 		return
 	if page > current_page:
-		play("next")
+		#play("next")
+		pass
 	elif page < current_page:
-		play("prev")
+		#play("prev")
+		pass
 	current_page = page
 	print_debug(current_page)
 	#$Control/PageContent.text = page_content[current_page]

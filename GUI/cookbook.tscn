@@ -1,89 +1,76 @@
-[gd_scene load_steps=6 format=3 uid="uid://d05d5fofk8e6r"]
+[gd_scene load_steps=4 format=3 uid="uid://d05d5fofk8e6r"]
 
 [ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="1_h827o"]
 [ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="2_jk72h"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="3_jk72h"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h827o"]
-atlas = ExtResource("1_h827o")
-region = Rect2(0, 0, 6326, 4582)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jk72h"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h827o")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Node2D" type="Node2D"]
 
-[node name="Cookbook" type="AnimatedSprite2D" parent="."]
-position = Vector2(573, 325)
-scale = Vector2(0.12265386, 0.12265387)
-sprite_frames = SubResource("SpriteFrames_jk72h")
-script = ExtResource("2_jk72h")
-
-[node name="Control" type="Control" parent="Cookbook"]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 573.0
+offset_top = 325.0
+offset_right = 613.0
+offset_bottom = 365.0
 
-[node name="food1" type="Sprite2D" parent="Cookbook"]
-position = Vector2(-1508.3097, -945.75085)
+[node name="Cookbook" type="Sprite2D" parent="Control"]
+scale = Vector2(0.5695444, 0.5695444)
+texture = ExtResource("1_h827o")
+script = ExtResource("2_jk72h")
+
+[node name="food1" type="Sprite2D" parent="Control/Cookbook"]
+position = Vector2(-282.68207, -245.81046)
+scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food1" type="TextureButton" parent="Cookbook/food1"]
+[node name="food1" type="TextureButton" parent="Control/Cookbook/food1"]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food2" type="Sprite2D" parent="Cookbook"]
-position = Vector2(-1508.3097, 1010.9751)
+[node name="food2" type="Sprite2D" parent="Control/Cookbook"]
+position = Vector2(-282.682, 161.53265)
+scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food2" type="TextureButton" parent="Cookbook/food2"]
+[node name="food2" type="TextureButton" parent="Control/Cookbook/food2"]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food3" type="Sprite2D" parent="Cookbook"]
-position = Vector2(1500.1569, -945.75085)
+[node name="food3" type="Sprite2D" parent="Control/Cookbook"]
+position = Vector2(323.06525, -245.81049)
+scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food3" type="TextureButton" parent="Cookbook/food3"]
+[node name="food3" type="TextureButton" parent="Control/Cookbook/food3"]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food4" type="Sprite2D" parent="Cookbook"]
-position = Vector2(1516.4628, 953.90393)
+[node name="food4" type="Sprite2D" parent="Control/Cookbook"]
+position = Vector2(326.57697, 163.28851)
+scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food4" type="TextureButton" parent="Cookbook/food4"]
+[node name="food4" type="TextureButton" parent="Control/Cookbook/food4"]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="left" type="TextureButton" parent="Cookbook"]
-offset_left = -3106.3027
-offset_top = -2291.0
-offset_right = -2413.2957
-offset_bottom = 2217.623
+[node name="left" type="TextureButton" parent="Control/Cookbook"]
+offset_left = -668.95575
+offset_top = -493.37686
+offset_right = 24.05133
+offset_bottom = 4015.246
 
-[node name="right" type="TextureButton" parent="Cookbook"]
-offset_left = 2462.2188
-offset_top = -2291.0
-offset_right = 3155.2258
-offset_bottom = 2217.623
-
-[connection signal="button_down" from="Cookbook/left" to="Cookbook" method="_on_left_button_down"]
-[connection signal="button_down" from="Cookbook/right" to="Cookbook" method="_on_right_button_down"]
+[node name="right" type="TextureButton" parent="Control/Cookbook"]
+offset_left = 530.24945
+offset_top = -493.37686
+offset_right = 1223.2566
+offset_bottom = 4015.246

@@ -1,4 +1,4 @@
-extends MeshInstance2D
+extends Sprite2D
 
 var speed = 0.1
 var stop = false
