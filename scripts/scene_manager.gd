@@ -27,6 +27,8 @@ func update_turn():
 		round +=1;
 		turn = 1;
 	print_debug(str("round: ", round, " turn: ", turn))
+	if round > 3:
+		get_tree().call_deferred('change_scene_to_file',"res://GUI/ending.tscn")
 	
 
 func change_scene(from, to_scene_name: String) -> void:

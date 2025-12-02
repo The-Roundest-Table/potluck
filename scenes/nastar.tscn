@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://xa588w3i8hex"]
 
 [ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar.gd" id="1_ghgsh"]
-[ext_resource type="Texture2D" uid="uid://byo7it4l62iqc" path="res://assets/various/BG.png" id="2_r4qwv"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_2d6wb"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_rbor1"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
 [ext_resource type="Texture2D" uid="uid://dik2n8ciy674i" path="res://assets/decoration/boba-tea_0000_pink-star.png" id="3_2d6wb"]
@@ -21,10 +21,10 @@ radius = 71.17584
 script = ExtResource("1_ghgsh")
 connected_scene = "bake"
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(582.0002, 316.00003)
-scale = Vector2(0.5062906, 0.4827586)
-texture = ExtResource("2_r4qwv")
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_2d6wb")
 
 [node name="Decor" type="MarginContainer" parent="."]
 offset_right = 344.0
