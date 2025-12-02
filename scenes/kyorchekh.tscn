@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnkjs2lh2nfm"]
+[gd_scene load_steps=11 format=3 uid="uid://dnkjs2lh2nfm"]
 
 [ext_resource type="Script" uid="uid://cbmorfil2u80s" path="res://scenes/berry_picking.gd" id="1_dsw5r"]
 [ext_resource type="PackedScene" uid="uid://cdkihj0cu2q0g" path="res://scenes/berries.tscn" id="1_f6m44"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://drfeln08usr41" path="res://assets/berries/bush3.png" id="3_7xwsb"]
 [ext_resource type="Texture2D" uid="uid://dc1bx3bw430ww" path="res://assets/berries/bush4.png" id="4_3gj6r"]
 [ext_resource type="Texture2D" uid="uid://bhfbwd4tmdcs1" path="res://assets/berries/bush2.png" id="6_fr2st"]
+[ext_resource type="Texture2D" uid="uid://b04e0les4x1g2" path="res://assets/decoration/boba-tea_0006_light-pink-star.png" id="9_3gj6r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fr2st"]
 
 [node name="BerryPicking" type="Node2D"]
 script = ExtResource("1_dsw5r")
@@ -61,3 +64,21 @@ position = Vector2(1057, 347)
 
 [node name="alaadji" parent="." instance=ExtResource("2_2vpnt")]
 position = Vector2(395, 108)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_fr2st")
+position = Vector2(586, 511)
+amount = 50
+texture = ExtResource("9_3gj6r")
+lifetime = 16.560000000000002
+preprocess = 60.0
+randomness = 0.11
+emission_shape = 3
+emission_rect_extents = Vector2(500, 100)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -1)
+initial_velocity_max = 1.0
+tangential_accel_max = 4.0
+angle_max = 372.0
+scale_amount_min = 0.0
