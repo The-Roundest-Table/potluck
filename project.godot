@@ -13,7 +13,7 @@ config_version=5
 config/name="Potluck"
 run/main_scene="uid://bql3eou4hq352"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://b74scm16f0pu5"
 
 [autoload]
 

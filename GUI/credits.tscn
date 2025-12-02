@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0571ck4xy05c"]
+[gd_scene load_steps=9 format=3 uid="uid://c0571ck4xy05c"]
 
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_8pfqu"]
+[ext_resource type="Script" uid="uid://byxn4kkiordqm" path="res://GUI/credits.gd" id="1_olfvg"]
 [ext_resource type="Texture2D" uid="uid://dwbxtw63abh7e" path="res://assets/UI/popup.png" id="2_olfvg"]
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="3_ecld3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ecld3"]
+
+[sub_resource type="Theme" id="Theme_fnfmc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btepa"]
+bg_color = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[sub_resource type="Theme" id="Theme_mtstf"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -13,6 +23,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_olfvg")
+connected_scene = "main_menu"
 
 [node name="Bg" type="Sprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
@@ -74,3 +86,28 @@ Asset Artist
 UI Designer
 Story Designer
 "
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_ecld3")
+layout_mode = 0
+offset_left = 267.0
+offset_top = 213.0
+offset_right = 386.0
+offset_bottom = 274.0
+theme = SubResource("Theme_fnfmc")
+theme_override_styles/panel = SubResource("StyleBoxFlat_btepa")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 208.0
+offset_right = 387.0
+offset_bottom = 278.0
+theme = SubResource("Theme_mtstf")
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)
+theme_override_fonts/font = ExtResource("3_ecld3")
+theme_override_font_sizes/font_size = 33
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
