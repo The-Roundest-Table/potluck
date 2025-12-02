@@ -1,9 +1,9 @@
 extends Control
 
-@onready var start = $VBoxContainer/start
+@onready var start = $VBoxContainer2/Start/TextureButton
 @onready var settings = $VBoxContainer/settings
-@onready var credits = $VBoxContainer/credits
-@onready var exit = $VBoxContainer/exit
+@onready var credits = $VBoxContainer2/Credits/TextureButton
+@onready var exit = $VBoxContainer2/Exit/TextureButton
 func _ready():
 	start.button_down.connect(on_start_pressed)
 	exit.button_down.connect(on_exit_pressed)

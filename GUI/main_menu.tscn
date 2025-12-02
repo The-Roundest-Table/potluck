@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bql3eou4hq352"]
+[gd_scene load_steps=8 format=3 uid="uid://bql3eou4hq352"]
 
 [ext_resource type="Script" uid="uid://dfhxmnq43th68" path="res://GUI/main_menu.gd" id="1_t7e0r"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_rhcmj"]
 [ext_resource type="Texture2D" uid="uid://de7rdnw45gj48" path="res://assets/opening scene/title.png" id="3_exjve"]
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="4_exjve"]
+[ext_resource type="Texture2D" uid="uid://dgwyi2hat3ea5" path="res://assets/UI/opening UI/start.png" id="5_5hhdc"]
+[ext_resource type="Texture2D" uid="uid://ds4pqriumu0bs" path="res://assets/UI/opening UI/credits.png" id="6_ibxkv"]
+[ext_resource type="Texture2D" uid="uid://bnjy53ke06eiw" path="res://assets/UI/opening UI/exit.png" id="7_bfvk1"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -43,43 +46,48 @@ theme_override_fonts/font = ExtResource("4_exjve")
 theme_override_font_sizes/font_size = 150
 text = "Together"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -150.75
-offset_top = 126.0
-offset_right = 90.0
-offset_bottom = 308.0
+offset_left = -120.375
+offset_top = 128.0
+offset_right = 120.375
+offset_bottom = 310.0
 grow_horizontal = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("4_exjve")
-theme_override_font_sizes/font_size = 40
-text = "Start"
+[node name="Start" type="Sprite2D" parent="VBoxContainer2"]
+position = Vector2(-231.625, 82)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_5hhdc")
 
-[node name="settings" type="Button" parent="VBoxContainer"]
-visible = false
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_exjve")
-theme_override_font_sizes/font_size = 40
-text = "Settings"
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Start"]
+offset_left = -274.0
+offset_top = -80.0
+offset_right = 266.0
+offset_bottom = 100.0
 
-[node name="credits" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("4_exjve")
-theme_override_font_sizes/font_size = 40
-text = "Credits"
+[node name="Credits" type="Sprite2D" parent="VBoxContainer2"]
+position = Vector2(120.375, 87)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ibxkv")
 
-[node name="exit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("4_exjve")
-theme_override_font_sizes/font_size = 40
-text = "Exit"
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Credits"]
+offset_left = -274.0
+offset_top = -80.0
+offset_right = 266.0
+offset_bottom = 100.0
+
+[node name="Exit" type="Sprite2D" parent="VBoxContainer2"]
+position = Vector2(454.375, 90)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_bfvk1")
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer2/Exit"]
+offset_left = -274.0
+offset_top = -80.0
+offset_right = 266.0
+offset_bottom = 100.0
