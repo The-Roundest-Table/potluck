@@ -28,4 +28,5 @@ func close():
 
 
 func _on_food_pop_up_button_pressed() -> void:
+	scene_manager.update_turn()
 	visible = false

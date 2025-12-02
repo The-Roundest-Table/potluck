@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 		print(int(rad_to_deg(rotation))%360)
 		choice = int(rad_to_deg(rotation))%choices_remain
 		selection.emit(choice)
-		scene_manager.update_turn()
+		#scene_manager.update_turn()
 		choices_remain = 4 - scene_manager.turn
 		#print_debug(str("round: ",scene_manager.round, "turn", scene_manager.turn))
 		stop = false

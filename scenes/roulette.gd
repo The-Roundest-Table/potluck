@@ -1,10 +1,10 @@
 extends BaseScene
 
 var rounds = [
-	['sate', 'stroganina', 'egg tofu', 'heartcatcher'],
-	['flapjack', 'mooncake', 'alaadji', 'nastar'],
-	['kyorchekh', 'es campur', 'tanghulu', 'naijuan'],
-	['boba', 'durian', 'ching bo leung', 'khaan']
+	['sate', 'kyorchekh', 'egg tofu', 'heartcatcher'],
+	['heartcatcher', 'mooncake', 'alaadji', 'nastar'],
+	['kyorchekh', 'es campur', 'boba', 'naijuan'],
+	['boba', 'durian', 'ching bo leung', 'nastar']
 ]
 
 var foods_json = "res://scripts/foods.json"
@@ -42,8 +42,8 @@ func _process(delta: float) -> void:
 		get_tree().call_deferred('change_scene_to_file', "res://GUI/cookbook.tscn")
 	if popup.opened:
 		print_debug("close please")
-	$round.text = str("Round", scene_manager.round)
-	$turn.text = str("Turn", scene_manager.turn)
+	$round.text = str("Round ", scene_manager.round + 1)
+	$turn.text = str("Turn ", scene_manager.turn + 1)
 
 
 func _on_spinner_selection(choice) -> void:

@@ -1,10 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://xa588w3i8hex"]
+[gd_scene load_steps=15 format=3 uid="uid://xa588w3i8hex"]
 
 [ext_resource type="Script" uid="uid://qyd6itnbyeg1" path="res://scenes/nastar.gd" id="1_ghgsh"]
 [ext_resource type="Texture2D" uid="uid://byo7it4l62iqc" path="res://assets/various/BG.png" id="2_r4qwv"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_rbor1"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
-[ext_resource type="Texture2D" uid="uid://j3h6tk2x3kbf" path="res://sprites/page.png" id="3_ddy2s"]
+[ext_resource type="Texture2D" uid="uid://dik2n8ciy674i" path="res://assets/decoration/boba-tea_0000_pink-star.png" id="3_2d6wb"]
+[ext_resource type="Texture2D" uid="uid://chgxplm4celxk" path="res://assets/decoration/boba-tea_0001_yellow-star.png" id="4_4iicu"]
+[ext_resource type="Texture2D" uid="uid://deflnu0snvu0l" path="res://assets/decoration/boba-tea_0002_light-blue-star.png" id="5_id3rr"]
+[ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="6_3pu6u"]
+[ext_resource type="Texture2D" uid="uid://buobhngh6bii8" path="res://assets/decoration/pearl-tower_0003_s1.png" id="6_maxvg"]
+[ext_resource type="Texture2D" uid="uid://b1yh5eu42e0c5" path="res://assets/decoration/pearl-tower_0007_p1.png" id="7_bw8vq"]
+[ext_resource type="Texture2D" uid="uid://bi2tmt5dul30x" path="res://assets/decoration/pearl-tower_0009_blue-dot.png" id="8_2ltlq"]
+[ext_resource type="Texture2D" uid="uid://c7tnts3lap1c7" path="res://assets/decoration/pearl-tower_0006_c3.png" id="9_10dvp"]
+[ext_resource type="Texture2D" uid="uid://dav53nd2743oa" path="res://assets/decoration/pearl-tower_0008_p2.png" id="10_vacua"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nmjgn"]
 radius = 71.17584
@@ -32,22 +40,34 @@ size_flags_horizontal = 3
 [node name="a" type="Button" parent="Decor/cols/col1"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "A"
+
+[node name="BobaTea0000PinkStar" type="Sprite2D" parent="Decor/cols/col1/a"]
+position = Vector2(81, 82)
+texture = ExtResource("3_2d6wb")
 
 [node name="b" type="Button" parent="Decor/cols/col1"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "C"
+
+[node name="BobaTea0001YellowStar" type="Sprite2D" parent="Decor/cols/col1/b"]
+position = Vector2(82, 80)
+texture = ExtResource("4_4iicu")
 
 [node name="c" type="Button" parent="Decor/cols/col1"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "E"
+
+[node name="BobaTea0002LightBlueStar" type="Sprite2D" parent="Decor/cols/col1/c"]
+position = Vector2(84, 72)
+texture = ExtResource("5_id3rr")
 
 [node name="d" type="Button" parent="Decor/cols/col1"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "G"
+
+[node name="PearlTower0003S1" type="Sprite2D" parent="Decor/cols/col1/d"]
+position = Vector2(91, 77)
+texture = ExtResource("6_maxvg")
 
 [node name="col2" type="VBoxContainer" parent="Decor/cols"]
 layout_mode = 2
@@ -58,20 +78,38 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "B"
 
+[node name="PearlTower0007P1" type="Sprite2D" parent="Decor/cols/col2/e"]
+position = Vector2(88, 70)
+texture = ExtResource("7_bw8vq")
+
 [node name="f" type="Button" parent="Decor/cols/col2"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "D"
+
+[node name="PearlTower0009BlueDot" type="Sprite2D" parent="Decor/cols/col2"]
+position = Vector2(81, 254)
+scale = Vector2(0.361186, 0.36118603)
+texture = ExtResource("8_2ltlq")
 
 [node name="g" type="Button" parent="Decor/cols/col2"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "F"
 
+[node name="PearlTower0006C3" type="Sprite2D" parent="Decor/cols/col2/g"]
+position = Vector2(86, 74)
+scale = Vector2(0.5034014, 0.50340134)
+texture = ExtResource("9_10dvp")
+
 [node name="h" type="Button" parent="Decor/cols/col2"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "H"
+
+[node name="PearlTower0008P2" type="Sprite2D" parent="Decor/cols/col2/h"]
+position = Vector2(85, 91)
+texture = ExtResource("10_vacua")
 
 [node name="tart" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -82,43 +120,50 @@ script = ExtResource("2_rbor1")
 
 [node name="a" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(-76, -68)
-texture = ExtResource("3_ddy2s")
+position = Vector2(-56, -41.999996)
+scale = Vector2(0.2831859, 0.28318584)
+texture = ExtResource("3_2d6wb")
 
 [node name="a2" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(37, 57)
-texture = ExtResource("3_ddy2s")
+position = Vector2(-18, 64)
+scale = Vector2(0.5977012, 0.59770113)
+texture = ExtResource("4_4iicu")
 
 [node name="a3" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(-36, 57)
-texture = ExtResource("3_ddy2s")
+texture = ExtResource("5_id3rr")
 
 [node name="a4" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(60, -5)
-texture = ExtResource("3_ddy2s")
+position = Vector2(52, -45)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_maxvg")
 
 [node name="a5" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(-12, -8)
-texture = ExtResource("3_ddy2s")
+scale = Vector2(0.27642277, 0.27642265)
+texture = ExtResource("7_bw8vq")
 
 [node name="a6" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(-77, -4)
-texture = ExtResource("3_ddy2s")
+scale = Vector2(0.17250673, 0.17250676)
+texture = ExtResource("8_2ltlq")
 
 [node name="a7" type="Sprite2D" parent="tart"]
 visible = false
-position = Vector2(59, -68)
-texture = ExtResource("3_ddy2s")
+position = Vector2(59.999985, 27)
+scale = Vector2(0.22789116, 0.22789116)
+texture = ExtResource("9_10dvp")
 
 [node name="a8" type="Sprite2D" parent="tart"]
 visible = false
 position = Vector2(-12, -69)
-texture = ExtResource("3_ddy2s")
+scale = Vector2(0.33333328, 0.33333334)
+texture = ExtResource("10_vacua")
 
 [node name="thing" type="Area2D" parent="tart"]
 
@@ -130,6 +175,7 @@ offset_left = 889.0
 offset_top = 26.0
 offset_right = 1125.0
 offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("6_3pu6u")
 text = "Ready to Bake!"
 
 [connection signal="mouse_entered" from="tart/thing" to="tart" method="_on_area_2d_mouse_entered"]

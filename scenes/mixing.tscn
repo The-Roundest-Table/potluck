@@ -142,6 +142,7 @@ _data = {
 
 [node name="Mixing" type="Node2D"]
 script = ExtResource("1_hrjjl")
+connected_scene = "roulette"
 
 [node name="Bg" type="Sprite2D" parent="."]
 position = Vector2(576, 304.99997)
