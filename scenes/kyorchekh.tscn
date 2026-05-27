@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnkjs2lh2nfm"]
+[gd_scene format=3 uid="uid://dnkjs2lh2nfm"]
 
 [ext_resource type="Script" uid="uid://cbmorfil2u80s" path="res://scenes/berry_picking.gd" id="1_dsw5r"]
 [ext_resource type="PackedScene" uid="uid://cdkihj0cu2q0g" path="res://scenes/berries.tscn" id="1_f6m44"]
@@ -12,60 +12,60 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fr2st"]
 
-[node name="BerryPicking" type="Node2D"]
+[node name="BerryPicking" type="Node2D" unique_id=1302391250]
 script = ExtResource("1_dsw5r")
 connected_scene = "mixing"
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=845837995]
 position = Vector2(576, 304.99997)
 scale = Vector2(0.61018515, 0.6101852)
 texture = ExtResource("2_308ow")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=614362962]
 position = Vector2(403, -223)
 texture = ExtResource("3_7xwsb")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1869845099]
 position = Vector2(-132, 285)
 texture = ExtResource("3_7xwsb")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=223992182]
 position = Vector2(1086, -158)
 texture = ExtResource("4_3gj6r")
 
-[node name="Bush" type="Sprite2D" parent="."]
+[node name="Bush" type="Sprite2D" parent="." unique_id=931055536]
 position = Vector2(229.5, 570.6971)
 scale = Vector2(0.781337, 0.781337)
 texture = ExtResource("2_qy3kh")
 
-[node name="Bush2" type="Sprite2D" parent="."]
+[node name="Bush2" type="Sprite2D" parent="." unique_id=367744998]
 position = Vector2(1040, 452)
 scale = Vector2(0.66016716, 0.6601671)
 texture = ExtResource("2_qy3kh")
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1086964961]
 position = Vector2(694, 768)
 texture = ExtResource("6_fr2st")
 
-[node name="Berries" parent="." instance=ExtResource("1_f6m44")]
+[node name="Berries" parent="." unique_id=1889354380 instance=ExtResource("1_f6m44")]
 position = Vector2(949, 486)
 
-[node name="Berries2" parent="." instance=ExtResource("1_f6m44")]
+[node name="Berries2" parent="." unique_id=86181040 instance=ExtResource("1_f6m44")]
 position = Vector2(121, 560)
 
-[node name="Berries3" parent="." instance=ExtResource("1_f6m44")]
+[node name="Berries3" parent="." unique_id=421196097 instance=ExtResource("1_f6m44")]
 position = Vector2(176, 389)
 
-[node name="Berries4" parent="." instance=ExtResource("1_f6m44")]
+[node name="Berries4" parent="." unique_id=795850836 instance=ExtResource("1_f6m44")]
 position = Vector2(353, 534)
 
-[node name="Berries5" parent="." instance=ExtResource("1_f6m44")]
+[node name="Berries5" parent="." unique_id=1242382545 instance=ExtResource("1_f6m44")]
 position = Vector2(1057, 347)
 
-[node name="alaadji" parent="." instance=ExtResource("2_2vpnt")]
+[node name="alaadji" parent="." unique_id=994265257 instance=ExtResource("2_2vpnt")]
 position = Vector2(395, 108)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=306709852]
 material = SubResource("CanvasItemMaterial_fr2st")
 position = Vector2(586, 511)
 amount = 50

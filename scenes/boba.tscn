@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gs22eokw4ff6"]
+[gd_scene format=3 uid="uid://gs22eokw4ff6"]
 
 [ext_resource type="Script" uid="uid://cekxtyxtjbh07" path="res://scenes/boba_tea.gd" id="1_122os"]
 [ext_resource type="Script" uid="uid://dmyqglvq8xt6a" path="res://scenes/straw.gd" id="1_fwli4"]
@@ -19,58 +19,58 @@ size = Vector2(28, 310)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20b7j"]
 size = Vector2(1159, 40)
 
-[node name="boba_tea" type="Node2D"]
+[node name="boba_tea" type="Node2D" unique_id=610458623]
 script = ExtResource("1_122os")
 connected_scene = "tower"
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=2021540534]
 position = Vector2(576, 304.99997)
 scale = Vector2(0.61018515, 0.6101852)
 texture = ExtResource("2_ilpfm")
 
-[node name="Base" type="Sprite2D" parent="."]
+[node name="Base" type="Sprite2D" parent="." unique_id=321511362]
 position = Vector2(592, 469)
 scale = Vector2(0.38254315, 0.38254315)
 texture = ExtResource("4_8jovd")
 
-[node name="Boba tea" type="Sprite2D" parent="."]
+[node name="Boba tea" type="Sprite2D" parent="." unique_id=502133413]
 position = Vector2(592, 455.00003)
 scale = Vector2(335.3125, 382.75)
 
-[node name="cup" type="Area2D" parent="Boba tea"]
+[node name="cup" type="Area2D" parent="Boba tea" unique_id=827725565]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cup"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cup" unique_id=636829831]
 position = Vector2(-0.0029822588, 0.03788364)
 shape = SubResource("RectangleShape2D_fwli4")
 
-[node name="cupfloor" type="StaticBody2D" parent="Boba tea"]
+[node name="cupfloor" type="StaticBody2D" parent="Boba tea" unique_id=1492713601]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cupfloor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boba tea/cupfloor" unique_id=124625894]
 position = Vector2(-0.005964637, 0.46701503)
 shape = SubResource("RectangleShape2D_122os")
 
-[node name="straw" type="CharacterBody2D" parent="." node_paths=PackedStringArray("endPoint")]
+[node name="straw" type="CharacterBody2D" parent="." unique_id=1484422162 node_paths=PackedStringArray("endPoint")]
 position = Vector2(73, 0)
 script = ExtResource("1_fwli4")
 endPoint = NodePath("../end")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="straw"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="straw" unique_id=1531844008]
 shape = SubResource("RectangleShape2D_vu8t7")
 
-[node name="Sprite2D" type="Sprite2D" parent="straw"]
+[node name="Sprite2D" type="Sprite2D" parent="straw" unique_id=289929006]
 scale = Vector2(0.4482759, 0.44827586)
 texture = ExtResource("3_tydjs")
 
-[node name="end" type="Marker2D" parent="."]
+[node name="end" type="Marker2D" parent="." unique_id=1863665220]
 position = Vector2(1099, 0)
 
-[node name="fall" type="Area2D" parent="."]
+[node name="fall" type="Area2D" parent="." unique_id=92862695]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fall" unique_id=1743669285]
 position = Vector2(586, 868)
 shape = SubResource("RectangleShape2D_20b7j")
 
-[node name="Top" type="Sprite2D" parent="."]
+[node name="Top" type="Sprite2D" parent="." unique_id=847655931]
 position = Vector2(592, 469)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("5_ilpfm")

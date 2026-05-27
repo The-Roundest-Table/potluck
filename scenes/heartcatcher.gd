@@ -17,6 +17,7 @@ var delay = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super()
+	scene_manager.update_turn()
 	pass # Replace with function body.
 
 

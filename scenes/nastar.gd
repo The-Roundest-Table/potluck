@@ -20,6 +20,7 @@ extends BaseScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super()
+	scene_manager.update_turn()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.start('nastar')
 	for n in buttons.size():

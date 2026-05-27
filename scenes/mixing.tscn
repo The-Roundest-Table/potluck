@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://beda38kvpiyoq"]
+[gd_scene format=3 uid="uid://beda38kvpiyoq"]
 
 [ext_resource type="Script" uid="uid://bdlqs32l1lbiy" path="res://scripts/mixing.gd" id="1_hrjjl"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_iuoun"]
@@ -140,71 +140,69 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_avmg2"]
 
-[node name="Mixing" type="Node2D"]
+[node name="Mixing" type="Node2D" unique_id=1598614809]
 script = ExtResource("1_hrjjl")
 connected_scene = "roulette"
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=348024105]
 position = Vector2(576, 304.99997)
 scale = Vector2(0.61018515, 0.6101852)
 texture = ExtResource("2_iuoun")
 
-[node name="Kyorchekh" type="Sprite2D" parent="."]
+[node name="Kyorchekh" type="Sprite2D" parent="." unique_id=1432048834]
 position = Vector2(600, 431)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_y2g2y")
 
-[node name="Hand1" type="CharacterBody2D" parent="."]
+[node name="Hand1" type="CharacterBody2D" parent="." unique_id=771577686]
 position = Vector2(684.00006, 14.000002)
 rotation = -0.029034635
 scale = Vector2(0.315, 0.315)
 
-[node name="Hand1Sprite" type="Sprite2D" parent="Hand1"]
+[node name="Hand1Sprite" type="Sprite2D" parent="Hand1" unique_id=1658722781]
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_553fv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand1" unique_id=218395887]
 position = Vector2(-877.1234, 247.51044)
 scale = Vector2(0.99999905, 0.99999905)
 shape = SubResource("RectangleShape2D_553fv")
 
-[node name="Ytyk" type="Node2D" parent="."]
+[node name="Ytyk" type="Node2D" parent="." unique_id=674736142]
 position = Vector2(586, 41)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk" unique_id=849509072]
 modulate = Color(0.8334631, 0.6342708, 0.459468, 1)
 position = Vector2(0, 370)
 scale = Vector2(1.4752796, 1.3483449)
 mesh = SubResource("SphereMesh_avmg2")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Ytyk"]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Ytyk" unique_id=506303484]
 modulate = Color(0.877132, 0.71575254, 0.5691327, 1)
 position = Vector2(-2, 361.50983)
 scale = Vector2(1.4115986, 1.1046754)
 mesh = SubResource("SphereMesh_avmg2")
 
-[node name="YtykMesh1" type="MeshInstance2D" parent="Ytyk"]
+[node name="YtykMesh1" type="MeshInstance2D" parent="Ytyk" unique_id=935439334]
 modulate = Color(0.8260324, 0.6943411, 0.41869348, 1)
 position = Vector2(-3, 157.5)
 scale = Vector2(1, 0.9375)
 mesh = SubResource("QuadMesh_plan6")
 
-[node name="Hand2" type="Sprite2D" parent="."]
+[node name="Hand2" type="Sprite2D" parent="." unique_id=2062811287]
 position = Vector2(784, 72)
 rotation = -0.029034635
 scale = Vector2(0.315, 0.315)
 texture = ExtResource("3_553fv")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_y2g2y")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=36428615]
+libraries/ = SubResource("AnimationLibrary_y2g2y")
 
-[node name="TimerDialogueAppear" type="Timer" parent="."]
+[node name="TimerDialogueAppear" type="Timer" parent="." unique_id=186031581]
 wait_time = 5.0
 one_shot = true
 
-[node name="RadialProgress" type="TextureProgressBar" parent="."]
+[node name="RadialProgress" type="TextureProgressBar" parent="." unique_id=2040541008]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -223,28 +221,28 @@ texture_under = ExtResource("4_avmg2")
 texture_over = ExtResource("5_plan6")
 texture_progress = ExtResource("6_iuoun")
 
-[node name="TimerToStopProgress" type="Timer" parent="."]
+[node name="TimerToStopProgress" type="Timer" parent="." unique_id=304122120]
 one_shot = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1966111480]
 visible = false
 material = SubResource("CanvasItemMaterial_avmg2")
 offset_right = 1214.0
 offset_bottom = 686.0
 color = Color(0, 0, 0, 0.8)
 
-[node name="Arrows" type="Node2D" parent="."]
+[node name="Arrows" type="Node2D" parent="." unique_id=1601468064]
 
-[node name="Arrow" type="Sprite2D" parent="Arrows"]
+[node name="Arrow" type="Sprite2D" parent="Arrows" unique_id=580693502]
 position = Vector2(1053, 363)
 texture = ExtResource("7_plan6")
 
-[node name="Arrow2" type="Sprite2D" parent="Arrows"]
+[node name="Arrow2" type="Sprite2D" parent="Arrows" unique_id=623609201]
 position = Vector2(106, 380)
 rotation = 3.1384838
 texture = ExtResource("7_plan6")
 
-[node name="Scriibles" type="Node2D" parent="."]
+[node name="Scriibles" type="Node2D" parent="." unique_id=219107430]
 
 [connection signal="timeout" from="TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
 [connection signal="timeout" from="TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]

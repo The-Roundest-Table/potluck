@@ -1,10 +1,10 @@
 extends BaseScene
 
 var rounds = [
-	['sate', 'kyorchekh', 'egg tofu', 'heartcatcher'],
-	['heartcatcher', 'mooncake', 'alaadji', 'nastar'],
-	['kyorchekh', 'es campur', 'boba', 'naijuan'],
-	['boba', 'durian', 'ching bo leung', 'nastar']
+	['sate', 'kyorchekh', 'egg tofu', 'stroganina'],
+	['heartcatcher', 'mooncake', 'alaadji', 'flapjack'],
+	['tanghulu', 'es campur', 'boba', 'naijuan'],
+	['khaan', 'durian', 'ching bo leung', 'nastar']
 ]
 
 var foods_json = "res://scripts/foods.json"
@@ -53,6 +53,7 @@ func _on_spinner_selection(choice) -> void:
 	#print_debug(rounds[scene_manager.round][choice])
 	var item = rounds[scene_manager.round][choice]
 	var id = scene_manager.round*4 + choice
+	#if scene_manager.cookbook_array.has(choice):
 	scene_manager.update_cookbook(food_descs.get(item),id)
 	#var item = 'sate'
 	if "heartcatcher nastar boba kyorchekh".contains(item):

@@ -5,6 +5,7 @@ var alaadji
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	scene_manager.update_turn()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	super()
 	alaadji = get_node("alaadji")
