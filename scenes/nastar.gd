@@ -37,3 +37,7 @@ func on_finish_pressed() -> void:
 func _on_dialogic_signal(argument:String):
 	if argument == "nastar_done":
 		scene_manager.change_scene(self, connected_scene)
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("skip"):
+		scene_manager.change_scene(self, connected_scene)

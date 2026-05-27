@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d1yc2tygvpjio"]
+[gd_scene format=3 uid="uid://d1yc2tygvpjio"]
 
 [ext_resource type="Script" uid="uid://bm6xab0jtlsm3" path="res://scenes/tower.gd" id="1_qrbg1"]
 [ext_resource type="PackedScene" uid="uid://clydxw6hsdi4x" path="res://boba_player.tscn" id="1_u577f"]
@@ -31,136 +31,136 @@ normal = Vector2(1, 0)
 normal = Vector2(-1, 0)
 distance = 274.0
 
-[node name="Tower" type="Node2D"]
+[node name="Tower" type="Node2D" unique_id=82244504]
 script = ExtResource("1_qrbg1")
 death_scene = "starbucks"
 win_scene = "mixue"
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=146968639]
 position = Vector2(574.25, 341.99994)
 scale = Vector2(0.5062906, 0.4827586)
 texture = ExtResource("2_xxmqw")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=1653892420]
 
-[node name="PearlTower0001C1" type="Sprite2D" parent="."]
+[node name="PearlTower0001C1" type="Sprite2D" parent="." unique_id=1626156142]
 position = Vector2(867, 71)
 scale = Vector2(0.6614907, 0.6614907)
 texture = ExtResource("2_k4j06")
 
-[node name="TowerAsset" type="Node2D" parent="." node_paths=PackedStringArray("start")]
+[node name="TowerAsset" type="Node2D" parent="." unique_id=20590176 node_paths=PackedStringArray("start")]
 script = ExtResource("2_ay4al")
 ammo = ExtResource("2_ktxwe")
 start = NodePath("LaserStart")
 
-[node name="Timer" type="Timer" parent="TowerAsset"]
+[node name="Timer" type="Timer" parent="TowerAsset" unique_id=2129773308]
 wait_time = 2.0
 
-[node name="LaserStart" type="Marker2D" parent="TowerAsset"]
+[node name="LaserStart" type="Marker2D" parent="TowerAsset" unique_id=915602894]
 position = Vector2(933, 61)
 
-[node name="RayCast2D" type="RayCast2D" parent="TowerAsset"]
+[node name="RayCast2D" type="RayCast2D" parent="TowerAsset" unique_id=968463925]
 position = Vector2(933, 61)
 target_position = Vector2(-958, 586)
 
-[node name="TowerMesh" type="MeshInstance2D" parent="TowerAsset"]
+[node name="TowerMesh" type="MeshInstance2D" parent="TowerAsset" unique_id=383777542]
 visible = false
 position = Vector2(933, 361.00003)
 mesh = SubResource("BoxMesh_ktxwe")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=681104965]
 collision_layer = 3
 
-[node name="left" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="left" type="CollisionShape2D" parent="StaticBody2D" unique_id=236510792]
 shape = SubResource("WorldBoundaryShape2D_u577f")
 
-[node name="right" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="right" type="CollisionShape2D" parent="StaticBody2D" unique_id=374466900]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_cy281")
 
-[node name="boba_player" parent="." instance=ExtResource("1_u577f")]
+[node name="boba_player" parent="." unique_id=1168606594 instance=ExtResource("1_u577f")]
 position = Vector2(73.000015, 583)
 
-[node name="winTimer" type="Timer" parent="."]
+[node name="winTimer" type="Timer" parent="." unique_id=1637826687]
 wait_time = 20.0
 one_shot = true
 
-[node name="Tower" type="Sprite2D" parent="."]
+[node name="Tower" type="Sprite2D" parent="." unique_id=999374371]
 position = Vector2(926, 357)
 scale = Vector2(0.6228448, 0.6228448)
 texture = ExtResource("5_jfguu")
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2019970649]
 offset_left = 53.0
 offset_top = 44.0
 offset_right = 346.0
 offset_bottom = 90.0
 max_value = 20.0
 
-[node name="PearlTower0002C2" type="Sprite2D" parent="."]
+[node name="PearlTower0002C2" type="Sprite2D" parent="." unique_id=1404576777]
 position = Vector2(1065, 88)
 scale = Vector2(0.67156863, 0.67156863)
 texture = ExtResource("7_i2ndj")
 
-[node name="BobaTea0006LightPinkStar" type="Sprite2D" parent="."]
+[node name="BobaTea0006LightPinkStar" type="Sprite2D" parent="." unique_id=1384628292]
 position = Vector2(688.25, 56.868423)
 scale = Vector2(0.23684211, 0.23684213)
 texture = ExtResource("8_2vbvo")
 
-[node name="BobaTea0005PinkStarS" type="Sprite2D" parent="."]
+[node name="BobaTea0005PinkStarS" type="Sprite2D" parent="." unique_id=330272496]
 position = Vector2(713.25, 202)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("9_64n81")
 
-[node name="PearlTower0001C2" type="Sprite2D" parent="."]
+[node name="PearlTower0001C2" type="Sprite2D" parent="." unique_id=62303395]
 position = Vector2(1029, 602.00006)
 scale = Vector2(0.7670808, 0.7670807)
 texture = ExtResource("2_k4j06")
 
-[node name="BobaTea0004BlueStar" type="Sprite2D" parent="."]
+[node name="BobaTea0004BlueStar" type="Sprite2D" parent="." unique_id=255217132]
 position = Vector2(1070, 617)
 texture = ExtResource("10_kw3tj")
 
-[node name="BobaTea0002LightBlueStar" type="Sprite2D" parent="."]
+[node name="BobaTea0002LightBlueStar" type="Sprite2D" parent="." unique_id=270721669]
 position = Vector2(431, 113.99999)
 scale = Vector2(0.34000003, 0.34)
 texture = ExtResource("11_k6fnl")
 
-[node name="BobaTea0001YellowStar" type="Sprite2D" parent="."]
+[node name="BobaTea0001YellowStar" type="Sprite2D" parent="." unique_id=54237898]
 position = Vector2(441, 151)
 scale = Vector2(0.24712643, 0.24712643)
 texture = ExtResource("12_3hems")
 
-[node name="BobaTea0000PinkStar" type="Sprite2D" parent="."]
+[node name="BobaTea0000PinkStar" type="Sprite2D" parent="." unique_id=1520701918]
 position = Vector2(973.00006, 459.00003)
 scale = Vector2(0.26106194, 0.26106194)
 texture = ExtResource("13_xxmqw")
 
-[node name="BobaTea0003OrangeStar" type="Sprite2D" parent="."]
+[node name="BobaTea0003OrangeStar" type="Sprite2D" parent="." unique_id=609435762]
 position = Vector2(880.00006, 343)
 scale = Vector2(0.39440992, 0.39440992)
 texture = ExtResource("14_3hems")
 
-[node name="PearlTower0004S2" type="Sprite2D" parent="."]
+[node name="PearlTower0004S2" type="Sprite2D" parent="." unique_id=711311856]
 position = Vector2(880, 73)
 scale = Vector2(0.5294118, 0.52941173)
 texture = ExtResource("15_xxmqw")
 
-[node name="PearlTower0007P1" type="Sprite2D" parent="."]
+[node name="PearlTower0007P1" type="Sprite2D" parent="." unique_id=1878485730]
 position = Vector2(836, 594)
 scale = Vector2(0.703252, 0.67054266)
 texture = ExtResource("16_xh8a6")
 
-[node name="PearlTower0008P2" type="Sprite2D" parent="."]
+[node name="PearlTower0008P2" type="Sprite2D" parent="." unique_id=86613460]
 position = Vector2(888.25, 632)
 scale = Vector2(0.7932331, 0.75757575)
 texture = ExtResource("17_v1bxd")
 
-[node name="PearlTower0009BlueDot" type="Sprite2D" parent="."]
+[node name="PearlTower0009BlueDot" type="Sprite2D" parent="." unique_id=1638615639]
 position = Vector2(124, 279)
 texture = ExtResource("18_cjdug")
 
-[node name="PearlTower0010RedDot" type="Sprite2D" parent="."]
+[node name="PearlTower0010RedDot" type="Sprite2D" parent="." unique_id=475468625]
 position = Vector2(1058, 283)
 texture = ExtResource("19_dyfdg")
 

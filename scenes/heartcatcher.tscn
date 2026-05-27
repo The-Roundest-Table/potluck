@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr7pjbkytkwh0"]
+[gd_scene format=3 uid="uid://dr7pjbkytkwh0"]
 
 [ext_resource type="Script" uid="uid://cfrmgji1b503l" path="res://scenes/heartcatcher.gd" id="1_hqnkh"]
 [ext_resource type="PackedScene" uid="uid://cw6bm1v3j4x6f" path="res://pan_player.tscn" id="1_wdnwu"]
@@ -11,29 +11,29 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hqnkh"]
 normal = Vector2(-1, 0)
 
-[node name="heartcatcher" type="Node2D"]
+[node name="heartcatcher" type="Node2D" unique_id=443055238]
 script = ExtResource("1_hqnkh")
 tomato = ExtResource("2_hqnkh")
 connected_scene = "heart_sauce"
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1369763021]
 position = Vector2(582.0002, 316.00003)
 scale = Vector2(0.5062906, 0.4827586)
 texture = ExtResource("3_6w0is")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1157011730]
 
-[node name="left" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="left" type="CollisionShape2D" parent="StaticBody2D" unique_id=1116100772]
 shape = SubResource("WorldBoundaryShape2D_v8y1u")
 
-[node name="right" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="right" type="CollisionShape2D" parent="StaticBody2D" unique_id=918330493]
 position = Vector2(1152, 0)
 shape = SubResource("WorldBoundaryShape2D_hqnkh")
 
-[node name="Pan" parent="." instance=ExtResource("1_wdnwu")]
+[node name="Pan" parent="." unique_id=802216480 instance=ExtResource("1_wdnwu")]
 position = Vector2(212, 527)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=259998289]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -44,12 +44,12 @@ offset_bottom = 85.0
 grow_horizontal = 2
 text = "left right keys to move"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2023871443]
 offset_right = 244.0
 offset_bottom = 142.0
 theme_override_font_sizes/normal_font_size = 30
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1298762392]
 offset_left = 887.0
 offset_top = 25.0
 offset_right = 1123.0

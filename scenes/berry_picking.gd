@@ -17,7 +17,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if alaadji.placed:
 		pass
-		#Dialogic.start('berries_spirits')
+	if Input.is_action_pressed("skip"):
+		scene_manager.change_scene(self, connected_scene)
 
 func _on_dialogic_signal(argument:String):
 	if argument == "berries_scene_end":

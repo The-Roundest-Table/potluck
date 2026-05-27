@@ -59,6 +59,13 @@ position = Vector2(17.861633, 185.76105)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
+[node name="stop" type="Button" parent="." unique_id=273768306]
+offset_left = 526.0
+offset_top = 305.0
+offset_right = 619.0
+offset_bottom = 340.0
+text = "STOP"
+
 [node name="FoodPopup" parent="." unique_id=1670246633 instance=ExtResource("2_f75s3")]
 visible = false
 position = Vector2(570, 324)
@@ -89,22 +96,6 @@ theme_override_fonts/font = ExtResource("10_8jefs")
 theme_override_font_sizes/font_size = 30
 text = "Turn:"
 
-[node name="Panel" type="Panel" parent="." unique_id=933656371]
-offset_left = 869.0
-offset_top = 223.0
-offset_right = 1054.0
-offset_bottom = 289.0
-
-[node name="Label" type="Label" parent="Panel" unique_id=765445574]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 8.0
-offset_right = 166.0
-offset_bottom = 57.0
-theme_override_fonts/font = ExtResource("10_8jefs")
-text = "Press SPACE to STOP
-spinning"
-horizontal_alignment = 1
-
 [connection signal="selection" from="spinner" to="." method="_on_spinner_selection"]
+[connection signal="button_down" from="stop" to="spinner" method="_on_stop_button_down"]
 [connection signal="pressed" from="FoodPopup/FoodPopUpButton" to="FoodPopup" method="_on_food_pop_up_button_pressed"]

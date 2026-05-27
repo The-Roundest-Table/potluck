@@ -27,3 +27,7 @@ func _on_dialogic_signal(argument:String):
 
 func _on_button_button_down() -> void:
 	Dialogic.start('baking')
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("skip"):
+		scene_manager.change_scene(self, connected_scene)

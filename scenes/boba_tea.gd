@@ -12,7 +12,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_pressed("skip"):
+		scene_manager.change_scene(self, connected_scene)
 
 
 func _on_straw_poked() -> void:

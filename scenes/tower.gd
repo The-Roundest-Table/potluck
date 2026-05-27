@@ -21,6 +21,9 @@ func _process(delta: float) -> void:
 	if play:
 		print_debug(wintimer.time_left)
 		progressBar.value = 20 - wintimer.time_left;
+		
+	if Input.is_action_pressed("skip"):
+		scene_manager.change_scene(self, "roulette")
 
 func _on_player_died():
 	print("die")
