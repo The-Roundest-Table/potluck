@@ -1,13 +1,13 @@
 { "sate": {
 		"name": "sate",
 		"art": "res://assets/placeholder/Potluck_planning (1).jpg",
-		"description": "meat skewers with peanut sauce",
+		"description": "Blazing heat at my back",
 		"ingredients": ["test", "test2"]
 	},
 	"stroganina": {
 		"name": "stroganina",
 		"art": "res://assets/final/stroganina.png",
-		"description": "Frozen fish that melts in your mouth. It's refreshing, rich in flavor",
+		"description": "Cold freshness melts under my tongue",
 		"ingredients": ["test", "test2"]
 	},
 	"egg tofu": {
@@ -19,7 +19,7 @@
 	"heartcatcher": {
 		"name": "西红柿鸡蛋面",
 		"art": "res://assets/final/noodle.png",
-		"description": "The original tomato eggs noodle soup doesn’t put soy sauce in it, but my mom’s secrete recipe actually put soy sauce and mushroom in it, which adds umami flavor to the soup and make it taste great.",
+		"description": "Mother's loving embrace whispered into a meal",
 		"ingredients": ["test", "test2"]
 	},
 	"flapjack": {
@@ -31,25 +31,25 @@
 	"mooncake": {
 		"name": "mooncake",
 		"art": "res://assets/final/mooncake.png",
-		"description": "This round celebrates connection, cultural identity, and shared experience—meals eaten together, recipes passed down, and the act of feeding as a gesture of love and inclusion.",
+		"description": "Under the light of the moon, a hope shared is a hope doubled",
 		"ingredients": ["test", "test2"]
 	},
 	"alaadji": {
 		"name": "alaadji",
 		"art": "res://assets/placeholder/Potluck_planning (6).jpg",
-		"description": "We usually leave these foods to the spirits. But it also makes a really nice meal. I remember cooking it together with my mother",
+		"description": "A memory of wild strawberries and pine",
 		"ingredients": ["test", "test2"]
 	},
 	"nastar": {
 		"name": "nastar",
 		"art": "res://assets/placeholder/Potluck_planning (5).jpg",
-		"description": "This round celebrates connection, cultural identity, and shared experience—meals eaten together, recipes passed down, and the act of feeding as a gesture of love and inclusion.",
+		"description": "Until the very end, you still have time",
 		"ingredients": ["test", "test2"]
 	},
 	"kyorchekh": {
 		"name": "kyorchekh",
 		"art": "res://assets/placeholder/Potluck_planning (10).jpg",
-		"description": "We usually make it together with my mother. It's made of fresh milk and berries we gather in the forest.",
+		"description": "An ocean of lavender washes away a pain for now",
 		"ingredients": ["test", "test2"]
 	},
 	"tanghulu": {
@@ -67,19 +67,19 @@
 	"es campur": {
 		"name": "es campur",
 		"art": "res://assets/placeholder/Potluck_planning (9).jpg",
-		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
+		"description": "A glittering mountain of snow and sweets just for me, as a treat",
 		"ingredients": ["test", "test2"]
 	},
 	"boba": {
 		"name": "boba tea",
 		"art": "res://assets/placeholder/Potluck_planning (16).jpg",
-		"description": "Food that tempts and teases—the forbidden bite, the midnight craving, the indulgence that feels both wrong and irresistibly right. ",
+		"description": "Weave and dance through the frigid air",
 		"ingredients": ["test", "test2"]
 	},
 	"durian": {
 		"name": "durian",
 		"art": "res://assets/placeholder/Potluck_planning (13).jpg",
-		"description": "These dishes explore desire, shame, and self-acceptance, revealing how pleasure and guilt intertwine in modern eating culture.",
+		"description": "Prickly and pungent, who would want to know you",
 		"ingredients": ["test", "test2"]
 	},
 	"ching bo leung": {
@@ -91,7 +91,7 @@
 	"khaan": {
 		"name": "khaan",
 		"art": "res://assets/placeholder/Potluck_planning (14).jpg",
-		"description": "This dish is made of cow's blood and intestines. It's something that I struggle with cooking in here. I still remember the taste.",
+		"description": "Lifeblood: my comfort, release from shame, how I miss your richness",
 		"ingredients": ["test", "test2"]
 	},
 }
