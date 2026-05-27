@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	
 	if speed <= 0:
 		speed = 0;
-		print(int(rad_to_deg(rotation))%360)
+		#print(int(rad_to_deg(rotation))%360)
 		choice = int(rad_to_deg(rotation))%choices_remain
 		selection.emit(choice)
 		#scene_manager.update_turn()

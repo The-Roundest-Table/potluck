@@ -1,12 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://d05d5fofk8e6r"]
+[gd_scene format=3 uid="uid://d05d5fofk8e6r"]
 
 [ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="1_h827o"]
 [ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="2_jk72h"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="3_jk72h"]
 
-[node name="Node2D" type="Node2D"]
+[node name="CookBook" type="Node2D" unique_id=109042980]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1444346503]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 573.0
@@ -14,63 +14,80 @@ offset_top = 325.0
 offset_right = 613.0
 offset_bottom = 365.0
 
-[node name="Cookbook" type="Sprite2D" parent="Control"]
+[node name="Cookbook" type="Sprite2D" parent="Control" unique_id=258790436]
 scale = Vector2(0.5695444, 0.5695444)
 texture = ExtResource("1_h827o")
 script = ExtResource("2_jk72h")
 
-[node name="food1" type="Sprite2D" parent="Control/Cookbook"]
+[node name="food1" type="Sprite2D" parent="Control/Cookbook" unique_id=1272711204]
 position = Vector2(-282.68207, -245.81046)
 scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food1" type="TextureButton" parent="Control/Cookbook/food1"]
+[node name="food1" type="TextureButton" parent="Control/Cookbook/food1" unique_id=659642119]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food2" type="Sprite2D" parent="Control/Cookbook"]
+[node name="food2" type="Sprite2D" parent="Control/Cookbook" unique_id=1781869396]
 position = Vector2(-282.682, 161.53265)
 scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food2" type="TextureButton" parent="Control/Cookbook/food2"]
+[node name="food2" type="TextureButton" parent="Control/Cookbook/food2" unique_id=990941299]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food3" type="Sprite2D" parent="Control/Cookbook"]
+[node name="food3" type="Sprite2D" parent="Control/Cookbook" unique_id=348165420]
 position = Vector2(323.06525, -245.81049)
 scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food3" type="TextureButton" parent="Control/Cookbook/food3"]
+[node name="food3" type="TextureButton" parent="Control/Cookbook/food3" unique_id=1663451299]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="food4" type="Sprite2D" parent="Control/Cookbook"]
+[node name="food4" type="Sprite2D" parent="Control/Cookbook" unique_id=1690962331]
 position = Vector2(326.57697, 163.28851)
 scale = Vector2(0.21535434, 0.21535437)
 texture = ExtResource("3_jk72h")
 
-[node name="food4" type="TextureButton" parent="Control/Cookbook/food4"]
+[node name="food4" type="TextureButton" parent="Control/Cookbook/food4" unique_id=7637776]
 offset_left = -847.9147
 offset_top = -554.4056
 offset_right = 807.14954
 offset_bottom = 595.17084
 
-[node name="left" type="TextureButton" parent="Control/Cookbook"]
+[node name="left" type="TextureButton" parent="Control/Cookbook" unique_id=2106111929]
 offset_left = -668.95575
 offset_top = -493.37686
 offset_right = 24.05133
 offset_bottom = 4015.246
 
-[node name="right" type="TextureButton" parent="Control/Cookbook"]
+[node name="right" type="TextureButton" parent="Control/Cookbook" unique_id=1337805771]
 offset_left = 530.24945
 offset_top = -493.37686
 offset_right = 1223.2566
 offset_bottom = 4015.246
+
+[node name="Recipe" type="Control" parent="." unique_id=1359198231]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="Page" type="Sprite2D" parent="Recipe" unique_id=1896934554]
+position = Vector2(573, 325)
+scale = Vector2(0.47901675, 0.4790168)
+texture = ExtResource("1_h827o")
+
+[connection signal="button_down" from="Control/Cookbook/food1/food1" to="Control/Cookbook" method="_on_food_1_button_down"]
+[connection signal="button_down" from="Control/Cookbook/food2/food2" to="Control/Cookbook" method="_on_food_2_button_down"]
+[connection signal="button_down" from="Control/Cookbook/food3/food3" to="Control/Cookbook" method="_on_food_3_button_down"]
+[connection signal="button_down" from="Control/Cookbook/food4/food4" to="Control/Cookbook" method="_on_food_4_button_down"]

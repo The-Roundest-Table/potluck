@@ -10,6 +10,7 @@ var scene_dir_path = "res://scenes/"
 var cutscene_dir_path = "res://cutscenes/"
 var spins = 0;
 var berries: int = 0
+var cookbook_array = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0]
 
 
 # Called when the node enters the scene tree for the first time.
@@ -47,3 +48,11 @@ func cutscene(from, to_scene_name: String) -> void:
 	
 	var full_path = cutscene_dir_path + to_scene_name + ".tscn"
 	from.get_tree().call_deferred('change_scene_to_file', full_path)
+
+func update_cookbook(item, id):
+	cookbook_array[id] = item;
+	print_debug(cookbook_array[id])
+	
+func open_cookbook(from):
+	last_scene_name = from.name
+	from.get_tree().call_deferred('change_scene_to_file', "res://GUI/cookbook.tscn")

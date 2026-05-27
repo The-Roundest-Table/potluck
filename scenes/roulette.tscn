@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn8vuxa5m2spt"]
+[gd_scene format=3 uid="uid://cn8vuxa5m2spt"]
 
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
@@ -6,26 +6,25 @@
 [ext_resource type="Texture2D" uid="uid://co7afw4fclfvv" path="res://assets/placeholder/Potluck_planning (1).png" id="2_iqt6o"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_k6evh"]
 [ext_resource type="Texture2D" uid="uid://dfajrqw3cmama" path="res://assets/opening scene/table.png" id="3_gils2"]
-[ext_resource type="PackedScene" uid="uid://d05d5fofk8e6r" path="res://GUI/cookbook.tscn" id="4_u4f06"]
 [ext_resource type="Texture2D" uid="uid://ika7v17boqtm" path="res://assets/opening scene/center.png" id="5_8jefs"]
 [ext_resource type="Texture2D" uid="uid://dwc3tnf5n4b1t" path="res://assets/opening scene/empty dish.png" id="7_gils2"]
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="10_8jefs"]
 
-[node name="roulette" type="Node2D"]
+[node name="roulette" type="Node2D" unique_id=600600796]
 script = ExtResource("1_uqyis")
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=1655567915]
 position = Vector2(580.44446, 329.875)
 scale = Vector2(0.60763896, 0.60763896)
 texture = ExtResource("2_k6evh")
 
-[node name="Table" type="Sprite2D" parent="."]
+[node name="Table" type="Sprite2D" parent="." unique_id=1398238028]
 position = Vector2(570, 324)
 rotation = 1.5707964
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("3_gils2")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1570386580]
 visible = false
 offset_left = -5.0
 offset_top = -34.0
@@ -34,47 +33,43 @@ offset_bottom = 1183.0
 scale = Vector2(0.555, 0.555)
 texture = ExtResource("2_iqt6o")
 
-[node name="spinner" type="Sprite2D" parent="."]
+[node name="spinner" type="Sprite2D" parent="." unique_id=617863805]
 position = Vector2(570, 324)
 scale = Vector2(0.55985916, 0.55985916)
 texture = ExtResource("5_8jefs")
 script = ExtResource("1_x8m2p")
 
-[node name="Sprite2D" type="Sprite2D" parent="spinner"]
+[node name="Sprite2D" type="Sprite2D" parent="spinner" unique_id=1855076995]
 position = Vector2(-198.2641, 1.7861328)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
-[node name="Sprite2D2" type="Sprite2D" parent="spinner"]
+[node name="Sprite2D2" type="Sprite2D" parent="spinner" unique_id=1640726051]
 position = Vector2(8.930847, -205.40878)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
-[node name="Sprite2D3" type="Sprite2D" parent="spinner"]
+[node name="Sprite2D3" type="Sprite2D" parent="spinner" unique_id=257200760]
 position = Vector2(208.98114, -10.716919)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
-[node name="Sprite2D4" type="Sprite2D" parent="spinner"]
+[node name="Sprite2D4" type="Sprite2D" parent="spinner" unique_id=857246108]
 position = Vector2(17.861633, 185.76105)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
-[node name="FoodPopup" parent="." instance=ExtResource("2_f75s3")]
+[node name="FoodPopup" parent="." unique_id=1670246633 instance=ExtResource("2_f75s3")]
 visible = false
 position = Vector2(570, 324)
 
-[node name="FoodPopUpButton" type="TextureButton" parent="FoodPopup"]
+[node name="FoodPopUpButton" type="TextureButton" parent="FoodPopup" unique_id=888285407]
 offset_left = -350.0
 offset_top = -266.0
 offset_right = 320.0
 offset_bottom = 245.0
 
-[node name="Cookbook" parent="." instance=ExtResource("4_u4f06")]
-visible = false
-position = Vector2(581, 333)
-
-[node name="round" type="Label" parent="."]
+[node name="round" type="Label" parent="." unique_id=2050791574]
 offset_left = 32.0
 offset_top = 32.0
 offset_right = 308.0
@@ -84,7 +79,7 @@ theme_override_fonts/font = ExtResource("10_8jefs")
 theme_override_font_sizes/font_size = 30
 text = "Round:"
 
-[node name="turn" type="Label" parent="."]
+[node name="turn" type="Label" parent="." unique_id=1953321478]
 offset_left = 32.0
 offset_top = 103.0
 offset_right = 308.0
@@ -94,13 +89,13 @@ theme_override_fonts/font = ExtResource("10_8jefs")
 theme_override_font_sizes/font_size = 30
 text = "Turn:"
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=933656371]
 offset_left = 869.0
 offset_top = 223.0
 offset_right = 1054.0
 offset_bottom = 289.0
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=765445574]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 8.0

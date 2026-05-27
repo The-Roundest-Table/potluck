@@ -9,16 +9,18 @@ var is_open = false
 
 
 var contents: Dictionary = {}
-var array = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0]
+var array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#close()
-	$food1/food1.button_down.connect(open_recipe);
-	$food2/food2.button_down.connect(open_recipe);
-	$food3/food3.button_down.connect(open_recipe);
-	$food4/food4.button_down.connect(open_recipe);
-	
+	#$food1/food1.button_down.connect(open_recipe, 1);
+	#$food2/food2.button_down.connect(open_recipe, 2);
+	#$food3/food3.button_down.connect(open_recipe, 3);
+	#$food4/food4.button_down.connect(open_recipe, 4);
+	current_page = 0;
+	go_to_page(current_page)
+	update_page()
 	pass # Replace with function body.
 
 func load_pages():
@@ -47,17 +49,12 @@ func open():
 	#$Control/PageContent.text = page_content[0]
 	#$Control/PageContent2.text = page_content2[0]
 
-func update_cookbook(food, id):
-	array[id] = food;
-	pass
-
 func update_page():
 	
-	$food1.texture = load(array[current_page*4].art) if array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food2.texture = load(array[current_page*4+1].art) if array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food3.texture = load(array[current_page*4+2].art) if array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food4.texture = load(array[current_page*4+3].art) if array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
-	#$food1/TextureButton
+	$food1.texture = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
+	$food2.texture = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
+	$food3.texture = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
+	$food4.texture = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
 
 func go_to_page(page:int):
 	if current_page == page:
@@ -100,6 +97,23 @@ func _on_right_button_down() -> void:
 			#new_page+=1
 	go_to_page(new_page)
 
-func open_recipe():
-	
+func open_recipe(item):
+	print_debug(item);
 	pass
+
+
+func _on_food_1_button_down() -> void:
+	open_recipe(1)
+	pass # Replace with function body.
+
+
+func _on_food_2_button_down() -> void:
+	open_recipe(2)
+
+
+func _on_food_3_button_down() -> void:
+	open_recipe(3)
+
+
+func _on_food_4_button_down() -> void:
+	open_recipe(4)
