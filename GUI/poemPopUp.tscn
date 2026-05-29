@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://wrj12h4lx8ew"]
+
+[node name="Node2D" type="Node2D" unique_id=153951900]
+
+[node name="PoemPopUp" type="Control" parent="." unique_id=4959709]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="PoemPopUp" unique_id=1532988277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 314.0
+offset_top = 174.0
+offset_right = 783.0
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PoemPopUp" unique_id=2144866407]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3svsne1b1sjq"]
+[gd_scene format=3 uid="uid://d3svsne1b1sjq"]
 
 [ext_resource type="Script" uid="uid://mkqcjyat4451" path="res://GUI/ending.gd" id="1_gax8s"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_myx0m"]
@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="3_gax8s"]
 [ext_resource type="Texture2D" uid="uid://bnjy53ke06eiw" path="res://assets/UI/opening UI/exit.png" id="5_j01a6"]
 
-[node name="Ending" type="Control"]
+[node name="Ending" type="Control" unique_id=638965233]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -17,16 +17,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gax8s")
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=168640859]
 position = Vector2(0, -3.0517578e-05)
 scale = Vector2(0.61018515, 0.6101852)
 texture = ExtResource("1_myx0m")
 
-[node name="Title" type="Sprite2D" parent="."]
+[node name="Title" type="Sprite2D" parent="." unique_id=1236010715]
 position = Vector2(0, -23)
 texture = ExtResource("2_iu16v")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=237800804]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -41,7 +41,7 @@ theme_override_fonts/font = ExtResource("3_gax8s")
 theme_override_font_sizes/font_size = 80
 text = "Thanks for playing!"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=88097731]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -54,27 +54,50 @@ grow_horizontal = 2
 theme_override_constants/separation = 4
 alignment = 1
 
-[node name="Return" type="Sprite2D" parent="VBoxContainer"]
+[node name="Return" type="Sprite2D" parent="VBoxContainer" unique_id=1872325888]
 position = Vector2(-18.625, 83)
 scale = Vector2(0.5444445, 0.54444444)
 texture = ExtResource("5_j01a6")
 
-[node name="return" type="TextureButton" parent="VBoxContainer/Return"]
+[node name="return" type="TextureButton" parent="VBoxContainer/Return" unique_id=1633453057]
 offset_left = -266.32654
 offset_top = -90.0
 offset_right = 266.32648
 offset_bottom = 90.0
 
-[node name="Exit" type="Sprite2D" parent="VBoxContainer"]
+[node name="Exit" type="Sprite2D" parent="VBoxContainer" unique_id=1779417724]
 position = Vector2(318.375, 82)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_j01a6")
 
-[node name="exit" type="TextureButton" parent="VBoxContainer/Exit"]
+[node name="exit" type="TextureButton" parent="VBoxContainer/Exit" unique_id=659943344]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
 offset_bottom = 100.0
+
+[node name="PoemFinal" type="Control" parent="." unique_id=1173222608]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="PoemFinal" unique_id=104280833]
+layout_mode = 0
+offset_left = -272.0
+offset_top = -281.0
+offset_right = 271.0
+offset_bottom = 73.0
+
+[node name="Label" type="Label" parent="PoemFinal" unique_id=1848298349]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = -231.0
+offset_top = -247.0
+offset_right = 237.0
+offset_bottom = 33.0
+text = "Default"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="VBoxContainer/Return/return" to="." method="_on_return_button_down"]
 [connection signal="button_down" from="VBoxContainer/Exit/exit" to="." method="_on_texture_button_button_down"]

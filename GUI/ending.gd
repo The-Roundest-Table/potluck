@@ -1,8 +1,16 @@
 extends Control
+var PoemText
+var Line1:String = "First Line"
+var Line2:String = "Second Line"
+var Line3:String = "Third Line"
+var Line4:String = "Fourth Line"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	PoemText = get_node("PoemFinal/Label")
+	#Line1 = Scene_Manager.
+	PoemText.text = Line1 + "\n" + Line2 + "\n" + Line3 + "\n" + Line4
 	pass # Replace with function body.
 
 
