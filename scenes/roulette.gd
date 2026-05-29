@@ -1,11 +1,7 @@
 extends BaseScene
 
-var rounds = [
-	['sate', 'kyorchekh', 'egg tofu', 'stroganina'],
-	['heartcatcher', 'mooncake', 'alaadji', 'flapjack'],
-	['tanghulu', 'es campur', 'boba', 'naijuan'],
-	['khaan', 'durian', 'ching bo leung', 'nastar']
-]
+
+var special_food = ['kyorchekh', 'boba', 'heartcatcher', 'nastar']
 
 var foods_json = "res://scripts/foods.json"
 var food_descs: Dictionary = {}
@@ -44,17 +40,23 @@ func _process(delta: float) -> void:
 		#get_tree().call_deferred('change_scene_to_file', "res://GUI/cookbook.tscn")
 	#if popup.opened:
 		#print_debug("close please")
-	$round.text = str("Round ", scene_manager.round + 1)
+	#$round.text = str("Round ", scene_manager.round + 1)
 	$turn.text = str("Turn ", scene_manager.turn + 1)
 
 
 func _on_spinner_selection(choice) -> void:
 	#print_debug(choice)
 	#print_debug(rounds[scene_manager.round][choice])
-	var item = rounds[scene_manager.round][choice]
-	var id = scene_manager.round*4 + choice
+	#var item = rounds[scene_manager.round][choice]
+	var item;
+	if scene_manager.turn != 3:
+		item = scene_manager.regular_food[choice]
+		scene_manager.regular_food.pop_at(choice)
+	else:
+		item = special_food[choice];
+	#var id = scene_manager.round*4 + choice
 	#if scene_manager.cookbook_array.has(choice):
-	scene_manager.update_cookbook(food_descs.get(item),id)
+	#scene_manager.update_cookbook(food_descs.get(item),id)
 	#var item = 'sate'
 	if "heartcatcher nastar boba kyorchekh".contains(item):
 		scene_manager.change_scene(self, item);

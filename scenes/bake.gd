@@ -1,7 +1,7 @@
 class_name Bake extends BaseScene
 
 @onready var tart_copies: Node2D = $tart_copies
-@export var connected_scene: String
+#@export var connected_scene: String
 
 var stop_baking = false;
 var tarts = [0, 0, 0, 0, 0];
@@ -22,7 +22,7 @@ func _ready():
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bake_done":
-		scene_manager.change_scene(self, connected_scene)
+		scene_manager.end_game()
 
 
 func _on_button_button_down() -> void:
@@ -30,4 +30,4 @@ func _on_button_button_down() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("skip"):
-		scene_manager.change_scene(self, connected_scene)
+		scene_manager.end_game()

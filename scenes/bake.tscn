@@ -11,7 +11,6 @@
 
 [node name="Bake" type="Node2D" unique_id=1409489638]
 script = ExtResource("1_ipi8e")
-connected_scene = "roulette"
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=1773666820]
 position = Vector2(576, 304.99997)
