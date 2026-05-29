@@ -19,19 +19,19 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if play:
-		print_debug(wintimer.time_left)
+		#print_debug(wintimer.time_left)
 		progressBar.value = 20 - wintimer.time_left;
 		
 	if Input.is_action_pressed("skip"):
 		scene_manager.end_game()
 
 func _on_player_died():
-	print("die")
+	#print("die")
 	scene_manager.cutscene(self, "starbucks")
 	pass
 
 func _on_win_timer_timeout() -> void:
-	print("win")
+	#print("win")
 	scene_manager.cutscene(self, win_scene)
 	pass # Replace with function body.
 

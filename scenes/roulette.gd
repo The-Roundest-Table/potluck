@@ -64,5 +64,6 @@ func _on_spinner_selection(choice) -> void:
 	var name = food_descs.get(item).name
 	var desc = food_descs.get(item).description
 	var art = food_descs.get(item).art
+	scene_manager.poem[scene_manager.turn] = desc
 	popup.open(name, desc, art, item)
 	

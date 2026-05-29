@@ -7,6 +7,7 @@ func _ready() -> void:
 	super()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.start("boba_tea", "lose")
+	scene_manager.poem[3] = "Be a deer and stay still"
 	pass # Replace with function body.
 
 

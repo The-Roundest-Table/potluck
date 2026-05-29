@@ -93,8 +93,10 @@ func _on_dialogic_signal(argument:String):
 		#print("mixing ended")
 		if DialogueCount == 7:
 			Dialogic.start('berries_ending2')
+			scene_manager.poem[3] = "Unresolved questions sit heavy like berry chunks"
 		if DialogueCount <= 4:
 			Dialogic.start('berries_ending1')
+			scene_manager.poem[3] = "A wave of lavender soothes for a moment"
 		if DialogueCount > 4 && DialogueCount < 7:
 			Dialogic.start('berries_ending3')
 	if argument == "end_berries":

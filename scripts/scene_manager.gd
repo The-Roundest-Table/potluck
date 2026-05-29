@@ -11,7 +11,7 @@ var cutscene_dir_path = "res://cutscenes/"
 var spins = 0;
 var berries: int = 0
 var cookbook_array = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0]
-var poem = [];
+var poem = [0, 0, 0, 0];
 var regular_food = [ 'sate', 'egg tofu', 'stroganina', 'mooncake', 'alaadji', 'flapjack',
 	'tanghulu', 'es campur', 'naijuan',
 	'khaan', 'durian', 'ching bo leung'
