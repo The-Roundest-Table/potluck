@@ -31,7 +31,7 @@ func _physics_process(delta):
 			MixLeft = true
 		#Mixing = true
 	if Input.is_action_pressed("skip"):
-		scene_manager.change_scene(self, connected_scene)
+		scene_manager.end_game()
 	#if(Input.is_anything_pressed()==false):
 		#Mixing = false
 	#if Mixing == true:
