@@ -28,7 +28,6 @@ func _process(delta: float) -> void:
 	pass
 
 func update_turn():
-	
 	if turn < 4:
 		turn +=1;
 		print_debug(str("turn: ", turn))

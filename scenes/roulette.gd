@@ -58,11 +58,11 @@ func _on_spinner_selection(choice) -> void:
 	#if scene_manager.cookbook_array.has(choice):
 	#scene_manager.update_cookbook(food_descs.get(item),id)
 	#var item = 'sate'
-	if "heartcatcher nastar boba kyorchekh".contains(item):
-		scene_manager.change_scene(self, item);
-	else:
-		var name = food_descs.get(item).name
-		var desc = food_descs.get(item).description
-		var art = food_descs.get(item).art
-		popup.open(name, desc, art)
+	#if "heartcatcher nastar boba kyorchekh".contains(item):
+		#scene_manager.change_scene(self, item);
+	#else:
+	var name = food_descs.get(item).name
+	var desc = food_descs.get(item).description
+	var art = food_descs.get(item).art
+	popup.open(name, desc, art, item)
 	
