@@ -9,6 +9,7 @@ func _ready():
 	exit.button_down.connect(on_exit_pressed)
 	#settings.button_down.connect(on_controls_pressed)
 	credits.button_down.connect(on_credits_pressed)
+	scene_manager.reset_game()
 
 func on_start_pressed() -> void:
 	get_tree().call_deferred('change_scene_to_file', "res://scenes/roulette.tscn")

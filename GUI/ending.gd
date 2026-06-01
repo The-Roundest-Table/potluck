@@ -13,8 +13,8 @@ func _ready() -> void:
 	Line2 = scene_manager.poem[1]
 	Line3 = scene_manager.poem[2]
 	Line4 = scene_manager.poem[3]
-	PoemText.text = Line1 + "\n" + Line2 + "\n" + Line3 + "\n" + Line4
-	pass # Replace with function body.
+	PoemText.text = Line1 + "\n" + Line2 + "\n" + Line3 + "\n" + Line4 + "\n" + "Thanks for playing!"
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

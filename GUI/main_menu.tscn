@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bql3eou4hq352"]
+[gd_scene format=3 uid="uid://bql3eou4hq352"]
 
 [ext_resource type="Script" uid="uid://dfhxmnq43th68" path="res://GUI/main_menu.gd" id="1_t7e0r"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_rhcmj"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ds4pqriumu0bs" path="res://assets/UI/opening UI/credits.png" id="6_ibxkv"]
 [ext_resource type="Texture2D" uid="uid://bnjy53ke06eiw" path="res://assets/UI/opening UI/exit.png" id="7_bfvk1"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=375777732]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,17 +19,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t7e0r")
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=1512283428]
 position = Vector2(-8.583069e-06, 1.4424324e-05)
 scale = Vector2(0.5981482, 0.5981482)
 texture = ExtResource("2_rhcmj")
 
-[node name="Title" type="Sprite2D" parent="."]
+[node name="Title" type="Sprite2D" parent="." unique_id=899328648]
 position = Vector2(0, -62.999996)
 scale = Vector2(0.4613662, 0.4613662)
 texture = ExtResource("3_exjve")
 
-[node name="Label" type="Label" parent="Title"]
+[node name="Label" type="Label" parent="Title" unique_id=369842900]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -46,7 +46,7 @@ theme_override_fonts/font = ExtResource("4_exjve")
 theme_override_font_sizes/font_size = 150
 text = "Together"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=356904702]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -59,34 +59,34 @@ grow_horizontal = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Start" type="Sprite2D" parent="VBoxContainer"]
+[node name="Start" type="Sprite2D" parent="VBoxContainer" unique_id=163919416]
 position = Vector2(-231.625, 82)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_5hhdc")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Start"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Start" unique_id=1481065182]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
 offset_bottom = 100.0
 
-[node name="Credits" type="Sprite2D" parent="VBoxContainer"]
+[node name="Credits" type="Sprite2D" parent="VBoxContainer" unique_id=352082126]
 position = Vector2(120.375, 87)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_ibxkv")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Credits"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Credits" unique_id=1878355070]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
 offset_bottom = 100.0
 
-[node name="Exit" type="Sprite2D" parent="VBoxContainer"]
+[node name="Exit" type="Sprite2D" parent="VBoxContainer" unique_id=1581544060]
 position = Vector2(454.375, 90)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_bfvk1")
 
-[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Exit"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/Exit" unique_id=1856040791]
 offset_left = -274.0
 offset_top = -80.0
 offset_right = 266.0
