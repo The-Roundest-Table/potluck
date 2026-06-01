@@ -340,6 +340,7 @@ scale = Vector2(0.19, 0.19)
 texture = ExtResource("3_oitc8")
 
 [node name="SoySauce" type="Control" parent="." unique_id=1039910282]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -359,15 +360,33 @@ rotation = -2.2096488
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("7_dxa4t")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1221967226]
+libraries/ = SubResource("AnimationLibrary_1mu0l")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1871647737]
+offset_left = 908.0
+offset_top = 239.00002
+offset_right = 1255.2727
+offset_bottom = 917.18176
+toggle_mode = true
+
+[node name="bottle" type="Sprite2D" parent="TextureButton" unique_id=1507421899]
+position = Vector2(96, 187.99998)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("7_dxa4t")
+
+[node name="Noodle0008Bowl拷贝" type="Sprite2D" parent="." unique_id=1928256896]
+position = Vector2(125.25186, 470.5)
+scale = Vector2(0.19064745, 0.19064745)
+texture = ExtResource("4_1qdqn")
+
 [node name="ScallionsButton" type="TextureButton" parent="." unique_id=1706871182]
-offset_left = 31.0
-offset_top = 511.0
-offset_right = 1141.0
+offset_left = 26.0
+offset_top = 373.0
+offset_right = 1026.0
 offset_bottom = 1123.0
 scale = Vector2(0.19, 0.19)
 texture_normal = ExtResource("3_oitc8")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1221967226]
-libraries/ = SubResource("AnimationLibrary_1mu0l")
-
+[connection signal="toggled" from="TextureButton" to="." method="_on_texture_button_toggled"]
 [connection signal="pressed" from="ScallionsButton" to="." method="_on_scallions_button_pressed"]
