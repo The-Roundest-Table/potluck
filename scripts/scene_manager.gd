@@ -64,7 +64,12 @@ func reset_game():
 	turn = 0
 	spins = 0;
 	berries = 0;
-	poem = []
+	poem = ["0", "01", "02", "04"];
+	regular_food = [ 'sate', 'egg tofu', 'stroganina', 'mooncake', 'alaadji', 'flapjack',
+		'tanghulu', 'es campur', 'naijuan',
+		'khaan', 'durian', 'ching bo leung'
+	]
+	spins = 0;
 	
 func end_game():
 	get_tree().call_deferred('change_scene_to_file',"res://GUI/ending.tscn")
