@@ -1,10 +1,10 @@
-I have a complicated relationship with my mother.
-label string3
-Hate and fear has been cultivated in the society we grew up.
-label string4
-Just like I never truly know who I am.
-label string5
-I still remember the song she sang me to put me to sleep. I remember smiles, warmth, hugs. Sakha kisses when you kiss your relatives by smelling them
+label Beginning
+I have a complicated relationship with my mother. And well...with myself
+[signal arg="start_mixing"]
+[end_timeline]
+label Kyorchekh
+But I still remember the song she sang me to put me to sleep. I remember smiles, warmth, hugs. Sakha kisses when you kiss your relatives by smelling them.
+Making kyourchekh together
 label string6
 I don't know how much of all these complications is just life or colonialism. Or other structures.
 label string7

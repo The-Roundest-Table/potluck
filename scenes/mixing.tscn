@@ -147,6 +147,9 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_avmg2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pb0wn"]
+size = Vector2(110, 100)
+
 [node name="Mixing" type="Node2D" unique_id=1598614809]
 script = ExtResource("1_hrjjl")
 connected_scene = "roulette"
@@ -170,18 +173,24 @@ texture = ExtResource("3_553fv")
 
 [node name="Area2D" type="Area2D" parent="MyHand" unique_id=2127074991]
 collision_layer = 2
-collision_mask = 2
-monitoring = false
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MyHand/Area2D" unique_id=353808875]
 position = Vector2(-730.0742, 259.86755)
 scale = Vector2(0.9999987, 0.9999987)
 shape = SubResource("RectangleShape2D_553fv")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyHand" unique_id=1637706186]
+position = Vector2(-730.0742, 259.86755)
+scale = Vector2(0.9999987, 0.9999987)
+shape = SubResource("RectangleShape2D_553fv")
+
 [node name="MyMomsHand" type="CharacterBody2D" parent="." unique_id=2038515262]
-position = Vector2(237.00002, 157.00003)
+position = Vector2(275, 233)
 rotation = -0.029034635
 scale = Vector2(-0.315, 0.315)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("5_pb0wn")
 
 [node name="Hand1Sprite" type="Sprite2D" parent="MyMomsHand" unique_id=1938644248]
@@ -191,19 +200,18 @@ texture = ExtResource("3_553fv")
 [node name="DetectionArea" type="Area2D" parent="MyMomsHand" unique_id=53187401]
 collision_layer = 2
 collision_mask = 2
-monitorable = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MyMomsHand/DetectionArea" unique_id=556570871]
 position = Vector2(177.65051, -116.31755)
 scale = Vector2(0.52025795, 0.48968008)
-polygon = PackedVector2Array(-354.29712, -8.524963, -1328.9623, 66.94995, -2433.0317, 321.53296, -2483.0952, 1393.2263, -730.0851, 1429.935, 804.56213, 1071.2656, 1209.3179, -352.7162, 709.76013, -712.96875)
+polygon = PackedVector2Array(-354.29712, -8.524963, -1328.9623, 66.94995, -2566.7876, 118.11621, -2530.1187, 1459.5347, -730.0851, 1429.935, 804.56213, 1071.2656, 1209.3179, -352.7162, 709.76013, -712.96875)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1779766652]
-
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1079246609]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1079246609]
 material = SubResource("ShaderMaterial_tqfad")
 offset_right = 1203.0
 offset_bottom = 650.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1779766652]
 
 [node name="Kyorchech" type="Node2D" parent="." unique_id=276364592]
 visible = false
@@ -305,9 +313,34 @@ texture = ExtResource("7_plan6")
 [node name="Scriibles" type="Node2D" parent="Kyorchech" unique_id=219107430]
 
 [node name="Borders" type="StaticBody2D" parent="." unique_id=1187687103]
+collision_layer = 6
+collision_mask = 6
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders" unique_id=1826666070]
-polygon = PackedVector2Array(3, -1, 1164, 1, 1160, 632, -11, 634, 3, 17, -60, 15, -151, 796, 1349, 840, 1403, -263, -255, -246, -116, 88)
+polygon = PackedVector2Array(3, -1, 1164, 1, 1160, 632, -11, 634, -15, 39, -258, -75, -151, 796, 1349, 840, 1403, -263, -255, -246, -236, -124)
+
+[node name="DialogueTrigger1" type="Area2D" parent="." unique_id=1235816861]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DialogueTrigger1" unique_id=1357728908]
+polygon = PackedVector2Array(-228, -148, 341, -342, 132, -870, -1044, -327, -1080, 1333, 1957, 1493, 1672, 1106, -16, 1106, -373, 875, -374, 276)
+
+[node name="Butterfly" type="ColorRect" parent="." unique_id=1232734283]
+visible = false
+offset_left = 766.0
+offset_top = 241.0
+offset_right = 879.0
+offset_bottom = 342.0
+color = Color(0.22736022, 0.6912115, 0.9999998, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Butterfly" unique_id=1906353821]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Butterfly/StaticBody2D" unique_id=747864891]
+position = Vector2(56, 50)
+shape = SubResource("RectangleShape2D_pb0wn")
 
 [connection signal="area_entered" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_entered"]
 [connection signal="area_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_exited"]
@@ -315,3 +348,5 @@ polygon = PackedVector2Array(3, -1, 1164, 1, 1160, 632, -11, 634, 3, 17, -60, 15
 [connection signal="body_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_body_exited"]
 [connection signal="timeout" from="Kyorchech/TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
 [connection signal="timeout" from="Kyorchech/TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]
+[connection signal="area_entered" from="DialogueTrigger1" to="." method="_on_dialogue_trigger_1_area_entered"]
+[connection signal="area_entered" from="DialogueTrigger1" to="MyMomsHand" method="_on_dialogue_trigger_1_area_entered"]

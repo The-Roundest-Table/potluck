@@ -1,10 +1,10 @@
 extends BaseScene
 
-@onready var mixingAnimator = $AnimationPlayer
-@onready var timerForDialogue = $TimerDialogueAppear
-@onready var timerStopProgress = $TimerToStopProgress
-@onready var progressBar = $RadialProgress
-var Mixing:bool = false
+@onready var mixingAnimator = $Kyorchech/AnimationPlayer
+@onready var timerForDialogue = $Kyorchech/TimerDialogueAppear
+@onready var timerStopProgress = $Kyorchech/TimerToStopProgress
+@onready var progressBar = $Kyorchech/RadialProgress
+var Mixing:bool = true
 var MixLeft:bool = true
 var MixRight:bool = true
 var DialogueCount = 0
@@ -16,20 +16,28 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	if Input.is_action_pressed("left"):
-		if (MixLeft == true):
-			mixingAnimator.play("mix_left")
-			progressBar.value += 1
-			MixLeft = false
-			MixRight = true
+		Mixing = true
+		if (Mixing == true):
+			if (MixLeft == true):
+				mixingAnimator.play("mix_left")
+				progressBar.value += 1
+				MixLeft = false
+				MixRight = true
+		
 		#Mixing = true
 		#timerForDialogue.start()
 	if Input.is_action_pressed("right"):
-		if (MixRight == true):
-			mixingAnimator.play("mix_right")
-			progressBar.value += 1
-			MixRight = false
-			MixLeft = true
+		Mixing = true
+		if (Mixing == true):
+			if (MixRight == true):
+				mixingAnimator.play("mix_right")
+				progressBar.value += 1
+				MixRight = false
+				MixLeft = true
+		
 		#Mixing = true
+	if Input.is_action_pressed("left") && Input.is_action_pressed("right"):
+		Mixing = false
 	if Input.is_action_pressed("skip"):
 		scene_manager.end_game()
 	#if(Input.is_anything_pressed()==false):
@@ -65,7 +73,7 @@ func _process(delta: float) -> void:
 		progressBar.value = 0
 		DialogueCount += 1
 		if DialogueCount == 1:
-			Dialogic.start('berries_mixing')
+			Dialogic.start('berries_mixing', 'Kyorchekh')
 		if DialogueCount == 2:
 			Dialogic.start('berries_mixing', 'string2')
 		if DialogueCount == 3:
@@ -101,3 +109,14 @@ func _on_dialogic_signal(argument:String):
 			Dialogic.start('berries_ending3')
 	if argument == "end_berries":
 		scene_manager.change_scene(self, connected_scene)
+	if argument == "start_mixing":
+		$Kyorchech.visible = true
+		$MyHand.visible = false
+		$MyMomsHand.visible = false
+
+
+func _on_dialogue_trigger_1_area_entered(area: Area2D) -> void:
+	$Butterfly.visible = true
+	#$Butterfly/ButterflyArea2D.monitorable = true
+	#$Butterfly/ButterflyArea2D.monitoring = true
+	#Dialogic.start('berries_mixing', 'Beginning')
