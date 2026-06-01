@@ -19,7 +19,7 @@ func _physics_process(delta):
 			
 			
 		else:
-			velocity = Vector2.ZERO
+			velocity = position.direction_to(player.position) * run_speed
 	#velocity = -position.direction_to(player.position) * run_speed
 	#else:
 		#velocity = position.direction_to(player.position) * run_speed

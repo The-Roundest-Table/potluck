@@ -4,10 +4,13 @@ I have a complicated relationship with my mother. And well...with myself
 [end_timeline]
 label Kyorchekh
 But I still remember the song she sang me to put me to sleep. I remember smiles, warmth, hugs. Sakha kisses when you kiss your relatives by smelling them.
+[signal arg="mom_hands"]
 Making kyourchekh together
+[signal arg="start_color"]
 label string6
 I don't know how much of all these complications is just life or colonialism. Or other structures.
 label string7
 I remember. So it means I resist
 [signal arg="mixing_ended"]
+[signal arg="end_berries"]
 [end_timeline]

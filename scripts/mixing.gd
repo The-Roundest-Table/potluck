@@ -74,18 +74,7 @@ func _process(delta: float) -> void:
 		DialogueCount += 1
 		if DialogueCount == 1:
 			Dialogic.start('berries_mixing', 'Kyorchekh')
-		if DialogueCount == 2:
-			Dialogic.start('berries_mixing', 'string2')
-		if DialogueCount == 3:
-			Dialogic.start('berries_mixing', 'string3')
-		if DialogueCount == 4:
-			Dialogic.start('berries_mixing', 'string4')
-		if DialogueCount == 5:
-			Dialogic.start('berries_mixing', 'string5')
-		if DialogueCount == 6:
-			Dialogic.start('berries_mixing', 'string6')
-		if DialogueCount == 7:
-			Dialogic.start('berries_mixing', 'string7')
+	
 			
 		
 	
@@ -113,6 +102,11 @@ func _on_dialogic_signal(argument:String):
 		$Kyorchech.visible = true
 		$MyHand.visible = false
 		$MyMomsHand.visible = false
+		$Butterfly.visible = false
+	if argument == "mom_hands":
+		$Kyorchech/MomsHands.visible = true
+	if argument == "start_color":
+		mixingAnimator.play("color")
 
 
 func _on_dialogue_trigger_1_area_entered(area: Area2D) -> void:
