@@ -4,13 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_iuoun"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_y2g2y"]
 [ext_resource type="Texture2D" uid="uid://bjsnyc0dsa5lo" path="res://placeholders/hand2.png" id="3_553fv"]
+[ext_resource type="Script" uid="uid://bjyr8btg6431o" path="res://scripts/my_hand.gd" id="3_f0cr4"]
 [ext_resource type="Texture2D" uid="uid://dst4xmjeqwbjq" path="res://assets/timer_progress/timer_under.png" id="4_avmg2"]
+[ext_resource type="Script" uid="uid://d1m2i4tfgwlkd" path="res://scripts/my_moms_hand.gd" id="5_pb0wn"]
 [ext_resource type="Texture2D" uid="uid://droxj63ksce45" path="res://assets/timer_progress/timer_over.png" id="5_plan6"]
 [ext_resource type="Texture2D" uid="uid://ctgqiy2qu5urg" path="res://assets/timer_progress/timer_progress.png" id="6_iuoun"]
 [ext_resource type="Texture2D" uid="uid://d6k7vgvu66bq" path="res://assets/placeholder/arrow.png" id="7_plan6"]
+[ext_resource type="Shader" uid="uid://stl3oxhsruvl" path="res://shaders/monochrome.gdshader" id="9_tqfad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
-size = Vector2(272.9, 213.84686)
+size = Vector2(567.7136, 464.29626)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tqfad"]
+shader = ExtResource("9_tqfad")
+shader_parameter/opacity = 1.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_avmg2"]
 radius = 100.0
@@ -24,7 +31,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hand1:position")
+tracks/0/path = NodePath("Kyorchech/Hand1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -36,7 +43,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hand2:position")
+tracks/1/path = NodePath("Kyorchech/Hand2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -52,7 +59,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hand2:position")
+tracks/0/path = NodePath("Kyorchech/Hand2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -64,7 +71,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hand1:position")
+tracks/1/path = NodePath("Kyorchech/Hand1:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -80,7 +87,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hand1:position")
+tracks/0/path = NodePath("Kyorchech/Hand1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -92,7 +99,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hand2:position")
+tracks/1/path = NodePath("Kyorchech/Hand2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -108,7 +115,7 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Hand1:position")
+tracks/0/path = NodePath("Kyorchech/Hand1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -120,7 +127,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Hand2:position")
+tracks/1/path = NodePath("Kyorchech/Hand2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -149,67 +156,120 @@ position = Vector2(576, 304.99997)
 scale = Vector2(0.61018515, 0.6101852)
 texture = ExtResource("2_iuoun")
 
-[node name="Kyorchekh" type="Sprite2D" parent="." unique_id=1432048834]
+[node name="MyHand" type="CharacterBody2D" parent="." unique_id=1911442101]
+position = Vector2(975, 365.99997)
+rotation = -0.029034635
+scale = Vector2(0.315, 0.315)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_f0cr4")
+
+[node name="Hand1Sprite" type="Sprite2D" parent="MyHand" unique_id=705242742]
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("3_553fv")
+
+[node name="Area2D" type="Area2D" parent="MyHand" unique_id=2127074991]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyHand/Area2D" unique_id=353808875]
+position = Vector2(-730.0742, 259.86755)
+scale = Vector2(0.9999987, 0.9999987)
+shape = SubResource("RectangleShape2D_553fv")
+
+[node name="MyMomsHand" type="CharacterBody2D" parent="." unique_id=2038515262]
+position = Vector2(237.00002, 157.00003)
+rotation = -0.029034635
+scale = Vector2(-0.315, 0.315)
+script = ExtResource("5_pb0wn")
+
+[node name="Hand1Sprite" type="Sprite2D" parent="MyMomsHand" unique_id=1938644248]
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("3_553fv")
+
+[node name="DetectionArea" type="Area2D" parent="MyMomsHand" unique_id=53187401]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MyMomsHand/DetectionArea" unique_id=556570871]
+position = Vector2(177.65051, -116.31755)
+scale = Vector2(0.52025795, 0.48968008)
+polygon = PackedVector2Array(-354.29712, -8.524963, -1328.9623, 66.94995, -2433.0317, 321.53296, -2483.0952, 1393.2263, -730.0851, 1429.935, 804.56213, 1071.2656, 1209.3179, -352.7162, 709.76013, -712.96875)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1779766652]
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1079246609]
+material = SubResource("ShaderMaterial_tqfad")
+offset_right = 1203.0
+offset_bottom = 650.0
+
+[node name="Kyorchech" type="Node2D" parent="." unique_id=276364592]
+visible = false
+
+[node name="Kyorchekh" type="Sprite2D" parent="Kyorchech" unique_id=1432048834]
 position = Vector2(600, 431)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_y2g2y")
 
-[node name="Hand1" type="CharacterBody2D" parent="." unique_id=771577686]
+[node name="Hand1" type="CharacterBody2D" parent="Kyorchech" unique_id=771577686]
 position = Vector2(684.00006, 14.000002)
 rotation = -0.029034635
 scale = Vector2(0.315, 0.315)
 
-[node name="Hand1Sprite" type="Sprite2D" parent="Hand1" unique_id=1658722781]
+[node name="Hand1Sprite" type="Sprite2D" parent="Kyorchech/Hand1" unique_id=1658722781]
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("3_553fv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hand1" unique_id=218395887]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kyorchech/Hand1" unique_id=218395887]
 position = Vector2(-877.1234, 247.51044)
 scale = Vector2(0.99999905, 0.99999905)
 shape = SubResource("RectangleShape2D_553fv")
 
-[node name="Ytyk" type="Node2D" parent="." unique_id=674736142]
+[node name="Ytyk" type="Node2D" parent="Kyorchech" unique_id=674736142]
 position = Vector2(586, 41)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Ytyk" unique_id=849509072]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Kyorchech/Ytyk" unique_id=849509072]
 modulate = Color(0.8334631, 0.6342708, 0.459468, 1)
 position = Vector2(0, 370)
 scale = Vector2(1.4752796, 1.3483449)
 mesh = SubResource("SphereMesh_avmg2")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Ytyk" unique_id=506303484]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Kyorchech/Ytyk" unique_id=506303484]
 modulate = Color(0.877132, 0.71575254, 0.5691327, 1)
 position = Vector2(-2, 361.50983)
 scale = Vector2(1.4115986, 1.1046754)
 mesh = SubResource("SphereMesh_avmg2")
 
-[node name="YtykMesh1" type="MeshInstance2D" parent="Ytyk" unique_id=935439334]
+[node name="YtykMesh1" type="MeshInstance2D" parent="Kyorchech/Ytyk" unique_id=935439334]
 modulate = Color(0.8260324, 0.6943411, 0.41869348, 1)
 position = Vector2(-3, 157.5)
 scale = Vector2(1, 0.9375)
 mesh = SubResource("QuadMesh_plan6")
 
-[node name="Hand2" type="Sprite2D" parent="." unique_id=2062811287]
+[node name="Hand2" type="Sprite2D" parent="Kyorchech" unique_id=2062811287]
 position = Vector2(784, 72)
 rotation = -0.029034635
 scale = Vector2(0.315, 0.315)
 texture = ExtResource("3_553fv")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=36428615]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Kyorchech" unique_id=36428615]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_y2g2y")
 
-[node name="TimerDialogueAppear" type="Timer" parent="." unique_id=186031581]
+[node name="TimerDialogueAppear" type="Timer" parent="Kyorchech" unique_id=186031581]
 wait_time = 5.0
 one_shot = true
 
-[node name="RadialProgress" type="TextureProgressBar" parent="." unique_id=2040541008]
+[node name="RadialProgress" type="TextureProgressBar" parent="Kyorchech" unique_id=2040541008]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 404.0
-offset_top = 343.00003
+offset_top = 343.0
 offset_right = 646.0
 offset_bottom = 581.0
 grow_horizontal = 2
@@ -221,28 +281,37 @@ texture_under = ExtResource("4_avmg2")
 texture_over = ExtResource("5_plan6")
 texture_progress = ExtResource("6_iuoun")
 
-[node name="TimerToStopProgress" type="Timer" parent="." unique_id=304122120]
+[node name="TimerToStopProgress" type="Timer" parent="Kyorchech" unique_id=304122120]
 one_shot = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1966111480]
+[node name="ColorRect" type="ColorRect" parent="Kyorchech" unique_id=1966111480]
 visible = false
 material = SubResource("CanvasItemMaterial_avmg2")
 offset_right = 1214.0
 offset_bottom = 686.0
 color = Color(0, 0, 0, 0.8)
 
-[node name="Arrows" type="Node2D" parent="." unique_id=1601468064]
+[node name="Arrows" type="Node2D" parent="Kyorchech" unique_id=1601468064]
 
-[node name="Arrow" type="Sprite2D" parent="Arrows" unique_id=580693502]
+[node name="Arrow" type="Sprite2D" parent="Kyorchech/Arrows" unique_id=580693502]
 position = Vector2(1053, 363)
 texture = ExtResource("7_plan6")
 
-[node name="Arrow2" type="Sprite2D" parent="Arrows" unique_id=623609201]
+[node name="Arrow2" type="Sprite2D" parent="Kyorchech/Arrows" unique_id=623609201]
 position = Vector2(106, 380)
 rotation = 3.1384838
 texture = ExtResource("7_plan6")
 
-[node name="Scriibles" type="Node2D" parent="." unique_id=219107430]
+[node name="Scriibles" type="Node2D" parent="Kyorchech" unique_id=219107430]
 
-[connection signal="timeout" from="TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
-[connection signal="timeout" from="TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]
+[node name="Borders" type="StaticBody2D" parent="." unique_id=1187687103]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Borders" unique_id=1826666070]
+polygon = PackedVector2Array(3, -1, 1164, 1, 1160, 632, -11, 634, 3, 17, -60, 15, -151, 796, 1349, 840, 1403, -263, -255, -246, -116, 88)
+
+[connection signal="area_entered" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_entered"]
+[connection signal="area_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_exited"]
+[connection signal="body_entered" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_body_exited"]
+[connection signal="timeout" from="Kyorchech/TimerDialogueAppear" to="." method="_on_timer_dialogue_appear_timeout"]
+[connection signal="timeout" from="Kyorchech/TimerToStopProgress" to="." method="_on_timer_to_stop_progress_timeout"]
