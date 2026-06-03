@@ -4,15 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_2d6wb"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_rbor1"]
 [ext_resource type="PackedScene" uid="uid://cyu87u6p5us2a" path="res://food/food.tscn" id="2_samfg"]
-[ext_resource type="Texture2D" uid="uid://dik2n8ciy674i" path="res://assets/decoration/boba-tea_0000_pink-star.png" id="3_2d6wb"]
-[ext_resource type="Texture2D" uid="uid://chgxplm4celxk" path="res://assets/decoration/boba-tea_0001_yellow-star.png" id="4_4iicu"]
-[ext_resource type="Texture2D" uid="uid://deflnu0snvu0l" path="res://assets/decoration/boba-tea_0002_light-blue-star.png" id="5_id3rr"]
+[ext_resource type="Texture2D" uid="uid://cqadx4pqus5ao" path="res://UI/nastar/nastar_button.png" id="3_bldbo"]
+[ext_resource type="Texture2D" uid="uid://cfefe2pgurr0d" path="res://UI/nastar/nastar_horns.png" id="4_4jbmr"]
+[ext_resource type="Texture2D" uid="uid://dedq6fbag4x6y" path="res://UI/nastar/nastar_bick.png" id="5_apgiu"]
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="6_3pu6u"]
-[ext_resource type="Texture2D" uid="uid://buobhngh6bii8" path="res://assets/decoration/pearl-tower_0003_s1.png" id="6_maxvg"]
-[ext_resource type="Texture2D" uid="uid://b1yh5eu42e0c5" path="res://assets/decoration/pearl-tower_0007_p1.png" id="7_bw8vq"]
-[ext_resource type="Texture2D" uid="uid://bi2tmt5dul30x" path="res://assets/decoration/pearl-tower_0009_blue-dot.png" id="8_2ltlq"]
-[ext_resource type="Texture2D" uid="uid://c7tnts3lap1c7" path="res://assets/decoration/pearl-tower_0006_c3.png" id="9_10dvp"]
-[ext_resource type="Texture2D" uid="uid://dav53nd2743oa" path="res://assets/decoration/pearl-tower_0008_p2.png" id="10_vacua"]
+[ext_resource type="Texture2D" uid="uid://de13fs80d1p2n" path="res://UI/nastar/nastar_comb.png" id="6_t2lnb"]
+[ext_resource type="Texture2D" uid="uid://bma752rkc8g0r" path="res://UI/nastar/nastar_cow_ears_icon.png" id="7_46asb"]
+[ext_resource type="Texture2D" uid="uid://6ps7pphlmp5" path="res://UI/nastar/nastar_eyes.png" id="8_hg55x"]
+[ext_resource type="Texture2D" uid="uid://xkklq14n18ah" path="res://UI/nastar/nastar_mouth.png" id="9_52h3n"]
+[ext_resource type="Texture2D" uid="uid://cclqdhmp5xrq6" path="res://UI/nastar/nastar_rabbit_ears_icon.png" id="10_52a5t"]
+[ext_resource type="Texture2D" uid="uid://8ov65xtp2i7" path="res://UI/nastar/nastar_nose.png" id="11_nlhla"]
+[ext_resource type="Texture2D" uid="uid://c6nuered5c5v5" path="res://UI/nastar/nastar_cow_ears.png" id="14_maxvg"]
+[ext_resource type="Texture2D" uid="uid://bqbexo68tsqoy" path="res://UI/nastar/nastar_rabbit_ears.png" id="15_bw8vq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nmjgn"]
 radius = 71.17584
@@ -28,7 +31,7 @@ texture = ExtResource("2_2d6wb")
 
 [node name="Decor" type="MarginContainer" parent="." unique_id=1610571625]
 offset_right = 344.0
-offset_bottom = 637.0
+offset_bottom = 605.0
 
 [node name="cols" type="HBoxContainer" parent="Decor" unique_id=1729054717]
 layout_mode = 2
@@ -37,133 +40,156 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="a" type="Button" parent="Decor/cols/col1" unique_id=1423898392]
+[node name="a" type="TextureButton" parent="Decor/cols/col1" unique_id=1473058482]
 layout_mode = 2
 size_flags_vertical = 3
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="BobaTea0000PinkStar" type="Sprite2D" parent="Decor/cols/col1/a" unique_id=775767473]
+[node name="horns" type="Sprite2D" parent="Decor/cols/col1/a" unique_id=775767473]
 position = Vector2(81, 82)
-texture = ExtResource("3_2d6wb")
+texture = ExtResource("4_4jbmr")
 
-[node name="b" type="Button" parent="Decor/cols/col1" unique_id=232830349]
+[node name="b" type="TextureButton" parent="Decor/cols/col1" unique_id=2087613705]
 layout_mode = 2
 size_flags_vertical = 3
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="BobaTea0001YellowStar" type="Sprite2D" parent="Decor/cols/col1/b" unique_id=1221786411]
+[node name="beak" type="Sprite2D" parent="Decor/cols/col1/b" unique_id=1221786411]
 position = Vector2(82, 80)
-texture = ExtResource("4_4iicu")
+texture = ExtResource("5_apgiu")
 
-[node name="c" type="Button" parent="Decor/cols/col1" unique_id=462567396]
+[node name="c" type="TextureButton" parent="Decor/cols/col1" unique_id=514357423]
 layout_mode = 2
 size_flags_vertical = 3
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="BobaTea0002LightBlueStar" type="Sprite2D" parent="Decor/cols/col1/c" unique_id=1558241962]
+[node name="comb" type="Sprite2D" parent="Decor/cols/col1/c" unique_id=1558241962]
 position = Vector2(84, 72)
-texture = ExtResource("5_id3rr")
+texture = ExtResource("6_t2lnb")
 
-[node name="d" type="Button" parent="Decor/cols/col1" unique_id=569490858]
+[node name="d" type="TextureButton" parent="Decor/cols/col1" unique_id=521896544]
 layout_mode = 2
 size_flags_vertical = 3
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="PearlTower0003S1" type="Sprite2D" parent="Decor/cols/col1/d" unique_id=1373432985]
-position = Vector2(91, 77)
-texture = ExtResource("6_maxvg")
+[node name="ears" type="Sprite2D" parent="Decor/cols/col1/d" unique_id=1373432985]
+position = Vector2(81, 77)
+scale = Vector2(0.5585645, 0.64583385)
+texture = ExtResource("7_46asb")
 
 [node name="col2" type="VBoxContainer" parent="Decor/cols" unique_id=2045213840]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="e" type="Button" parent="Decor/cols/col2" unique_id=2032945219]
+[node name="e" type="TextureButton" parent="Decor/cols/col2" unique_id=926704531]
 layout_mode = 2
 size_flags_vertical = 3
-text = "B"
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="PearlTower0007P1" type="Sprite2D" parent="Decor/cols/col2/e" unique_id=1201604831]
+[node name="eyes" type="Sprite2D" parent="Decor/cols/col2/e" unique_id=1201604831]
 position = Vector2(88, 70)
-texture = ExtResource("7_bw8vq")
+texture = ExtResource("8_hg55x")
 
-[node name="f" type="Button" parent="Decor/cols/col2" unique_id=252082572]
+[node name="f" type="TextureButton" parent="Decor/cols/col2" unique_id=497312553]
 layout_mode = 2
 size_flags_vertical = 3
-text = "D"
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="PearlTower0009BlueDot" type="Sprite2D" parent="Decor/cols/col2" unique_id=1247774053]
-position = Vector2(81, 254)
-scale = Vector2(0.361186, 0.36118603)
-texture = ExtResource("8_2ltlq")
+[node name="mouth" type="Sprite2D" parent="Decor/cols/col2" unique_id=1247774053]
+position = Vector2(88, 238.00002)
+scale = Vector2(0.9203537, 0.9203537)
+texture = ExtResource("9_52h3n")
 
-[node name="g" type="Button" parent="Decor/cols/col2" unique_id=601273435]
+[node name="g" type="TextureButton" parent="Decor/cols/col2" unique_id=1443721786]
 layout_mode = 2
 size_flags_vertical = 3
-text = "F"
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="PearlTower0006C3" type="Sprite2D" parent="Decor/cols/col2/g" unique_id=350700238]
+[node name="rabbit ears" type="Sprite2D" parent="Decor/cols/col2/g" unique_id=350700238]
 position = Vector2(86, 74)
-scale = Vector2(0.5034014, 0.50340134)
-texture = ExtResource("9_10dvp")
+scale = Vector2(0.66233796, 0.6623379)
+texture = ExtResource("10_52a5t")
 
-[node name="h" type="Button" parent="Decor/cols/col2" unique_id=2142482151]
+[node name="h" type="TextureButton" parent="Decor/cols/col2" unique_id=728924933]
 layout_mode = 2
 size_flags_vertical = 3
-text = "H"
+texture_normal = ExtResource("3_bldbo")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="PearlTower0008P2" type="Sprite2D" parent="Decor/cols/col2/h" unique_id=1258644603]
+[node name="snout" type="Sprite2D" parent="Decor/cols/col2/h" unique_id=1258644603]
 position = Vector2(85, 91)
-texture = ExtResource("10_vacua")
+texture = ExtResource("11_nlhla")
 
 [node name="tart" type="Node2D" parent="." unique_id=290104272]
 unique_name_in_owner = true
-position = Vector2(568, 305)
+position = Vector2(608, 345)
+scale = Vector2(2, 2)
 script = ExtResource("2_rbor1")
 
 [node name="nastar_base" parent="tart" unique_id=1288945025 instance=ExtResource("2_samfg")]
 
 [node name="a" type="Sprite2D" parent="tart" unique_id=1306480269]
 visible = false
-position = Vector2(-56, -41.999996)
-scale = Vector2(0.2831859, 0.28318584)
-texture = ExtResource("3_2d6wb")
+position = Vector2(-26.850098, -37.951355)
+scale = Vector2(0.38834625, 0.38834614)
+texture = ExtResource("4_4jbmr")
 
-[node name="a2" type="Sprite2D" parent="tart" unique_id=1559277443]
+[node name="c" type="Sprite2D" parent="tart" unique_id=1185623250]
 visible = false
-position = Vector2(-18, 64)
-scale = Vector2(0.5977012, 0.59770113)
-texture = ExtResource("4_4iicu")
+position = Vector2(-11.3333435, -72.000015)
+scale = Vector2(0.6666667, 0.6666667)
+texture = ExtResource("6_t2lnb")
 
-[node name="a3" type="Sprite2D" parent="tart" unique_id=1185623250]
+[node name="d" type="Sprite2D" parent="tart" unique_id=1492781070]
 visible = false
-position = Vector2(-36, 57)
-texture = ExtResource("5_id3rr")
+position = Vector2(-23.57196, -43.375)
+scale = Vector2(0.3712121, 0.37121212)
+texture = ExtResource("14_maxvg")
 
-[node name="a4" type="Sprite2D" parent="tart" unique_id=1492781070]
+[node name="e" type="Sprite2D" parent="tart" unique_id=490082730]
 visible = false
-position = Vector2(52, -45)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_maxvg")
+position = Vector2(-32.47461, -8)
+scale = Vector2(0.47457626, 0.47457597)
+texture = ExtResource("8_hg55x")
 
-[node name="a5" type="Sprite2D" parent="tart" unique_id=490082730]
+[node name="f" type="Sprite2D" parent="tart" unique_id=807838017]
 visible = false
-position = Vector2(-12, -8)
-scale = Vector2(0.27642277, 0.27642265)
-texture = ExtResource("7_bw8vq")
+position = Vector2(-39.076538, 22.626678)
+scale = Vector2(0.50218236, 0.5021824)
+texture = ExtResource("9_52h3n")
 
-[node name="a6" type="Sprite2D" parent="tart" unique_id=807838017]
+[node name="b" type="Sprite2D" parent="tart" unique_id=1559277443]
 visible = false
-position = Vector2(-77, -4)
-scale = Vector2(0.17250673, 0.17250676)
-texture = ExtResource("8_2ltlq")
+position = Vector2(-45.309814, 20.70691)
+scale = Vector2(0.5311739, 0.5311738)
+texture = ExtResource("5_apgiu")
 
-[node name="a7" type="Sprite2D" parent="tart" unique_id=1431737193]
+[node name="g" type="Sprite2D" parent="tart" unique_id=1431737193]
 visible = false
-position = Vector2(59.999985, 27)
-scale = Vector2(0.22789116, 0.22789116)
-texture = ExtResource("9_10dvp")
+position = Vector2(-14.034268, -77.625)
+scale = Vector2(0.57571423, 0.57571423)
+texture = ExtResource("15_bw8vq")
 
-[node name="a8" type="Sprite2D" parent="tart" unique_id=134570731]
+[node name="h" type="Sprite2D" parent="tart" unique_id=134570731]
 visible = false
-position = Vector2(-12, -69)
-scale = Vector2(0.33333328, 0.33333334)
-texture = ExtResource("10_vacua")
+position = Vector2(-39.6251, 31.500006)
+scale = Vector2(0.49137947, 0.49137956)
+texture = ExtResource("11_nlhla")
 
 [node name="thing" type="Area2D" parent="tart" unique_id=2033159884]
 

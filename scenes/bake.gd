@@ -10,7 +10,7 @@ var tarts = [0, 0, 0, 0, 0];
 func _ready():
 	super()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
-	
+	tart.scale = Vector2(1,1)
 	for i in 5:
 		tarts[i] = tart.duplicate();
 		add_child(tarts[i])
@@ -22,6 +22,7 @@ func _ready():
 
 func _on_dialogic_signal(argument:String):
 	if argument == "bake_done":
+		scene_manager.poem[3] = "Until the very end, you still have time"
 		scene_manager.end_game()
 
 

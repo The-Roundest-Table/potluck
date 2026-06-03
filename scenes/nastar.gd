@@ -13,7 +13,7 @@ extends BaseScene
 
 @onready var finish = $finish
 @onready var buttons = [a, b, c, d, e, f, g, h];
-@onready var decors = [$tart/a, $tart/a2, $tart/a3, $tart/a4, $tart/a5, $tart/a6, $tart/a7, $tart/a8]
+@onready var decors = [$tart/a, $tart/b, $tart/c, $tart/d, $tart/e, $tart/f, $tart/g, $tart/h]
 
 
 

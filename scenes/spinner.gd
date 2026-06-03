@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		print_debug(choice)
 		selection.emit(choice)
 		#scene_manager.update_turn()
-		choices_remain = 12 - scene_manager.turn
+		choices_remain = 11 - scene_manager.turn
 		#print_debug(str("round: ",scene_manager.round, "turn", scene_manager.turn))
 		stop = false
 		speed = 0.1
