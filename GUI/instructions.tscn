@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cfrcbotxrr6jr"]
+
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_psqxd"]
+[ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="2_pn275"]
+[ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="3_vjrku"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="4_rm4xa"]
+
+[node name="Instructions" type="Control" unique_id=1217888540]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=312892005]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("1_psqxd")
+
+[node name="Cookbook" type="Sprite2D" parent="." unique_id=1148378669]
+position = Vector2(576, 305)
+scale = Vector2(0.5695444, 0.5695444)
+texture = ExtResource("2_pn275")
+script = ExtResource("3_vjrku")
+
+[node name="Title" type="Label" parent="." unique_id=1352736524]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 80.0
+offset_right = 550.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(1, 0.48235294, 0.33333334, 1)
+theme_override_fonts/font = ExtResource("4_rm4xa")
+theme_override_font_sizes/font_size = 30
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="instructions" type="Label" parent="." unique_id=1776414806]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 140.0
+offset_right = 550.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 0.48235294, 0.33333334, 1)
+theme_override_fonts/font = ExtResource("4_rm4xa")
+text = "1. Press stop to select an option on the wheel.
+2. Do it 3 times"
+vertical_alignment = 1
+autowrap_mode = 2

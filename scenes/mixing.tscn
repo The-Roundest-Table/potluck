@@ -253,7 +253,7 @@ size = Vector2(110, 100)
 
 [node name="Mixing" type="Node2D" unique_id=1598614809]
 script = ExtResource("1_hrjjl")
-connected_scene = "roulette"
+connected_scene = "ending"
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=348024105]
 position = Vector2(576, 304.99997)

@@ -50,5 +50,15 @@ func _on_spinner_selection(choice) -> void:
 	var desc = food_descs.get(item).description
 	var art = food_descs.get(item).art
 	scene_manager.poem[scene_manager.turn] = desc
+	scene_manager.update_cookbook(food_descs.get(item))
 	popup.open(name, desc, art, item)
 	
+
+
+func _on_cookbook_button_down() -> void:
+	scene_manager.open_cookbook(self)
+
+
+func _on_help_button_down() -> void:
+	scene_manager.open_instructions(self)
+	pass # Replace with function body.

@@ -97,7 +97,7 @@ func _on_dialogic_signal(argument:String):
 		if DialogueCount > 4 && DialogueCount < 7:
 			Dialogic.start('berries_ending3')
 	if argument == "end_berries":
-		scene_manager.change_scene(self, connected_scene)
+		scene_manager.end_game()
 	if argument == "start_mixing":
 		$Kyorchech.visible = true
 		$MyHand.visible = false

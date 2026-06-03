@@ -50,11 +50,10 @@ func open():
 	#$Control/PageContent2.text = page_content2[0]
 
 func update_page():
-	
-	$food1.texture = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food2.texture = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food3.texture = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
-	$food4.texture = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
+	$"../food1".texture_normal = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
+	$"../food2".texture_normal = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
+	$"../food3".texture_normal = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
+	$"../food4".texture_normal = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
 
 func go_to_page(page:int):
 	if current_page == page:
@@ -99,21 +98,37 @@ func _on_right_button_down() -> void:
 
 func open_recipe(item):
 	print_debug(item);
-	pass
+	var index = current_page*4 + item
+	var check = scene_manager.cookbook_array[index]
+	if check is Dictionary:
+		$"../../Recipe".visible = true;
+		$"../../Recipe/left/Name".text = check.name
+		$"../../Recipe/left/Art".texture = load(check.art)
+		$"../../Recipe/left/Desc".text = check.description
+		print_debug($"../../Recipe/left/Desc".text)
+		var str = "";
+		for i in check.ingredients:
+			#print_debug(i)
+			str = str + i + "\n"
+		$"../../Recipe/right/Ingredients2".text = str
 
 
 func _on_food_1_button_down() -> void:
-	open_recipe(1)
+	open_recipe(0)
 	pass # Replace with function body.
 
 
 func _on_food_2_button_down() -> void:
-	open_recipe(2)
+	open_recipe(1)
 
 
 func _on_food_3_button_down() -> void:
-	open_recipe(3)
+	open_recipe(2)
 
 
 func _on_food_4_button_down() -> void:
-	open_recipe(4)
+	open_recipe(3)
+
+
+func _on_roulette_button_down() -> void:
+	get_tree().call_deferred('change_scene_to_file', "res://scenes/roulette.tscn")

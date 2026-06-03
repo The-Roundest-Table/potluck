@@ -30,19 +30,8 @@ func _process(delta: float) -> void:
 		#print_debug(str("round: ",scene_manager.round, "turn", scene_manager.turn))
 		stop = false
 		speed = 0.1
-		
-		
-		
 
-	
-#func _input(event: InputEvent) -> void:
-	#if event.is_action_pressed("select"):
-		#stop = true
-		#$"../FoodPopup".visible = false
-		
-
-
-func _on_stop_button_down() -> void:
+func _on_stop_2_button_down() -> void:
+	#print_debug("stop")
 	stop = true
 	$"../FoodPopup".visible = false
-	pass # Replace with function body.

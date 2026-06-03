@@ -11,6 +11,7 @@ var cutscene_dir_path = "res://cutscenes/"
 var spins = 0;
 var berries: int = 0
 var cookbook_array = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0,0,0,0,0]
+var cookbook_count = 0;
 var poem = ["0", "01", "02", "04"];
 var regular_food = [ 'sate', 'egg tofu', 'stroganina', 'mooncake', 'alaadji', 'flapjack',
 	'tanghulu', 'es campur', 'naijuan',
@@ -52,13 +53,19 @@ func cutscene(from, to_scene_name: String) -> void:
 	var full_path = cutscene_dir_path + to_scene_name + ".tscn"
 	from.get_tree().call_deferred('change_scene_to_file', full_path)
 
-func update_cookbook(item, id):
-	cookbook_array[id] = item;
-	print_debug(cookbook_array[id])
+func update_cookbook(item):
+	if !cookbook_array.has(item):
+		cookbook_array[cookbook_count] = item;
+		cookbook_count+=1;
+	print_debug(cookbook_array)
 	
 func open_cookbook(from):
 	last_scene_name = from.name
 	from.get_tree().call_deferred('change_scene_to_file', "res://GUI/cookbook.tscn")
+	
+func open_instructions(from):
+	last_scene_name = from.name
+	from.get_tree().call_deferred('change_scene_to_file', "res://GUI/instructions.tscn")
 
 func reset_game():
 	turn = 0
