@@ -1,6 +1,223 @@
 [gd_scene format=3 uid="uid://cw0l7bmpfaxsx"]
 
 [ext_resource type="Script" uid="uid://dristmwt85juc" path="res://cutscenes/starbucks.gd" id="1_lcr7n"]
+[ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_uxl5x"]
+[ext_resource type="Texture2D" uid="uid://d15tn5gald01s" path="res://assets/starbugs/starbus_logo_bg.png" id="3_i6vur"]
+[ext_resource type="Texture2D" uid="uid://ci3rcy21ygu3r" path="res://assets/starbugs/starbus_boba.png" id="4_k8ai0"]
+[ext_resource type="Texture2D" uid="uid://bmlj5e38fo1m3" path="res://assets/starbugs/starbus_logo.png" id="5_vrgr2"]
+[ext_resource type="Texture2D" uid="uid://bedhsxnsj65jy" path="res://assets/starbugs/starbus_ants.png.png" id="6_k8ai0"]
+
+[sub_resource type="Animation" id="Animation_k8ai0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StarbusLogo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5793172, 0.5793172)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusLogo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(565.00006, 377)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StarbusLogoBg:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StarbusBoba:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StarbusBoba:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StarbusLogo:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CPUParticles2D2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_vrgr2"]
+resource_name = "appear"
+length = 1.5666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StarbusLogo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.014, 0.014), Vector2(2.559, 2.559), Vector2(0.5793172, 0.5793172)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusLogo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.1666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(565.00006, 377), Vector2(565, 316.99997), Vector2(565.00006, 377)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StarbusLogoBg:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StarbusBoba:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4766668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CPUParticles2D2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.5666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_l4lwh"]
+resource_name = "shake"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StarbusBoba:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.63, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.21986273, -0.1981202, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusLogo:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.65, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.25294304, -0.14482822, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StarbusLogo:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.27, 0.66, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(565.00006, 377), Vector2(549.00006, 372.00006), Vector2(577.00006, 382), Vector2(565.00006, 377)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3flvw"]
+_data = {
+&"RESET": SubResource("Animation_k8ai0"),
+&"appear": SubResource("Animation_vrgr2"),
+&"shake": SubResource("Animation_l4lwh")
+}
+
+[sub_resource type="AnimationRootNode" id="AnimationRootNode_k8ai0"]
 
 [node name="Starbucks" type="Node2D" unique_id=1394247663]
 script = ExtResource("1_lcr7n")
@@ -19,3 +236,47 @@ offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "starbucks"
+
+[node name="Bg" type="Sprite2D" parent="." unique_id=1531879910]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_uxl5x")
+
+[node name="StarbusLogoBg" type="Sprite2D" parent="." unique_id=1393039543]
+position = Vector2(565, 320)
+scale = Vector2(0.58528405, 0.58511966)
+texture = ExtResource("3_i6vur")
+
+[node name="StarbusBoba" type="Sprite2D" parent="." unique_id=254250897]
+position = Vector2(591, 296)
+scale = Vector2(0.58057857, 0.58057857)
+texture = ExtResource("4_k8ai0")
+
+[node name="StarbusLogo" type="Sprite2D" parent="." unique_id=828664106]
+position = Vector2(565.00006, 377)
+scale = Vector2(0.5793172, 0.5793172)
+texture = ExtResource("5_vrgr2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=562967900]
+libraries/ = SubResource("AnimationLibrary_3flvw")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=809039643]
+visible = false
+position = Vector2(516, 106)
+amount = 50
+texture = ExtResource("6_k8ai0")
+lifetime = 10.0
+preprocess = 60.0
+randomness = 0.11
+emission_shape = 3
+emission_rect_extents = Vector2(500, 100)
+spread = 180.0
+initial_velocity_max = 1.0
+tangential_accel_max = 4.0
+angle_max = 370.0
+scale_amount_min = 0.1
+scale_amount_max = 0.5
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1942957231]
+tree_root = SubResource("AnimationRootNode_k8ai0")
+anim_player = NodePath("../AnimationPlayer")

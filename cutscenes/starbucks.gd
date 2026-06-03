@@ -1,5 +1,6 @@
 class_name Starbucks extends BaseScene
 @export var connected_scene: String
+@onready var anim = $AnimationPlayer
 
 
 # Called when the node enters the scene tree for the first time.
