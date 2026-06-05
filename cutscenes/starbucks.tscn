@@ -217,8 +217,6 @@ _data = {
 &"shake": SubResource("Animation_l4lwh")
 }
 
-[sub_resource type="AnimationRootNode" id="AnimationRootNode_k8ai0"]
-
 [node name="Starbucks" type="Node2D" unique_id=1394247663]
 script = ExtResource("1_lcr7n")
 connected_scene = "roulette"
@@ -276,7 +274,3 @@ tangential_accel_max = 4.0
 angle_max = 370.0
 scale_amount_min = 0.1
 scale_amount_max = 0.5
-
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1942957231]
-tree_root = SubResource("AnimationRootNode_k8ai0")
-anim_player = NodePath("../AnimationPlayer")

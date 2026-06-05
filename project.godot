@@ -17,6 +17,9 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Potluck"
 run/main_scene="uid://bql3eou4hq352"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0.93607444, 0.6950569, 0.4204781, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://b86plgbswcxxl"
 config/icon="uid://cnttn1bkmk16e"
 
 [autoload]

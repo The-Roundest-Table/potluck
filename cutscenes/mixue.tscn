@@ -1,7 +1,220 @@
 [gd_scene format=3 uid="uid://civt2xg2ko08r"]
 
 [ext_resource type="Script" uid="uid://beuqqjd2tvmav" path="res://cutscenes/mixue.gd" id="1_3dgju"]
+[ext_resource type="Texture2D" uid="uid://cu3y84smp6s5q" path="res://assets/snowqueen/snowqueen_bg.jpg" id="2_pxwel"]
+[ext_resource type="Texture2D" uid="uid://d15tn5gald01s" path="res://assets/starbugs/starbus_logo_bg.png" id="3_d75mo"]
+[ext_resource type="Texture2D" uid="uid://ci3rcy21ygu3r" path="res://assets/starbugs/starbus_boba.png" id="3_y7wli"]
+[ext_resource type="Texture2D" uid="uid://wukv75u48ddg" path="res://assets/snowqueen/snowqueen_boba.png" id="4_pxwel"]
+[ext_resource type="Texture2D" uid="uid://ctck2kbeloomu" path="res://assets/snowqueen/snowqueen_logo.png" id="6_0qhgd"]
+[ext_resource type="Texture2D" uid="uid://bmcn0jgjkbdfn" path="res://assets/snowqueen/snowqueen_.png" id="7_avq0x"]
+
+[sub_resource type="Animation" id="Animation_k8ai0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StarbusLogo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.013999999, 0.013999999)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusLogo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(565.00006, 377)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StarbusLogo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StarbusBoba:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CPUParticles2D2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StarbusBoba2:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_vrgr2"]
+resource_name = "appear"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StarbusLogo:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.09, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.013999999, 0.013999999), Vector2(0.609, 0.609), Vector2(0.013999999, 0.013999999)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusLogo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.09, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(565.00006, 377), Vector2(565, 335.84), Vector2(565.00006, 377)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("StarbusLogo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StarbusBoba:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_l4lwh"]
+resource_name = "shake"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CPUParticles2D2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StarbusBoba2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26, 0.66, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.19792347, -0.3144943, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_avq0x"]
+_data = {
+&"RESET": SubResource("Animation_k8ai0"),
+&"appear": SubResource("Animation_vrgr2"),
+&"shake": SubResource("Animation_l4lwh")
+}
 
 [node name="WinScene" type="Node2D" unique_id=1818110559]
 script = ExtResource("1_3dgju")
 connected_scene = "roulette"
+
+[node name="Bg2" type="Sprite2D" parent="." unique_id=759883192]
+position = Vector2(576, 304.99997)
+scale = Vector2(0.61018515, 0.6101852)
+texture = ExtResource("2_pxwel")
+
+[node name="StarbusLogoBg" type="Sprite2D" parent="." unique_id=521170733]
+position = Vector2(565, 320)
+scale = Vector2(0.58528405, 0.58511966)
+texture = ExtResource("3_d75mo")
+
+[node name="StarbusBoba2" type="Sprite2D" parent="." unique_id=261444171]
+position = Vector2(591, 296)
+scale = Vector2(0.58057857, 0.58057857)
+texture = ExtResource("4_pxwel")
+
+[node name="StarbusBoba" type="Sprite2D" parent="." unique_id=490228784]
+position = Vector2(591, 296)
+scale = Vector2(0.58057857, 0.58057857)
+texture = ExtResource("3_y7wli")
+
+[node name="StarbusLogo" type="Sprite2D" parent="." unique_id=1125045088]
+position = Vector2(565.00006, 377)
+scale = Vector2(0.013999999, 0.013999999)
+texture = ExtResource("6_0qhgd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1872391584]
+libraries/ = SubResource("AnimationLibrary_avq0x")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=1888016563]
+visible = false
+position = Vector2(516, 106)
+amount = 50
+texture = ExtResource("7_avq0x")
+lifetime = 10.0
+preprocess = 60.0
+randomness = 0.11
+emission_shape = 3
+emission_rect_extents = Vector2(500, 100)
+spread = 180.0
+initial_velocity_max = 1.0
+tangential_accel_max = 4.0
+angle_max = 370.0
+scale_amount_min = 0.1
+scale_amount_max = 0.5

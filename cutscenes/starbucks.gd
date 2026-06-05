@@ -9,6 +9,8 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.start("boba_tea", "lose")
 	scene_manager.poem[3] = "Be a deer and stay still"
+	anim.play("appear")
+	anim.queue("shake")
 	pass # Replace with function body.
 
 
