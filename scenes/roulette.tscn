@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cdkcdihm0ihdi" path="res://scenes/roulette.gd" id="1_uqyis"]
 [ext_resource type="Script" uid="uid://dsnjgbuv0b2r7" path="res://scenes/spinner.gd" id="1_x8m2p"]
 [ext_resource type="PackedScene" uid="uid://b0ctfmbotm2gy" path="res://GUI/food_popup.tscn" id="2_f75s3"]
-[ext_resource type="Texture2D" uid="uid://co7afw4fclfvv" path="res://assets/placeholder/Potluck_planning (1).png" id="2_iqt6o"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_k6evh"]
 [ext_resource type="Texture2D" uid="uid://dfajrqw3cmama" path="res://assets/opening scene/table.png" id="3_gils2"]
 [ext_resource type="Texture2D" uid="uid://ika7v17boqtm" path="res://assets/opening scene/center.png" id="5_8jefs"]
@@ -12,6 +11,13 @@
 [ext_resource type="Texture2D" uid="uid://j6s1575014g1" path="res://assets/UI/UI assets/Menu Icon/Complete.png" id="10_ekxsn"]
 [ext_resource type="Texture2D" uid="uid://dbp5neb5l564f" path="res://assets/UI/UI assets/Menu Icon/Back Cover.png" id="11_262yx"]
 [ext_resource type="Texture2D" uid="uid://yhct021lt6vd" path="res://assets/UI/opening UI/help.png" id="11_shxjy"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_shxjy"]
+
+[sub_resource type="Theme" id="Theme_262yx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bppav"]
+bg_color = Color(0.9340804, 0.9340805, 0.93408036, 1)
 
 [node name="roulette" type="Node2D" unique_id=600600796]
 script = ExtResource("1_uqyis")
@@ -26,15 +32,6 @@ position = Vector2(570, 324)
 rotation = 1.5707964
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("3_gils2")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1570386580]
-visible = false
-offset_left = -5.0
-offset_top = -34.0
-offset_right = 2065.0
-offset_bottom = 1183.0
-scale = Vector2(0.555, 0.555)
-texture = ExtResource("2_iqt6o")
 
 [node name="spinner" type="Sprite2D" parent="." unique_id=617863805]
 position = Vector2(570, 324)
@@ -62,30 +59,40 @@ position = Vector2(17.861633, 185.76105)
 scale = Vector2(0.29510042, 0.29510036)
 texture = ExtResource("7_gils2")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=36350747]
+[node name="Control" type="Control" parent="." unique_id=1983953589]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 649.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1666330906]
+material = SubResource("CanvasItemMaterial_shxjy")
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 506.5
-offset_top = 301.5
-offset_right = 638.5
-offset_bottom = 353.5
+offset_left = -59.5
+offset_top = -30.5
+offset_right = 59.5
+offset_bottom = 30.5
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.9490196, 0.9372549, 0.8235294, 1)
+theme = SubResource("Theme_262yx")
+theme_override_styles/panel = SubResource("StyleBoxFlat_bppav")
 
-[node name="Label" type="Label" parent="." unique_id=58265764]
+[node name="Label" type="Label" parent="Control" unique_id=58265764]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 506.5
-offset_top = 310.0
-offset_right = 638.5
-offset_bottom = 345.0
+offset_left = -66.0
+offset_top = -17.5
+offset_right = 66.0
+offset_bottom = 17.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -94,18 +101,19 @@ theme_override_font_sizes/font_size = 32
 text = "STOP"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="." unique_id=1983953589]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1151.0
-offset_bottom = 649.0
-
 [node name="Stop2" type="TextureButton" parent="Control" unique_id=1558404899]
-layout_mode = 0
-offset_left = 506.0
-offset_top = 301.0
-offset_right = 639.0
-offset_bottom = 354.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -30.5
+offset_right = 59.5
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="cookbook" type="TextureButton" parent="Control" unique_id=356648191]
 layout_mode = 1
@@ -118,20 +126,27 @@ stretch_mode = 5
 
 [node name="help" type="TextureButton" parent="Control" unique_id=510598595]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -87.0
-offset_top = -91.0
-offset_right = -19.0
-offset_bottom = -23.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_left = 32.0
+offset_top = 144.0
+offset_right = 100.0
+offset_bottom = 212.0
 texture_normal = ExtResource("11_shxjy")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="turn" type="Label" parent="Control" unique_id=1953321478]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -57.0
+offset_right = 284.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_8jefs")
+theme_override_font_sizes/font_size = 30
+text = "Turn:"
 
 [node name="FoodPopup" parent="." unique_id=1670246633 instance=ExtResource("2_f75s3")]
 visible = false
@@ -142,16 +157,6 @@ offset_left = -350.0
 offset_top = -266.0
 offset_right = 320.0
 offset_bottom = 245.0
-
-[node name="turn" type="Label" parent="." unique_id=1953321478]
-offset_left = 10.0
-offset_top = 592.0
-offset_right = 286.0
-offset_bottom = 649.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("10_8jefs")
-theme_override_font_sizes/font_size = 30
-text = "Turn:"
 
 [connection signal="selection" from="spinner" to="." method="_on_spinner_selection"]
 [connection signal="button_down" from="Control/Stop2" to="spinner" method="_on_stop_2_button_down"]

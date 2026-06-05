@@ -31,7 +31,7 @@ texture = ExtResource("2_2d6wb")
 
 [node name="Decor" type="MarginContainer" parent="." unique_id=1610571625]
 offset_right = 344.0
-offset_bottom = 605.0
+offset_bottom = 614.0
 
 [node name="cols" type="HBoxContainer" parent="Decor" unique_id=1729054717]
 layout_mode = 2

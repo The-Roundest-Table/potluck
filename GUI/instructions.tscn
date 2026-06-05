@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cfrcbotxrr6jr"]
 
+[ext_resource type="Script" uid="uid://t0ra2gpfrr6w" path="res://GUI/instructions.gd" id="1_pn275"]
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_psqxd"]
 [ext_resource type="Texture2D" uid="uid://bvo8o1f2w0x7j" path="res://assets/UI/cookbook.png" id="2_pn275"]
-[ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="3_vjrku"]
 [ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="4_rm4xa"]
+[ext_resource type="Texture2D" uid="uid://dfajrqw3cmama" path="res://assets/opening scene/table.png" id="5_vjrku"]
 
 [node name="Instructions" type="Control" unique_id=1217888540]
 layout_mode = 3
@@ -12,17 +13,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pn275")
 
 [node name="Bg" type="Sprite2D" parent="." unique_id=312892005]
-position = Vector2(576, 304.99997)
-scale = Vector2(0.61018515, 0.6101852)
+position = Vector2(575.55554, 323.25)
+scale = Vector2(0.6013888, 0.6013889)
 texture = ExtResource("1_psqxd")
 
 [node name="Cookbook" type="Sprite2D" parent="." unique_id=1148378669]
 position = Vector2(576, 305)
 scale = Vector2(0.5695444, 0.5695444)
 texture = ExtResource("2_pn275")
-script = ExtResource("3_vjrku")
 
 [node name="Title" type="Label" parent="." unique_id=1352736524]
 layout_mode = 0
@@ -49,3 +50,15 @@ text = "1. Press stop to select an option on the wheel.
 2. Do it 3 times"
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="roulette" type="TextureButton" parent="." unique_id=1131217440]
+layout_mode = 0
+offset_left = 9.77771
+offset_top = 24.50003
+offset_right = 110.77771
+offset_bottom = 125.50003
+texture_normal = ExtResource("5_vjrku")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="button_down" from="roulette" to="." method="_on_roulette_button_down"]

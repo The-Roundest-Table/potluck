@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0571ck4xy05c"]
+[gd_scene format=3 uid="uid://c0571ck4xy05c"]
 
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_8pfqu"]
 [ext_resource type="Script" uid="uid://byxn4kkiordqm" path="res://GUI/credits.gd" id="1_olfvg"]
@@ -14,7 +14,7 @@ bg_color = Color(0.9340804, 0.9340805, 0.93408036, 1)
 
 [sub_resource type="Theme" id="Theme_mtstf"]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" unique_id=1879622459]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,30 +26,30 @@ grow_vertical = 2
 script = ExtResource("1_olfvg")
 connected_scene = "main_menu"
 
-[node name="Bg" type="Sprite2D" parent="."]
+[node name="Bg" type="Sprite2D" parent="." unique_id=1242634641]
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_8pfqu")
 
-[node name="Popup" type="Sprite2D" parent="."]
-position = Vector2(-32, -75)
-scale = Vector2(0.4298561, 0.42985612)
+[node name="Popup" type="Sprite2D" parent="." unique_id=1829651494]
+position = Vector2(-24, -87)
+scale = Vector2(0.49250594, 0.49250603)
 texture = ExtResource("2_olfvg")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1129900187]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -266.0
-offset_top = -126.0
-offset_right = 266.0
-offset_bottom = 126.0
+offset_left = -385.0
+offset_top = -205.5
+offset_right = 385.0
+offset_bottom = 205.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label3" type="Label" parent="VBoxContainer"]
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=65229057]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)
 theme_override_fonts/font = ExtResource("3_ecld3")
@@ -58,51 +58,57 @@ text = "Credits
 "
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1297117449]
 layout_mode = 2
 theme_override_constants/separation = 44
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1364951016]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)
 theme_override_fonts/font = ExtResource("3_ecld3")
 theme_override_font_sizes/font_size = 30
 text = "Sargylana Cherepanova
+
 Audrey Chung
 Xuefei Wu
 Yi Zhou
 Everyone
-"
+
+Song : 
+Artist:"
 horizontal_alignment = 2
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=914904691]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)
 theme_override_fonts/font = ExtResource("3_ecld3")
 theme_override_font_sizes/font_size = 30
-text = "Game Developer
-Game Developer
+text = "Developer
 Asset Artist
-UI Designer
+Lead Developer
+Lead Artist
+Layout Designer
 Story Designer
-"
 
-[node name="Panel" type="Panel" parent="."]
+샛별 - Cozy Place
+J&Bnocopyrightmusic470"
+
+[node name="Panel" type="Panel" parent="." unique_id=1357730511]
 material = SubResource("CanvasItemMaterial_ecld3")
 layout_mode = 0
-offset_left = 267.0
-offset_top = 213.0
-offset_right = 386.0
-offset_bottom = 274.0
+offset_left = 421.0
+offset_top = 221.0
+offset_right = 540.0
+offset_bottom = 282.0
 theme = SubResource("Theme_fnfmc")
 theme_override_styles/panel = SubResource("StyleBoxFlat_btepa")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1360309180]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 208.0
-offset_right = 387.0
-offset_bottom = 278.0
+offset_left = 428.0
+offset_top = 216.0
+offset_right = 541.0
+offset_bottom = 286.0
 theme = SubResource("Theme_mtstf")
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)

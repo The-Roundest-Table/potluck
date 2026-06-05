@@ -36,7 +36,7 @@ func load_json_file():
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("book"):
 		scene_manager.open_cookbook(self)
-	$turn.text = str("Turn ", scene_manager.turn + 1)
+	$Control/turn.text = str("Turn ", scene_manager.turn + 1)
 
 
 func _on_spinner_selection(choice) -> void:

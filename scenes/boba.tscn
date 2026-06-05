@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0mcr61ijfn67" path="res://assets/boba/straw.png" id="3_tydjs"]
 [ext_resource type="Texture2D" uid="uid://cmf234fk76kai" path="res://assets/boba/base.png" id="4_8jovd"]
 [ext_resource type="Texture2D" uid="uid://0g8trybin3k8" path="res://assets/boba/top.png" id="5_ilpfm"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="7_pg5db"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fwli4"]
 size = Vector2(0.5010252, 0.93272376)
@@ -18,6 +19,11 @@ size = Vector2(28, 310)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_20b7j"]
 size = Vector2(1159, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugreq"]
+bg_color = Color(0.9237415, 0.92569304, 0.92736024, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [node name="boba_tea" type="Node2D" unique_id=610458623]
 script = ExtResource("1_122os")
@@ -74,6 +80,21 @@ shape = SubResource("RectangleShape2D_20b7j")
 position = Vector2(592, 469)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("5_ilpfm")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1275837629]
+offset_left = 16.0
+offset_top = 568.0
+offset_right = 376.0
+offset_bottom = 608.0
+size_flags_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ugreq")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1300457442]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
+theme_override_fonts/font = ExtResource("7_pg5db")
+theme_override_font_sizes/font_size = 24
+text = "Controls: SPACE Bar"
 
 [connection signal="poked" from="straw" to="." method="_on_straw_poked"]
 [connection signal="body_entered" from="fall" to="straw" method="_on_fall_body_entered"]

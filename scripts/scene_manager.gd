@@ -1,4 +1,4 @@
-class_name Scene_Manager extends Node
+class_name Scene_Manager extends CanvasLayer
 
 var last_scene_name: String
 var tart: Node2D
@@ -27,6 +27,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		print_debug("pause")
+		$Pause.visible = !$Pause.visible;
 
 func update_turn():
 	if turn < 4:
@@ -80,3 +85,15 @@ func reset_game():
 	
 func end_game():
 	get_tree().call_deferred('change_scene_to_file',"res://GUI/ending.tscn")
+
+
+func _on_resume_button_down() -> void:
+	$Pause.visible = false;
+
+
+func _on_restart_button_down() -> void:
+	reset_game()
+
+
+func _on_exit_button_down() -> void:
+	get_tree().quit()

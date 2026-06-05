@@ -78,7 +78,7 @@
 	},
 	"durian": {
 		"name": "durian",
-		"art": "res://assets/placeholder/Potluck_planning (13).jpg",
+		"art": "res://assets/placeholder/durian.png",
 		"description": "Prickly and pungent, who would want to know you",
 		"ingredients": ["test", "test2"]
 	},

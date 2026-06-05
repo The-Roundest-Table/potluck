@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dav53nd2743oa" path="res://assets/decoration/pearl-tower_0008_p2.png" id="17_v1bxd"]
 [ext_resource type="Texture2D" uid="uid://bi2tmt5dul30x" path="res://assets/decoration/pearl-tower_0009_blue-dot.png" id="18_cjdug"]
 [ext_resource type="Texture2D" uid="uid://dc1le7afrqk4c" path="res://assets/decoration/pearl-tower_0010_red-dot.png" id="19_dyfdg"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="21_xh8a6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktxwe"]
 size = Vector3(125, 600, 1)
@@ -30,6 +31,11 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cy281"]
 normal = Vector2(-1, 0)
 distance = 274.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1bxd"]
+bg_color = Color(0.9237415, 0.92569304, 0.92736024, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [node name="Tower" type="Node2D" unique_id=82244504]
 script = ExtResource("1_qrbg1")
@@ -163,6 +169,20 @@ texture = ExtResource("18_cjdug")
 [node name="PearlTower0010RedDot" type="Sprite2D" parent="." unique_id=475468625]
 position = Vector2(1058, 283)
 texture = ExtResource("19_dyfdg")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1257247287]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 376.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v1bxd")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=679766079]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
+theme_override_fonts/font = ExtResource("21_xh8a6")
+theme_override_font_sizes/font_size = 24
+text = "Use the left and right arrow keys to dodge the lasers."
 
 [connection signal="timeout" from="TowerAsset/Timer" to="TowerAsset" method="_on_timer_timeout"]
 [connection signal="timeout" from="winTimer" to="." method="_on_win_timer_timeout"]

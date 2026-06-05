@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c0lkfc642qq8h"]
+
+[ext_resource type="Script" uid="uid://gsxrl6vrqs3q" path="res://scripts/scene_manager.gd" id="1_jo5df"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="2_a4gjy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0i0d"]
+bg_color = Color(0.8202322, 0.5230224, 0.45819527, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="SceneManager" type="CanvasLayer" unique_id=280573124]
+script = ExtResource("1_jo5df")
+
+[node name="Pause" type="Control" parent="." unique_id=2097605693]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Pause" unique_id=720536037]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -81.5
+offset_right = 105.0
+offset_bottom = 81.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0i0d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/PanelContainer" unique_id=681162012]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Pause/PanelContainer/VBoxContainer" unique_id=662249779]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_a4gjy")
+theme_override_font_sizes/font_size = 32
+text = "PUAS?"
+horizontal_alignment = 1
+vertical_alignment = 3
+
+[node name="Resume" type="Button" parent="Pause/PanelContainer/VBoxContainer" unique_id=1968064171]
+layout_mode = 2
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Pause/PanelContainer/VBoxContainer" unique_id=1089967683]
+layout_mode = 2
+text = "Restart"
+
+[node name="Exit" type="Button" parent="Pause/PanelContainer/VBoxContainer" unique_id=252852373]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="button_down" from="Pause/PanelContainer/VBoxContainer/Resume" to="." method="_on_resume_button_down"]
+[connection signal="button_down" from="Pause/PanelContainer/VBoxContainer/Restart" to="." method="_on_restart_button_down"]
+[connection signal="button_down" from="Pause/PanelContainer/VBoxContainer/Exit" to="." method="_on_exit_button_down"]

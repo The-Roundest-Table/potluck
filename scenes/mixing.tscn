@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ctgqiy2qu5urg" path="res://assets/timer_progress/timer_progress.png" id="6_iuoun"]
 [ext_resource type="Texture2D" uid="uid://d6k7vgvu66bq" path="res://assets/placeholder/arrow.png" id="7_plan6"]
 [ext_resource type="Shader" uid="uid://stl3oxhsruvl" path="res://shaders/monochrome.gdshader" id="9_tqfad"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="12_ytp5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_553fv"]
 size = Vector2(567.7136, 464.29626)
@@ -251,6 +252,11 @@ shader_parameter/opacity = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pb0wn"]
 size = Vector2(110, 100)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eynuo"]
+bg_color = Color(0.9237415, 0.92569304, 0.92736024, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
 [node name="Mixing" type="Node2D" unique_id=1598614809]
 script = ExtResource("1_hrjjl")
 connected_scene = "ending"
@@ -468,6 +474,20 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Butterfly/StaticBody2D" unique_id=747864891]
 position = Vector2(56, 50)
 shape = SubResource("RectangleShape2D_pb0wn")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2138240982]
+offset_left = 16.0
+offset_top = 576.0
+offset_right = 643.0
+offset_bottom = 616.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_eynuo")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=629173575]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
+theme_override_fonts/font = ExtResource("12_ytp5r")
+theme_override_font_sizes/font_size = 24
+text = "Use the left and right arrow keys"
 
 [connection signal="area_entered" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_entered"]
 [connection signal="area_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_exited"]
