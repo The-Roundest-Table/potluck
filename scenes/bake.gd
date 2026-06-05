@@ -27,7 +27,7 @@ func _on_dialogic_signal(argument:String):
 
 
 func _on_button_button_down() -> void:
-	#take_screenshot()
+	take_screenshot()
 	Dialogic.start('baking')
 
 func _process(delta: float) -> void:
