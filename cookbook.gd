@@ -57,7 +57,7 @@ func update_page():
 		if scene_manager.cookbook_array[current_page*4 + count] is Dictionary:
 			var art = scene_manager.cookbook_array[current_page*4 + count].art
 			if art.contains("nastar"):
-				food.texture_normal = scene_manager.nastar_photo;
+				food.texture_normal = load(scene_manager.nastar_photo);
 			else:
 				food.texture_normal = load(art)
 		else:
