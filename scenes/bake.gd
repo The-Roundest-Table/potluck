@@ -27,8 +27,14 @@ func _on_dialogic_signal(argument:String):
 
 
 func _on_button_button_down() -> void:
+	#take_screenshot()
 	Dialogic.start('baking')
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("skip"):
 		scene_manager.end_game()
+
+func take_screenshot() -> void:
+	var img = get_viewport().get_texture()
+	scene_manager.nastar_photo = img;
+	#scene_manager.cookbook_array.get(scene_manager.cookbook_count-1).art = img

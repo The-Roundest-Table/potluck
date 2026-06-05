@@ -19,8 +19,10 @@ func _ready() -> void:
 	#$food3/food3.button_down.connect(open_recipe, 3);
 	#$food4/food4.button_down.connect(open_recipe, 4);
 	current_page = 0;
+	array = [$"../food1", $"../food2", $"../food3", $"../food4"]
 	go_to_page(current_page)
 	update_page()
+	
 	pass # Replace with function body.
 
 func load_pages():
@@ -50,10 +52,25 @@ func open():
 	#$Control/PageContent2.text = page_content2[0]
 
 func update_page():
-	$"../food1".texture_normal = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
-	$"../food2".texture_normal = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
-	$"../food3".texture_normal = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
-	$"../food4".texture_normal = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
+	var count = 0;
+	for food in array:
+		if scene_manager.cookbook_array[current_page*4 + count] is Dictionary:
+			var art = scene_manager.cookbook_array[current_page*4 + count].art
+			if art.contains("nastar"):
+				food.texture_normal = scene_manager.nastar_photo;
+			else:
+				food.texture_normal = load(art)
+		else:
+			food.texture_normal = load("res://assets/final/cookbook/cookbook_default.png")
+		#if art.has("nastar"):
+			#food.texture_normal = scene_manager.nastar_photo;
+		#else:
+			#food.texture_normal = load(scene_manager.cookbook_array[current_page*4 + count].art) if scene_manager.cookbook_array[current_page*4 + count] is Dictionary else load("res://assets/food art/yogurt.png");
+		count += 1;
+	#$"../food1".texture_normal = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
+	#$"../food2".texture_normal = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
+	#$"../food3".texture_normal = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
+	#$"../food4".texture_normal = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
 
 func go_to_page(page:int):
 	if current_page == page:

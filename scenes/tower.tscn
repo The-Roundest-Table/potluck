@@ -173,7 +173,7 @@ texture = ExtResource("19_dyfdg")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1257247287]
 offset_left = 16.0
 offset_top = 104.0
-offset_right = 376.0
+offset_right = 265.0
 offset_bottom = 144.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_v1bxd")
 
@@ -182,7 +182,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
 theme_override_fonts/font = ExtResource("21_xh8a6")
 theme_override_font_sizes/font_size = 24
-text = "Use the left and right arrow keys to dodge the lasers."
+text = "Controls: Arrow keys"
 
 [connection signal="timeout" from="TowerAsset/Timer" to="TowerAsset" method="_on_timer_timeout"]
 [connection signal="timeout" from="winTimer" to="." method="_on_win_timer_timeout"]

@@ -84,7 +84,7 @@ texture = ExtResource("5_ilpfm")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1275837629]
 offset_left = 16.0
 offset_top = 568.0
-offset_right = 376.0
+offset_right = 247.0
 offset_bottom = 608.0
 size_flags_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ugreq")

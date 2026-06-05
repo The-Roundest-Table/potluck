@@ -4,10 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="2_3gvg0"]
 [ext_resource type="Script" uid="uid://6rgbns2juvu8" path="res://scenes/tart.gd" id="2_k816o"]
 [ext_resource type="Texture2D" uid="uid://dwc3tnf5n4b1t" path="res://assets/opening scene/empty dish.png" id="3_ny1ra"]
+[ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="5_mgbsn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k816o"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_ny1ra"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cul25"]
+bg_color = Color(1, 0.5413895, 0.47555286, 1)
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qq1wn"]
+bg_color = Color(0.9237415, 0.92569304, 0.92736024, 1)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [node name="Bake" type="Node2D" unique_id=1409489638]
 script = ExtResource("1_ipi8e")
@@ -97,10 +110,28 @@ position = Vector2(617, 308)
 script = ExtResource("2_k816o")
 
 [node name="Button" type="Button" parent="." unique_id=1131182880]
-offset_left = 565.0
-offset_top = 568.0
-offset_right = 665.0
-offset_bottom = 599.0
+offset_left = 1022.0
+offset_top = 565.0
+offset_right = 1122.0
+offset_bottom = 596.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_mgbsn")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_cul25")
 text = "Finish!"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1890816249]
+visible = false
+offset_left = 376.0
+offset_right = 752.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qq1wn")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=1809737579]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
+theme_override_fonts/font = ExtResource("5_mgbsn")
+theme_override_font_sizes/font_size = 24
+text = "Arrange the nastar on the plate."
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

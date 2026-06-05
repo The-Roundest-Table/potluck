@@ -17,7 +17,7 @@ var regular_food = [ 'sate', 'egg tofu', 'stroganina', 'mooncake', 'alaadji', 'f
 	'tanghulu', 'es campur', 'naijuan',
 	'khaan', 'durian', 'ching bo leung'
 ]
-
+var nastar_photo;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

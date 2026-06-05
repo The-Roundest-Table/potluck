@@ -478,7 +478,7 @@ shape = SubResource("RectangleShape2D_pb0wn")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2138240982]
 offset_left = 16.0
 offset_top = 576.0
-offset_right = 643.0
+offset_right = 265.0
 offset_bottom = 616.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_eynuo")
 
@@ -487,7 +487,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9515446, 0.45026433, 0.37617216, 1)
 theme_override_fonts/font = ExtResource("12_ytp5r")
 theme_override_font_sizes/font_size = 24
-text = "Use the left and right arrow keys"
+text = "Controls: Arrow keys"
 
 [connection signal="area_entered" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_entered"]
 [connection signal="area_exited" from="MyMomsHand/DetectionArea" to="MyMomsHand" method="_on_detection_area_area_exited"]
