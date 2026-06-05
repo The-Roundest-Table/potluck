@@ -59,7 +59,7 @@ func update_page():
 			if art.contains("nastar"):
 				food.texture_normal = load(scene_manager.nastar_photo);
 			else:
-				food.texture_normal = load(art)
+				food.texture_normal = art
 		else:
 			food.texture_normal = load("res://assets/final/cookbook/cookbook_default.png")
 		#if art.has("nastar"):
