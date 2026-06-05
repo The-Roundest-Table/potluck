@@ -1,96 +1,96 @@
 { "sate": {
 		"name": "sate",
-		"art": "res://assets/placeholder/Potluck_planning (1).jpg",
+		"art": "res://assets/final/cookbook/cookbook_sate.png",
 		"description": "Blazing heat at my back",
 		"ingredients": ["test", "test2"]
 	},
 	"stroganina": {
 		"name": "stroganina",
-		"art": "res://assets/final/stroganina.png",
+		"art": "res://assets/final/cookbook/cookbook_stroganina.png",
 		"description": "Cold freshness melts under my tongue",
 		"ingredients": ["test", "test2"]
 	},
 	"egg tofu": {
 		"name": "egg tofu",
-		"art": "res://assets/placeholder/Potluck_planning (4).jpg",
+		"art": "res://assets/final/cookbook/cookbook_egg_tofu.png",
 		"description": "A return to warmth, simplicity, and safety.",
 		"ingredients": ["test", "test2"]
 	},
 	"heartcatcher": {
 		"name": "西红柿鸡蛋面",
-		"art": "res://assets/final/noodle.png",
+		"art": "res://assets/final/cookbook/cookbook_heartcatcher.png",
 		"description": "Mother's loving embrace whispered into a meal",
 		"ingredients": ["test", "test2"]
 	},
 	"flapjack": {
 		"name": "flapjack",
-		"art": "res://assets/placeholder/Potluck_planning (7).jpg",
-		"description": "Food as a bridge between people.",
+		"art": "res://assets/final/cookbook/cookbook_flapjack.png",
+		"description": "A bridge between people.",
 		"ingredients": ["test", "test2"]
 	},
 	"mooncake": {
 		"name": "mooncake",
-		"art": "res://assets/final/mooncake.png",
+		"art": "res://assets/final/cookbook/cookbook_mooncake.png",
 		"description": "Under the light of the moon, a hope shared is a hope doubled",
 		"ingredients": ["test", "test2"]
 	},
 	"alaadji": {
 		"name": "alaadji",
-		"art": "res://assets/placeholder/Potluck_planning (6).jpg",
+		"art": "res://assets/final/cookbook/cookbook_alaadji.png",
 		"description": "A memory of wild strawberries and pine",
 		"ingredients": ["test", "test2"]
 	},
 	"nastar": {
 		"name": "nastar",
-		"art": "res://assets/placeholder/Potluck_planning (5).jpg",
+		"art": "res://assets/final/cookbook/cookbook_nastar.png",
 		"description": "Until the very end, you still have time",
 		"ingredients": ["test", "test2"]
 	},
 	"kyorchekh": {
 		"name": "kyorchekh",
-		"art": "res://assets/placeholder/Potluck_planning (10).jpg",
+		"art": "res://assets/final/cookbook/cookbook_kyorcheck.png",
 		"description": "An ocean of lavender washes away a pain for now",
 		"ingredients": ["test", "test2"]
 	},
 	"tanghulu": {
 		"name": "tanghulu",
-		"art": "res://assets/placeholder/Potluck_planning (12).jpg",
-		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
+		"art": "res://assets/final/cookbook/cookbook_tanghulu.png",
+		"description": "Shiny sweetness",
 		"ingredients": ["test", "test2"]
 	},
 	"naijuan": {
 		"name": "naijuan",
-		"art": "res://assets/placeholder/Potluck_planning (11).jpg",
-		"description": "Dishes that change state — raw to cooked, solid to liquid, frozen to melted — symbolizing growth, passage, or emotional change.",
+		"art": "res://assets/final/cookbook/cookbook_neijuan.png",
+		"description": "Rich and soft",
 		"ingredients": ["test", "test2"]
 	},
 	"es campur": {
 		"name": "es campur",
-		"art": "res://assets/placeholder/Potluck_planning (9).jpg",
+		"art": "res://assets/final/cookbook/cookbook_es campur.png",
 		"description": "A glittering mountain of snow and sweets just for me, as a treat",
 		"ingredients": ["test", "test2"]
 	},
 	"boba": {
 		"name": "boba tea",
-		"art": "res://assets/placeholder/Potluck_planning (16).jpg",
+		"art": "res://assets/final/cookbook/cookbook_boba.png",
 		"description": "Weave and dance through the frigid air",
 		"ingredients": ["test", "test2"]
 	},
 	"durian": {
 		"name": "durian",
-		"art": "res://assets/placeholder/durian.png",
+		"art": "res://assets/final/cookbook/cookbook_durian.pngg",
 		"description": "Prickly and pungent, who would want to know you",
 		"ingredients": ["test", "test2"]
 	},
 	"ching bo leung": {
 		"name": "ching bo leung",
-		"art": "res://assets/placeholder/Potluck_planning (15).jpg",
-		"description": "These dishes explore desire, shame, and self-acceptance, revealing how pleasure and guilt intertwine in modern eating culture.",
+		"art": "res://assets/final/cookbook/cookbook_ching bo leung.pngg",
+		"description": "Pleasure, guilt, desire",
 		"ingredients": ["test", "test2"]
 	},
 	"khaan": {
 		"name": "khaan",
-		"art": "res://assets/placeholder/Potluck_planning (14).jpg",
+		"art": "res://assets/final/cookbook/cookbook_khaan.png",
 		"description": "Lifeblood: my comfort, release from shame, how I miss your richness",
 		"ingredients": ["test", "test2"]
 	},

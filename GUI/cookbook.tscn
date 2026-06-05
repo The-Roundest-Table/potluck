@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2owux1awrwmf" path="res://assets/opening scene/BG.png" id="1_ymttw"]
 [ext_resource type="Script" uid="uid://b02megbqay6cf" path="res://cookbook.gd" id="2_jk72h"]
 [ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="3_jk72h"]
+[ext_resource type="Texture2D" uid="uid://cies0njbht4uh" path="res://assets/final/cookbook/cookbook_default.png" id="4_hmwto"]
 [ext_resource type="FontFile" uid="uid://skyp10ihyysh" path="res://assets/UI/UI assets/Fonts/fonnts.com-Hello-Bloomie-Serif-.otf" id="5_k772i"]
 [ext_resource type="Texture2D" uid="uid://dfajrqw3cmama" path="res://assets/opening scene/table.png" id="6_nwoqq"]
 
@@ -41,39 +42,45 @@ offset_bottom = 290.58313
 
 [node name="food1" type="TextureButton" parent="Control" unique_id=659642119]
 layout_mode = 0
-offset_left = -318.0
-offset_top = -248.0
-offset_bottom = -13.0
-texture_normal = ExtResource("3_jk72h")
+offset_left = -282.7777
+offset_top = -206.50003
+offset_right = 35.22229
+offset_bottom = 28.49997
+scale = Vector2(0.74, 0.74)
+texture_normal = ExtResource("4_hmwto")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="food2" type="TextureButton" parent="Control" unique_id=990941299]
 layout_mode = 0
-offset_left = -318.0
-offset_top = -13.0
-offset_bottom = 213.0
-texture_normal = ExtResource("3_jk72h")
+offset_left = -282.7777
+offset_top = 0.49996948
+offset_right = 35.22229
+offset_bottom = 226.49997
+scale = Vector2(0.74, 0.74)
+texture_normal = ExtResource("4_hmwto")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="food3" type="TextureButton" parent="Control" unique_id=1663451299]
 layout_mode = 0
-offset_left = 14.0
-offset_top = -248.0
-offset_right = 326.0
-offset_bottom = -13.0
-texture_normal = ExtResource("3_jk72h")
+offset_left = 52.22229
+offset_top = -204.50003
+offset_right = 364.2223
+offset_bottom = 30.49997
+scale = Vector2(0.74, 0.74)
+texture_normal = ExtResource("4_hmwto")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="food4" type="TextureButton" parent="Control" unique_id=7637776]
 layout_mode = 0
-offset_left = 14.0
-offset_top = -13.0
-offset_right = 326.0
-offset_bottom = 213.0
-texture_normal = ExtResource("3_jk72h")
+offset_left = 54.22229
+offset_top = 4.4999695
+offset_right = 366.2223
+offset_bottom = 230.49997
+scale = Vector2(0.74, 0.74)
+texture_normal = ExtResource("4_hmwto")
 ignore_texture_size = true
 stretch_mode = 5
 

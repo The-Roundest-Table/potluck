@@ -50,10 +50,10 @@ func open():
 	#$Control/PageContent2.text = page_content2[0]
 
 func update_page():
-	$"../food1".texture_normal = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/food art/yogurt.png");
-	$"../food2".texture_normal = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/food art/yogurt.png");
-	$"../food3".texture_normal = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/food art/yogurt.png");
-	$"../food4".texture_normal = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/food art/yogurt.png");
+	$"../food1".texture_normal = load(scene_manager.cookbook_array[current_page*4].art) if scene_manager.cookbook_array[current_page*4] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
+	$"../food2".texture_normal = load(scene_manager.cookbook_array[current_page*4+1].art) if scene_manager.cookbook_array[current_page*4+1] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
+	$"../food3".texture_normal = load(scene_manager.cookbook_array[current_page*4+2].art) if scene_manager.cookbook_array[current_page*4+2] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
+	$"../food4".texture_normal = load(scene_manager.cookbook_array[current_page*4+3].art) if scene_manager.cookbook_array[current_page*4+3] is Dictionary else load("res://assets/final/cookbook/cookbook_default.png");
 
 func go_to_page(page:int):
 	if current_page == page:

@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0ctfmbotm2gy"]
+[gd_scene format=3 uid="uid://b0ctfmbotm2gy"]
 
 [ext_resource type="Script" uid="uid://b3d7qjnxy7m46" path="res://GUI/food_popup.gd" id="1_icyk3"]
 [ext_resource type="Texture2D" uid="uid://cuqsqmpt11d24" path="res://assets/UI/UI assets/Pop Up Cards Variation/pop up card 1.png" id="2_icyk3"]
-[ext_resource type="Texture2D" uid="uid://bv20yoxcjqd8x" path="res://assets/food art/yogurt.png" id="2_qewg7"]
+[ext_resource type="Texture2D" uid="uid://dp4na8hceh0o5" path="res://assets/final/cookbook/cookbook_kyorcheck.png" id="3_ma7ir"]
 [ext_resource type="FontFile" uid="uid://dxfnp1j2t0cdv" path="res://assets/UI/Hello-Bloomie-Serif-.otf" id="4_ma7ir"]
 
-[node name="FoodPopup" type="Node2D"]
+[node name="FoodPopup" type="Node2D" unique_id=969310851]
 script = ExtResource("1_icyk3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=443321957]
 visible = false
 offset_left = -833.0
 offset_top = -503.0
@@ -16,17 +16,17 @@ offset_right = 1029.0
 offset_bottom = 628.0
 color = Color(0, 0, 0, 1)
 
-[node name="card" type="Sprite2D" parent="."]
+[node name="card" type="Sprite2D" parent="." unique_id=705927271]
 position = Vector2(-33.000004, -12)
 scale = Vector2(0.3547662, 0.3547662)
 texture = ExtResource("2_icyk3")
 
-[node name="food" type="Sprite2D" parent="."]
+[node name="food" type="Sprite2D" parent="." unique_id=772452241]
 position = Vector2(3.0517578e-05, -36.999985)
-scale = Vector2(0.23383623, 0.23383619)
-texture = ExtResource("2_qewg7")
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("3_ma7ir")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1956607965]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,7 +40,7 @@ offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="name" type="Label" parent="Control"]
+[node name="name" type="Label" parent="Control" unique_id=740492015]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -54,7 +54,7 @@ theme_override_fonts/font = ExtResource("4_ma7ir")
 theme_override_font_sizes/font_size = 30
 text = "Food Title"
 
-[node name="description" type="RichTextLabel" parent="Control"]
+[node name="description" type="RichTextLabel" parent="Control" unique_id=1063528771]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 220.0
@@ -64,3 +64,4 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_ma7ir")
 bbcode_enabled = true
 text = "Here is some stuff about the food. Dig in!"
+horizontal_alignment = 1
